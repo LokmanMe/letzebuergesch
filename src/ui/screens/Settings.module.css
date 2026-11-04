@@ -1,0 +1,77 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.page h1 {
+  font-size: 1.6rem;
+}
+
+.h2 {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+
+.label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.stepper {
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+}
+
+.stepper button {
+  min-width: 48px;
+  font-size: 1.3rem;
+}
+
+.number {
+  width: 80px;
+  min-height: 48px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.hint {
+  margin: 8px 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.ok {
+  margin: 10px 0 0;
+  color: var(--easy);
+  font-weight: 600;
+}
+
+.error {
+  margin: 10px 0 0;
+  color: var(--again);
+  font-weight: 600;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-weight: 600;
+}
+
+.confirm p {
+  margin: 0 0 10px;
+  font-weight: 600;
+}

@@ -1,7 +1,10 @@
 import { HashRouter, NavLink, Navigate, Outlet, Route, Routes } from "react-router-dom";
 import { AppStateProvider } from "./state/AppStateContext";
 import { Home } from "./screens/Home";
+import { Progress } from "./screens/Progress";
+import { Relecture } from "./screens/Relecture";
 import { Review } from "./screens/Review";
+import { Settings } from "./screens/Settings";
 import styles from "./App.module.css";
 
 const NAV = [
@@ -36,6 +39,9 @@ export function AppRoutes() {
     <Routes>
       <Route element={<Layout withNav />}>
         <Route path="/" element={<Home />} />
+        <Route path="/progression" element={<Progress />} />
+        <Route path="/reglages" element={<Settings />} />
+        <Route path="/relecture" element={<Relecture />} />
       </Route>
       <Route element={<Layout withNav={false} />}>
         <Route path="/revision" element={<Review />} />
