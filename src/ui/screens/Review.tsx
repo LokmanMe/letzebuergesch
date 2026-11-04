@@ -90,7 +90,7 @@ export function Review() {
             <li className={styles.hard}>Difficile : {counts.hard}</li>
             <li className={styles.easy}>Facile : {counts.easy}</li>
           </ul>
-          <p>Äddi, bis muer ! Et pense à placer ta phrase du jour.</p>
+          <p>Äddi, bis muer ! N'oublie pas de placer ta phrase du jour.</p>
           <ButtonLink to="/" variant="primary" block>
             Retour à l'accueil
           </ButtonLink>
