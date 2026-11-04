@@ -84,9 +84,9 @@ npm run build
 
 Le dossier `dist/` est un site statique (chemins relatifs, routage par `#`), déployable n'importe où.
 
-**Netlify (recommandé, le plus simple)** : connecte-toi sur [app.netlify.com/drop](https://app.netlify.com/drop) et glisse-dépose le dossier `dist/`. Tu obtiens une URL aléatoire en `*.netlify.app` : non référencée, donc « privée » tant que tu ne la partages pas. Pour mettre à jour, refais `npm run build` et redépose `dist/` sur le même site (onglet *Deploys*).
+**GitHub Pages (déploiement actuel)** : l'appli est publiée sur https://lokmanme.github.io/letzebuergesch/. Le workflow `.github/workflows/deploy.yml` lance les tests, construit et publie à chaque `git push` sur `main` : pour mettre à jour, il suffit de pousser. Sur un compte gratuit, le dépôt et le site sont publics (ta progression, elle, reste dans ton navigateur).
 
-**GitHub Pages** : pousse le dépôt sur GitHub, puis publie `dist/` (par ex. avec l'action officielle « Deploy static content to Pages »). Attention : sur un compte gratuit, le dépôt et le site sont publics.
+**Netlify** : glisse-dépose le dossier `dist/` sur [app.netlify.com/drop](https://app.netlify.com/drop) ; URL aléatoire en `*.netlify.app`.
 
 **Vercel** : `npx vercel` à la racine du projet (framework détecté : Vite, dossier de sortie `dist`).
 
