@@ -1,0 +1,24 @@
+{
+  "id": "cafeteria",
+  "title": "Cafétéria et courses",
+  "description": "Commander, payer, faire ses courses.",
+  "cards": [
+    { "id": "cafeteria-001", "moduleId": "cafeteria", "type": "phrase", "fr": "Je voudrais un café.", "lb": "Ech hätt gär e Kaffi.", "phonetic": "èch hètt gèr eu ka-fi", "note": "« Ech hätt gär… » = je voudrais… : marche pour tout commander.", "lodQuery": "Kaffi", "verified": false },
+    { "id": "cafeteria-002", "moduleId": "cafeteria", "type": "phrase", "fr": "Un café au lait, s'il vous plaît.", "lb": "E Kaffi mat Mëllech, wann ech gelift.", "phonetic": "eu ka-fi matt mul-lech, vann èch gue-lift", "lodQuery": "Mëllech", "verified": false },
+    { "id": "cafeteria-003", "moduleId": "cafeteria", "type": "phrase", "fr": "Un verre d'eau", "lb": "E Glas Waasser", "phonetic": "eu glass vaa-sseur", "lodQuery": "Waasser", "verified": false },
+    { "id": "cafeteria-004", "moduleId": "cafeteria", "type": "phrase", "fr": "Une bière", "lb": "E Béier", "phonetic": "eu béï-eur", "lodQuery": "Béier", "verified": false },
+    { "id": "cafeteria-005", "moduleId": "cafeteria", "type": "phrase", "fr": "Combien ça coûte ?", "lb": "Wéi vill kascht dat?", "phonetic": "véï fill kacht datt", "lodQuery": "kaschten", "verified": false },
+    { "id": "cafeteria-006", "moduleId": "cafeteria", "type": "phrase", "fr": "Je peux payer par carte ?", "lb": "Kann ech mat der Kaart bezuelen?", "phonetic": "kann èch matt deur kaart beu-tsou-eu-leun", "lodQuery": "bezuelen", "verified": false },
+    { "id": "cafeteria-007", "moduleId": "cafeteria", "type": "phrase", "fr": "L'addition, s'il vous plaît.", "lb": "D'Rechnung, wann ech gelift.", "phonetic": "drèch-noung, vann èch gue-lift", "lodQuery": "Rechnung", "verified": false },
+    { "id": "cafeteria-008", "moduleId": "cafeteria", "type": "phrase", "fr": "Autre chose ? (question du vendeur)", "lb": "Soss nach eppes?", "phonetic": "zoss nach èp-pess", "lodQuery": "eppes", "verified": false },
+    { "id": "cafeteria-009", "moduleId": "cafeteria", "type": "phrase", "fr": "Non merci, c'est tout.", "lb": "Nee merci, dat ass alles.", "phonetic": "néé mèr-ci, datt ass al-less", "lodQuery": "alles", "verified": false },
+    { "id": "cafeteria-010", "moduleId": "cafeteria", "type": "phrase", "fr": "À emporter, s'il vous plaît.", "lb": "Fir matzehuelen, wann ech gelift.", "phonetic": "fir mat-tseu-hou-eu-leun", "lodQuery": "mathuelen", "verified": false },
+    { "id": "cafeteria-011", "moduleId": "cafeteria", "type": "phrase", "fr": "Un sachet, s'il vous plaît.", "lb": "Eng Tut, wann ech gelift.", "phonetic": "èng toutt, vann èch gue-lift", "lodQuery": "Tut", "verified": false },
+    { "id": "cafeteria-012", "moduleId": "cafeteria", "type": "phrase", "fr": "C'est délicieux.", "lb": "Dat ass lecker.", "phonetic": "datt ass lè-keur", "lodQuery": "lecker", "verified": false },
+    { "id": "cafeteria-013", "moduleId": "cafeteria", "type": "phrase", "fr": "Bon appétit !", "lb": "Gudden Appetit!", "phonetic": "goud-den a-pé-titt", "lodQuery": "Appetit", "verified": false },
+    { "id": "cafeteria-014", "moduleId": "cafeteria", "type": "phrase", "fr": "Santé ! (en trinquant)", "lb": "Prost!", "phonetic": "prosst", "lodQuery": "prost", "verified": false },
+    { "id": "cafeteria-015", "moduleId": "cafeteria", "type": "phrase", "fr": "J'ai soif.", "lb": "Ech hunn Duuscht.", "phonetic": "èch hounn douucht", "lodQuery": "Duuscht", "verified": false },
+    { "id": "cafeteria-016", "moduleId": "cafeteria", "type": "phrase", "fr": "Je n'ai pas faim.", "lb": "Ech hu keen Honger.", "phonetic": "èch hou kéén hong-eur", "note": "« hunn » perd son « n » devant le k (règle du « n »).", "lodQuery": "Honger", "verified": false },
+    { "id": "cafeteria-017", "moduleId": "cafeteria", "type": "phrase", "fr": "Où sont les toilettes ?", "lb": "Wou sinn d'Toiletten?", "phonetic": "vo zinn dtoi-lèt-teun", "lodQuery": "Toilett", "verified": false }
+  ]
+}

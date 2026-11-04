@@ -1,0 +1,21 @@
+{
+  "id": "joker",
+  "title": "Phrases joker",
+  "description": "Pour se sortir d'affaire quand on ne comprend pas.",
+  "cards": [
+    { "id": "joker-001", "moduleId": "joker", "type": "phrase", "fr": "Je parle seulement un peu luxembourgeois.", "lb": "Ech schwätze just e bësse Lëtzebuergesch.", "phonetic": "èch chvèt-seu youst eu bus-seu lèt-se-bouer-guech", "lodQuery": "schwätzen", "verified": false },
+    { "id": "joker-002", "moduleId": "joker", "type": "phrase", "fr": "Pouvez-vous parler plus lentement, s'il vous plaît ?", "lb": "Kënnt Dir w.e.g. méi lues schwätzen?", "phonetic": "kunnt dir vann èch gue-lift méï lou-ess chvèt-seun", "note": "« w.e.g. » se lit « wann ech gelift ».", "lodQuery": "lues", "verified": false },
+    { "id": "joker-003", "moduleId": "joker", "type": "phrase", "fr": "Je ne comprends pas.", "lb": "Ech verstinn net.", "phonetic": "èch feur-chtinn nett", "lodQuery": "verstoen", "verified": false },
+    { "id": "joker-004", "moduleId": "joker", "type": "phrase", "fr": "Vous pouvez répéter ?", "lb": "Kënnt Dir dat widderhuelen?", "phonetic": "kunnt dir datt vid-deur-hou-eu-leun", "lodQuery": "widderhuelen", "verified": false },
+    { "id": "joker-005", "moduleId": "joker", "type": "phrase", "fr": "Encore une fois, s'il vous plaît.", "lb": "Nach eng Kéier, wann ech gelift.", "phonetic": "nach èng kéï-eur, vann èch gue-lift", "lodQuery": "Kéier", "verified": false },
+    { "id": "joker-006", "moduleId": "joker", "type": "phrase", "fr": "Qu'est-ce que ça veut dire ?", "lb": "Wat heescht dat?", "phonetic": "vatt héécht datt", "lodQuery": "heeschen", "verified": false },
+    { "id": "joker-007", "moduleId": "joker", "type": "phrase", "fr": "Comment dit-on « … » en luxembourgeois ?", "lb": "Wéi seet een « … » op Lëtzebuergesch?", "phonetic": "véï zét één … op lèt-se-bouer-guech", "lodQuery": "soen", "verified": false },
+    { "id": "joker-008", "moduleId": "joker", "type": "phrase", "fr": "Comment ça s'écrit ?", "lb": "Wéi schreift een dat?", "phonetic": "véï chraïft één datt", "lodQuery": "schreiwen", "verified": false },
+    { "id": "joker-009", "moduleId": "joker", "type": "phrase", "fr": "Vous parlez français ?", "lb": "Schwätzt Dir Franséisch?", "phonetic": "chvètst dir fran-zé-ich", "lodQuery": "Franséisch", "verified": false },
+    { "id": "joker-010", "moduleId": "joker", "type": "phrase", "fr": "Je ne sais pas.", "lb": "Ech weess net.", "phonetic": "èch véss nett", "lodQuery": "wëssen", "verified": false },
+    { "id": "joker-011", "moduleId": "joker", "type": "phrase", "fr": "Un instant, s'il vous plaît.", "lb": "Ee Moment, wann ech gelift.", "phonetic": "éé mo-mènt, vann èch gue-lift", "lodQuery": "Moment", "verified": false },
+    { "id": "joker-012", "moduleId": "joker", "type": "phrase", "fr": "C'est difficile !", "lb": "Dat ass schwéier!", "phonetic": "datt ass chvéï-eur", "lodQuery": "schwéier", "verified": false },
+    { "id": "joker-013", "moduleId": "joker", "type": "phrase", "fr": "Tu peux m'aider ?", "lb": "Kanns du mir hëllefen?", "phonetic": "kanns dou mir hul-leu-feun", "lodQuery": "hëllefen", "verified": false },
+    { "id": "joker-014", "moduleId": "joker", "type": "phrase", "fr": "J'apprends encore !", "lb": "Ech léieren nach!", "phonetic": "èch léï-euh-reun nach", "lodQuery": "léieren", "verified": false }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "numbers-days",
+  "title": "Nombres et jours",
+  "description": "Compter jusqu'à 20 et les jours de la semaine.",
+  "cards": [
+    { "id": "numbers-days-001", "moduleId": "numbers-days", "type": "phrase", "fr": "1, 2, 3", "lb": "eent, zwee, dräi", "phonetic": "éént, tsvéé, draï", "note": "Devant un nom, « eent » devient « een » ou « eng ».", "lodQuery": "eent", "verified": false },
+    { "id": "numbers-days-002", "moduleId": "numbers-days", "type": "phrase", "fr": "4, 5, 6", "lb": "véier, fënnef, sechs", "phonetic": "féï-eur, funn-eff, zèks", "lodQuery": "fënnef", "verified": false },
+    { "id": "numbers-days-003", "moduleId": "numbers-days", "type": "phrase", "fr": "7, 8, 9, 10", "lb": "siwen, aacht, néng, zéng", "phonetic": "zi-veun, aacht, nèng, tsèng", "lodQuery": "néng", "verified": false },
+    { "id": "numbers-days-004", "moduleId": "numbers-days", "type": "phrase", "fr": "11, 12, 13", "lb": "eelef, zwielef, dräizéng", "phonetic": "éé-leff, tsvi-eu-leff, draï-tsèng", "lodQuery": "zwielef", "verified": false },
+    { "id": "numbers-days-005", "moduleId": "numbers-days", "type": "phrase", "fr": "14, 15, 16", "lb": "véierzéng, fofzéng, siechzéng", "phonetic": "féï-eur-tsèng, fof-tsèng, zi-ech-tsèng", "lodQuery": "fofzéng", "verified": false },
+    { "id": "numbers-days-006", "moduleId": "numbers-days", "type": "phrase", "fr": "17, 18, 19, 20", "lb": "siwwenzéng, uechtzéng, nonzéng, zwanzeg", "phonetic": "ziv-veun-tsèng, ou-echt-tsèng, non-tsèng, tsvan-tsech", "lodQuery": "zwanzeg", "verified": false },
+    { "id": "numbers-days-007", "moduleId": "numbers-days", "type": "phrase", "fr": "lundi", "lb": "Méindeg", "phonetic": "méïn-dech", "lodQuery": "Méindeg", "verified": false },
+    { "id": "numbers-days-008", "moduleId": "numbers-days", "type": "phrase", "fr": "mardi", "lb": "Dënschdeg", "phonetic": "dunch-dech", "lodQuery": "Dënschdeg", "verified": false },
+    { "id": "numbers-days-009", "moduleId": "numbers-days", "type": "phrase", "fr": "mercredi", "lb": "Mëttwoch", "phonetic": "mutt-voch", "lodQuery": "Mëttwoch", "verified": false },
+    { "id": "numbers-days-010", "moduleId": "numbers-days", "type": "phrase", "fr": "jeudi", "lb": "Donneschdeg", "phonetic": "don-nech-dech", "lodQuery": "Donneschdeg", "verified": false },
+    { "id": "numbers-days-011", "moduleId": "numbers-days", "type": "phrase", "fr": "vendredi", "lb": "Freideg", "phonetic": "fraï-dech", "lodQuery": "Freideg", "verified": false },
+    { "id": "numbers-days-012", "moduleId": "numbers-days", "type": "phrase", "fr": "samedi", "lb": "Samschdeg", "phonetic": "zamch-dech", "lodQuery": "Samschdeg", "verified": false },
+    { "id": "numbers-days-013", "moduleId": "numbers-days", "type": "phrase", "fr": "dimanche", "lb": "Sonndeg", "phonetic": "zonn-dech", "lodQuery": "Sonndeg", "verified": false },
+    { "id": "numbers-days-014", "moduleId": "numbers-days", "type": "phrase", "fr": "aujourd'hui, demain, hier", "lb": "haut, muer, gëschter", "phonetic": "haout, mou-eur, guich-teur", "lodQuery": "muer", "verified": false },
+    { "id": "numbers-days-015", "moduleId": "numbers-days", "type": "phrase", "fr": "Quel jour sommes-nous ?", "lb": "Wat fir een Dag ass haut?", "phonetic": "vatt fir één dach ass haout", "lodQuery": "Dag", "verified": false },
+    { "id": "numbers-days-016", "moduleId": "numbers-days", "type": "phrase", "fr": "le week-end", "lb": "de Weekend", "phonetic": "deu vik-ènd", "lodQuery": "Weekend", "verified": false }
+  ]
+}

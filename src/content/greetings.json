@@ -1,0 +1,23 @@
+{
+  "id": "greetings",
+  "title": "Salutations et politesses",
+  "description": "Dire bonjour, au revoir, merci et s'excuser.",
+  "cards": [
+    { "id": "greetings-001", "moduleId": "greetings", "type": "phrase", "fr": "Bonjour (à toute heure)", "lb": "Moien!", "phonetic": "moï-eune", "note": "La salutation passe-partout, au bureau comme dans la rue.", "lodQuery": "Moien", "verified": false },
+    { "id": "greetings-002", "moduleId": "greetings", "type": "phrase", "fr": "Bonjour (le matin, plus soigné)", "lb": "Gudde Moien!", "phonetic": "goud-de moï-eune", "lodQuery": "gudde Moien", "verified": false },
+    { "id": "greetings-003", "moduleId": "greetings", "type": "phrase", "fr": "Bonsoir", "lb": "Gudden Owend!", "phonetic": "goud-den o-vent", "lodQuery": "Owend", "verified": false },
+    { "id": "greetings-004", "moduleId": "greetings", "type": "phrase", "fr": "Bonne nuit", "lb": "Gutt Nuecht!", "phonetic": "goutt nou-acht", "note": "Le « ch » se prononce au fond de la gorge, comme dans « Bach ».", "lodQuery": "Nuecht", "verified": false },
+    { "id": "greetings-005", "moduleId": "greetings", "type": "phrase", "fr": "Au revoir", "lb": "Äddi!", "phonetic": "è-di", "note": "Entre collègues on entend aussi « Salut! » ou « Ciao! ».", "lodQuery": "äddi", "verified": false },
+    { "id": "greetings-006", "moduleId": "greetings", "type": "phrase", "fr": "À plus tard", "lb": "Bis spéider!", "phonetic": "biss chpé-ï-deur", "lodQuery": "spéider", "verified": false },
+    { "id": "greetings-007", "moduleId": "greetings", "type": "phrase", "fr": "À bientôt", "lb": "Bis geschwënn!", "phonetic": "biss gue-chvunn", "lodQuery": "geschwënn", "verified": false },
+    { "id": "greetings-008", "moduleId": "greetings", "type": "phrase", "fr": "Merci", "lb": "Merci!", "phonetic": "mèr-ci", "note": "Comme en français, avec l'accent sur la première syllabe.", "lodQuery": "merci", "verified": false },
+    { "id": "greetings-009", "moduleId": "greetings", "type": "phrase", "fr": "Merci beaucoup", "lb": "Villmools merci!", "phonetic": "fil-môls mèr-ci", "lodQuery": "villmools", "verified": false },
+    { "id": "greetings-010", "moduleId": "greetings", "type": "phrase", "fr": "S'il vous plaît / s'il te plaît", "lb": "Wann ech gelift.", "phonetic": "vann èch gue-lift", "note": "S'écrit souvent en abrégé : w.e.g.", "lodQuery": "gelift", "verified": false },
+    { "id": "greetings-011", "moduleId": "greetings", "type": "phrase", "fr": "De rien / avec plaisir", "lb": "Gär geschitt.", "phonetic": "gèr gue-chitt", "lodQuery": "gär geschitt", "verified": false },
+    { "id": "greetings-012", "moduleId": "greetings", "type": "phrase", "fr": "Excusez-moi / pardon", "lb": "Entschëllegt.", "phonetic": "ent-chu-lecht", "note": "Pour attirer l'attention ou passer devant quelqu'un.", "lodQuery": "entschëllegt", "verified": false },
+    { "id": "greetings-013", "moduleId": "greetings", "type": "phrase", "fr": "Je suis désolé(e)", "lb": "Et deet mer leid.", "phonetic": "ett dét meur laït", "lodQuery": "leid", "verified": false },
+    { "id": "greetings-014", "moduleId": "greetings", "type": "phrase", "fr": "Oui", "lb": "Jo.", "phonetic": "yo", "lodQuery": "jo", "verified": false },
+    { "id": "greetings-015", "moduleId": "greetings", "type": "phrase", "fr": "Non", "lb": "Neen.", "phonetic": "nééne", "note": "On entend aussi « Nee ».", "lodQuery": "neen", "verified": false },
+    { "id": "greetings-016", "moduleId": "greetings", "type": "phrase", "fr": "Bienvenue !", "lb": "Wëllkomm!", "phonetic": "vull-komm", "lodQuery": "wëllkomm", "verified": false }
+  ]
+}

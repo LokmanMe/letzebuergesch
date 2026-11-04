@@ -1,0 +1,25 @@
+{
+  "id": "office",
+  "title": "Bureau et vie courante",
+  "description": "Prendre des nouvelles, souhaiter, parler de la météo.",
+  "cards": [
+    { "id": "office-001", "moduleId": "office", "type": "phrase", "fr": "Comment ça va ?", "lb": "Wéi geet et?", "phonetic": "véï guét ett", "lodQuery": "goen", "verified": false },
+    { "id": "office-002", "moduleId": "office", "type": "phrase", "fr": "Ça va bien, merci.", "lb": "Et geet gutt, merci.", "phonetic": "ett guét goutt, mèr-ci", "lodQuery": "gutt", "verified": false },
+    { "id": "office-003", "moduleId": "office", "type": "phrase", "fr": "Ça va (comme ci comme ça).", "lb": "Et geet.", "phonetic": "ett guét", "verified": false },
+    { "id": "office-004", "moduleId": "office", "type": "phrase", "fr": "Bonne journée !", "lb": "Schéinen Dag!", "phonetic": "chéï-neun dach", "lodQuery": "schéin", "verified": false },
+    { "id": "office-005", "moduleId": "office", "type": "phrase", "fr": "Bonne soirée !", "lb": "Schéinen Owend!", "phonetic": "chéï-neun o-vent", "lodQuery": "Owend", "verified": false },
+    { "id": "office-006", "moduleId": "office", "type": "phrase", "fr": "Bon week-end !", "lb": "Schéint Weekend!", "phonetic": "chéïnt vik-ènd", "note": "On entend aussi « E schéine Weekend! ».", "lodQuery": "Weekend", "verified": false },
+    { "id": "office-007", "moduleId": "office", "type": "phrase", "fr": "À demain !", "lb": "Bis muer!", "phonetic": "biss mou-eur", "lodQuery": "muer", "verified": false },
+    { "id": "office-008", "moduleId": "office", "type": "phrase", "fr": "Bonnes vacances !", "lb": "Schéi Vakanz!", "phonetic": "chéï va-kants", "lodQuery": "Vakanz", "verified": false },
+    { "id": "office-009", "moduleId": "office", "type": "phrase", "fr": "Joyeux anniversaire !", "lb": "Alles Guddes fir däi Gebuertsdag!", "phonetic": "al-less goud-dess fir daï gue-bouerts-dach", "lodQuery": "Gebuertsdag", "verified": false },
+    { "id": "office-010", "moduleId": "office", "type": "phrase", "fr": "Bonne année !", "lb": "Schéint neit Joer!", "phonetic": "chéïnt naït yôr", "lodQuery": "Joer", "verified": false },
+    { "id": "office-011", "moduleId": "office", "type": "phrase", "fr": "Bonne chance !", "lb": "Vill Gléck!", "phonetic": "fill gluck", "lodQuery": "Gléck", "verified": false },
+    { "id": "office-012", "moduleId": "office", "type": "phrase", "fr": "Merci pour ton aide.", "lb": "Merci fir deng Hëllef.", "phonetic": "mèr-ci fir dèng hul-leff", "lodQuery": "Hëllef", "verified": false },
+    { "id": "office-013", "moduleId": "office", "type": "phrase", "fr": "Pas de problème.", "lb": "Kee Problem.", "phonetic": "kéé pro-blèm", "lodQuery": "Problem", "verified": false },
+    { "id": "office-014", "moduleId": "office", "type": "phrase", "fr": "Viens, on va boire un café.", "lb": "Komm, mir drénken e Kaffi.", "phonetic": "komm, mir drèn-keun eu ka-fi", "lodQuery": "drénken", "verified": false },
+    { "id": "office-015", "moduleId": "office", "type": "phrase", "fr": "Je dois y aller.", "lb": "Ech muss goen.", "phonetic": "èch mouss go-eun", "lodQuery": "goen", "verified": false },
+    { "id": "office-016", "moduleId": "office", "type": "phrase", "fr": "Il fait beau aujourd'hui.", "lb": "Haut ass schéint Wieder.", "phonetic": "haout ass chéïnt vi-eu-deur", "lodQuery": "Wieder", "verified": false },
+    { "id": "office-017", "moduleId": "office", "type": "phrase", "fr": "Il pleut.", "lb": "Et reent.", "phonetic": "ett réént", "lodQuery": "reenen", "verified": false },
+    { "id": "office-018", "moduleId": "office", "type": "phrase", "fr": "Il fait froid.", "lb": "Et ass kal.", "phonetic": "ett ass kal", "lodQuery": "kal", "verified": false }
+  ]
+}

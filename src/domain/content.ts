@@ -9,5 +9,5 @@ export function mergeCards(modules: Module[], customCards: Card[]): Card[] {
 
 /** URL de recherche lod.lu. Aucun lien audio direct n'est jamais construit. */
 export function lodSearchUrl(card: Pick<Card, "lb" | "lodQuery">): string {
-  return `https://lod.lu/?q=${encodeURIComponent(card.lodQuery ?? card.lb)}`;
+  return `https://lod.lu/sich/lb/${encodeURIComponent(card.lodQuery ?? card.lb)}`;
 }
