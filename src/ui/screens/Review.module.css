@@ -1,0 +1,102 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 8px;
+}
+
+.title {
+  font-size: 1.15rem;
+  text-align: center;
+}
+
+.quit {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.counter {
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted);
+  min-width: 48px;
+  text-align: right;
+}
+
+.retry {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--warn-text);
+  background: var(--warn-bg);
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+
+.ratings {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.ratings button {
+  min-height: 56px;
+  border-width: 2px;
+}
+
+.again {
+  color: var(--again);
+  border-color: var(--again);
+}
+
+.hard {
+  color: var(--hard);
+  border-color: var(--hard);
+}
+
+.easy {
+  color: var(--easy);
+  border-color: var(--easy);
+}
+
+.hint {
+  margin: 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+@media (hover: none) {
+  .hint {
+    display: none;
+  }
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.big {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.counts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-weight: 600;
+}
