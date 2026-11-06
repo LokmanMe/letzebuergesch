@@ -5,11 +5,19 @@ import { Button, UnverifiedBadge } from "../components/ui";
 import type { CardRendererProps } from "./registry";
 import styles from "./PhraseCard.module.css";
 
-export function PhraseCard({ card, revealed, onReveal, audioSignal }: CardRendererProps) {
+export function PhraseCard({ card, mode = "recall", revealed, onReveal, audioSignal }: CardRendererProps) {
   const audio = LOD_AUDIO[card.id];
+  const discover = mode === "discover";
+  if (discover) revealed = true;
   return (
     <article className={styles.card} aria-live="polite">
-      <p className={styles.label}>Comment dit-on en luxembourgeois ?</p>
+      {discover ? (
+        <p className={styles.label}>
+          <span className={styles.newBadge}>✨ Nouvelle</span> Découvre cette phrase :
+        </p>
+      ) : (
+        <p className={styles.label}>Comment dit-on en luxembourgeois ?</p>
+      )}
       <p className={styles.fr} lang="fr">
         {card.fr}
       </p>

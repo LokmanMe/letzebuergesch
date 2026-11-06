@@ -100,3 +100,15 @@
   flex-wrap: wrap;
   font-weight: 600;
 }
+
+.noted {
+  min-height: 56px;
+  font-size: 1.05rem;
+}
+
+.discoverHint {
+  margin: -6px 0 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}

@@ -30,6 +30,11 @@ export function review(progress: CardProgress | undefined, rating: Rating, today
   };
 }
 
+/** Première rencontre avec une carte (mode découverte) : boîte 1, à revoir le lendemain. */
+export function introduce(today: LocalDate): CardProgress {
+  return { box: 1, due: addDays(today, BOX_INTERVALS[1]), firstSeen: today, lastReviewed: today, reviews: 1, lapses: 0 };
+}
+
 export function isDue(progress: CardProgress, today: LocalDate): boolean {
   return progress.due <= today;
 }

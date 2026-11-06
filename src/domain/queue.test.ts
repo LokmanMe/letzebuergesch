@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { defaultState } from "../storage/defaultState";
 import { availableNewCards, buildDailyQueue, buildFlashQueue, dueCards, newCardsRemaining } from "./queue";
-import { advanceSession, applyRating, startSession } from "./session";
+import { advanceSession, applyDiscovery, applyRating, startSession } from "./session";
 import type { AppState, Box, Card, CardProgress } from "./types";
 
 const T = "2026-03-10";
@@ -64,28 +64,47 @@ describe("file du jour", () => {
 });
 
 describe("session", () => {
-  it("une carte ratée revient à la fin de la file, une seule fois", () => {
-    let q = startSession([card(1), card(2)]);
+  const seen = stateWith({ "m-002": p(1, T), "m-003": p(2, T) });
+
+  it("carte jamais vue → découverte ; carte déjà vue → révision", () => {
+    const q = startSession([card(1), card(2)], seen);
+    expect(q.map((i) => i.phase)).toEqual(["discover", "review"]);
+  });
+
+  it("une carte découverte revient en fin de session pour un essai d'entraînement", () => {
+    let q = startSession([card(1), card(2)], seen);
+    q = advanceSession(q, "noted");
+    expect(q.map((i) => [i.card.id, i.phase, i.practiceReason])).toEqual([
+      ["m-002", "review", undefined],
+      ["m-001", "practice", "discovered"],
+    ]);
+  });
+
+  it("une carte ratée revient en fin de session, une seule fois", () => {
+    let q = startSession([card(2), card(3)], seen);
     q = advanceSession(q, "again");
-    expect(q.map((i) => [i.card.id, i.isRetry])).toEqual([["m-002", false], ["m-001", true]]);
+    expect(q.map((i) => [i.card.id, i.phase, i.practiceReason])).toEqual([
+      ["m-003", "review", undefined],
+      ["m-002", "practice", "missed"],
+    ]);
     q = advanceSession(q, "easy");
     q = advanceSession(q, "again"); // ratée à nouveau en entraînement : on n'insiste pas
     expect(q).toHaveLength(0);
   });
 
-  it("applyRating met à jour progression et journal ; la 2e présentation ne change rien", () => {
-    let s = defaultState();
-    s = applyRating(s, "m-001", "again", T);
-    expect(s.progress["m-001"]).toMatchObject({ box: 1, due: "2026-03-11" });
+  it("applyDiscovery : boîte 1, à revoir demain, compte comme nouvelle carte du jour", () => {
+    const s = applyDiscovery(defaultState(), "m-001", T);
+    expect(s.progress["m-001"]).toMatchObject({ box: 1, due: "2026-03-11", firstSeen: T, reviews: 1, lapses: 0 });
     expect(s.log[T]).toEqual({ reviewed: 1, newIntroduced: 1 });
+    expect(applyDiscovery(s, "m-001", T)).toBe(s); // déjà connue : rien ne change
+  });
 
-    const afterRetry = applyRating(s, "m-001", "easy", T, true);
-    expect(afterRetry).toBe(s);
-
-    s = applyRating(s, "m-002", "easy", T);
-    expect(s.log[T]).toEqual({ reviewed: 2, newIntroduced: 2 });
-    s = applyRating(s, "m-002", "easy", "2026-03-13");
-    expect(s.log["2026-03-13"]).toEqual({ reviewed: 1, newIntroduced: 0 });
-    expect(s.progress["m-002"].box).toBe(3);
+  it("applyRating met à jour progression et journal", () => {
+    let s = applyDiscovery(defaultState(), "m-002", T);
+    s = applyRating(s, "m-002", "easy", "2026-03-11");
+    expect(s.log["2026-03-11"]).toEqual({ reviewed: 1, newIntroduced: 0 });
+    expect(s.progress["m-002"]).toMatchObject({ box: 2, due: "2026-03-14" });
+    s = applyRating(s, "m-002", "again", "2026-03-14");
+    expect(s.progress["m-002"]).toMatchObject({ box: 1, lapses: 1 });
   });
 });

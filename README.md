@@ -32,9 +32,15 @@ Une fois installée, l'appli a sa propre icône et fonctionne hors ligne.
 
 Chaque jour, l'appli te propose une petite session : quelques phrases à revoir et quelques nouvelles. Elle s'occupe de choisir **quoi** réviser et **quand**, pour que les phrases restent en mémoire sans y passer des heures.
 
-### Les cartes
+### Les nouvelles phrases ✨
 
-1. Une phrase s'affiche **en français**.
+La première fois qu'une phrase apparaît, elle porte le badge **« Nouvelle »** : tu n'as rien à deviner. Tu vois directement le français, le luxembourgeois, la prononciation et les boutons d'écoute. Prends le temps de l'écouter et de la répéter à voix haute, puis appuie sur **« C'est noté »**.
+
+La phrase revient **à la fin de la session** pour un premier essai de mémoire (sans conséquence si tu te trompes), puis **le lendemain** pour un vrai rappel.
+
+### Les révisions
+
+1. Une phrase déjà vue s'affiche **en français**.
 2. Essaie de la dire **dans ta tête en luxembourgeois**.
 3. Appuie sur **« Voir la réponse »** : tu vois la phrase en luxembourgeois, sa prononciation écrite « à la française » et parfois une petite astuce.
 4. **Écoute la prononciation** 🔊 avec de vraies voix luxembourgeoises, tirées du dictionnaire officiel [lod.lu](https://lod.lu) (voir plus bas).
@@ -97,7 +103,7 @@ Chaque jour, une phrase à **placer pour de vrai** : avec un collègue, à la bo
 - **Réinitialiser** : repartir de zéro.
 
 ### ⌨️ Raccourcis clavier (sur ordinateur)
-**Espace** pour voir la réponse, **E** pour écouter, puis **1** (Raté), **2** (Difficile) ou **3** (Facile).
+**Espace** pour voir la réponse, **E** pour écouter, puis **1** (Raté), **2** (Difficile) ou **3** (Facile). Sur une nouvelle phrase, **Entrée** pour « C'est noté ».
 
 ---
 

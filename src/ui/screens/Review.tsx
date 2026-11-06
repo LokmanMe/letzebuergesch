@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { buildDailyQueue, buildFlashQueue } from "../../domain/queue";
-import { advanceSession, applyRating, startSession, type SessionItem } from "../../domain/session";
+import { advanceSession, applyDiscovery, applyRating, startSession, type SessionItem } from "../../domain/session";
 import type { Rating } from "../../domain/types";
 import { stop as stopAudio } from "../audio/player";
 import { cardRenderers } from "../cards/registry";
@@ -22,25 +22,34 @@ export function Review() {
 
   // La file est figée au démarrage de la session.
   const [queue, setQueue] = useState<SessionItem[]>(() =>
-    startSession(mode === "eclair" ? buildFlashQueue(cards, state, today) : buildDailyQueue(cards, state, today)),
+    startSession(mode === "eclair" ? buildFlashQueue(cards, state, today) : buildDailyQueue(cards, state, today), state),
   );
   const [total] = useState(queue.length);
   const [revealed, setRevealed] = useState(false);
   const [counts, setCounts] = useState<Record<Rating, number>>({ again: 0, hard: 0, easy: 0 });
+  const [discovered, setDiscovered] = useState(0);
   const [audioSignal, setAudioSignal] = useState(0);
 
   const current = queue[0];
+  const discovering = current?.phase === "discover";
+  // En découverte, la réponse est visible d'emblée.
+  const answerShown = revealed || discovering;
 
   useEffect(() => () => stopAudio(), []);
 
-  const rate = useCallback(
-    (rating: Rating) => {
+  const next = useCallback(
+    (outcome: Rating | "noted") => {
       if (!current) return;
       stopAudio();
       setAudioSignal(0); // sinon la carte suivante jouerait toute seule à l'affichage
-      update((s) => applyRating(s, current.card.id, rating, today, current.isRetry));
-      if (!current.isRetry) setCounts((c) => ({ ...c, [rating]: c[rating] + 1 }));
-      setQueue((q) => advanceSession(q, rating));
+      if (current.phase === "discover") {
+        update((s) => applyDiscovery(s, current.card.id, today));
+        setDiscovered((n) => n + 1);
+      } else if (current.phase === "review" && outcome !== "noted") {
+        update((s) => applyRating(s, current.card.id, outcome, today));
+        setCounts((c) => ({ ...c, [outcome]: c[outcome] + 1 }));
+      }
+      setQueue((q) => advanceSession(q, outcome));
       setRevealed(false);
     },
     [current, today, update],
@@ -51,23 +60,27 @@ export function Review() {
       if (e.altKey || e.ctrlKey || e.metaKey || !current) return;
       const target = e.target instanceof Element ? e.target : null;
       if (target?.closest("input, textarea, select")) return;
-      if (!revealed && (e.key === " " || e.key === "Enter") && !target?.closest("button, a")) {
-        e.preventDefault();
-        setRevealed(true);
-      } else if (revealed && e.key.toLowerCase() === "e") {
+      const onControl = Boolean(target?.closest("button, a"));
+      if (answerShown && e.key.toLowerCase() === "e") {
         e.preventDefault();
         setAudioSignal((n) => n + 1);
-      } else if (revealed) {
+      } else if (discovering && (e.key === " " || e.key === "Enter") && !onControl) {
+        e.preventDefault();
+        next("noted");
+      } else if (!answerShown && (e.key === " " || e.key === "Enter") && !onControl) {
+        e.preventDefault();
+        setRevealed(true);
+      } else if (answerShown && !discovering) {
         const r = RATINGS.find((x) => x.key === e.key);
         if (r) {
           e.preventDefault();
-          rate(r.rating);
+          next(r.rating);
         }
       }
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [current, revealed, rate]);
+  }, [current, answerShown, discovering, next]);
 
   const title = mode === "eclair" ? "Révision éclair" : "Session du jour";
 
@@ -91,14 +104,24 @@ export function Review() {
       <main className={styles.page}>
         <h1 className={styles.title}>Session terminée 🎉</h1>
         <Panel className={styles.summary}>
-          <p className={styles.big}>
-            {reviewed} carte{reviewed > 1 ? "s" : ""} révisée{reviewed > 1 ? "s" : ""}
-          </p>
+          {discovered > 0 && (
+            <p className={styles.big}>
+              ✨ {discovered} nouvelle{discovered > 1 ? "s" : ""} phrase{discovered > 1 ? "s" : ""} découverte{discovered > 1 ? "s" : ""}
+            </p>
+          )}
+          {reviewed > 0 && (
+            <p className={styles.big}>
+              {reviewed} carte{reviewed > 1 ? "s" : ""} révisée{reviewed > 1 ? "s" : ""}
+            </p>
+          )}
+          {reviewed > 0 && (
           <ul className={styles.counts}>
             <li className={styles.again}>Raté : {counts.again}</li>
             <li className={styles.hard}>Difficile : {counts.hard}</li>
             <li className={styles.easy}>Facile : {counts.easy}</li>
           </ul>
+          )}
+          {discovered > 0 && <p>Les nouvelles phrases reviendront demain pour un premier vrai rappel.</p>}
           <p>Äddi, bis muer ! N'oublie pas de placer ta phrase du jour.</p>
           <ButtonLink to="/" variant="primary" block>
             Retour à l'accueil
@@ -109,7 +132,7 @@ export function Review() {
   }
 
   const Renderer = cardRenderers[current.card.type];
-  const done = total - queue.filter((i) => !i.isRetry).length;
+  const done = total - queue.filter((i) => i.phase !== "practice").length;
 
   return (
     <main className={styles.page}>
@@ -123,17 +146,37 @@ export function Review() {
         </span>
       </header>
 
-      {current.isRetry && <p className={styles.retry}>Deuxième essai — pour s'entraîner, sans effet sur le planning.</p>}
+      {current.phase === "practice" && (
+        <p className={styles.retry}>
+          {current.practiceReason === "discovered"
+            ? "Premier essai : retrouve la phrase découverte tout à l'heure. Sans effet sur le planning."
+            : "Deuxième essai, pour s'entraîner. Sans effet sur le planning."}
+        </p>
+      )}
 
-      <Renderer key={`${current.card.id}-${current.isRetry}`} card={current.card} revealed={revealed} onReveal={() => setRevealed(true)} audioSignal={audioSignal} />
+      <Renderer
+        key={`${current.card.id}-${current.phase}`}
+        card={current.card}
+        mode={discovering ? "discover" : "recall"}
+        revealed={answerShown}
+        onReveal={() => setRevealed(true)}
+        audioSignal={audioSignal}
+      />
 
-      {revealed && (
+      {discovering && (
+        <Button variant="primary" block className={styles.noted} onClick={() => next("noted")} aria-keyshortcuts="Enter">
+          C'est noté →
+        </Button>
+      )}
+      {discovering && <p className={styles.discoverHint}>Elle reviendra en fin de session pour un premier essai, puis demain.</p>}
+
+      {answerShown && !discovering && (
         <div className={styles.ratings} role="group" aria-label="Noter ma réponse">
           {RATINGS.map((r) => (
             <Button
               key={r.rating}
               className={styles[r.rating]}
-              onClick={() => rate(r.rating)}
+              onClick={() => next(r.rating)}
               aria-label={r.aria}
               aria-keyshortcuts={r.key}
             >
@@ -142,7 +185,11 @@ export function Review() {
           ))}
         </div>
       )}
-      <p className={styles.hint}>Clavier : Espace pour voir la réponse, E pour écouter, puis 1 / 2 / 3.</p>
+      <p className={styles.hint}>
+        {discovering
+          ? "Clavier : E pour écouter, Entrée pour continuer."
+          : "Clavier : Espace pour voir la réponse, E pour écouter, puis 1 / 2 / 3."}
+      </p>
     </main>
   );
 }

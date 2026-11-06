@@ -9,6 +9,8 @@ import { PhraseCard } from "./PhraseCard";
  */
 export type CardRendererProps = {
   card: Card;
+  /** "discover" : première rencontre, la réponse est montrée d'emblée (pas de question). */
+  mode?: "recall" | "discover";
   revealed: boolean;
   onReveal: () => void;
   /** Incrémenté par le raccourci « E » : le composant joue l'audio de la carte s'il en a. */
