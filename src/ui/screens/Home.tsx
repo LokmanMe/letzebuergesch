@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { LOD_AUDIO } from "../../content";
 import { pickPhraseOfDay, setPhraseOfDayDone } from "../../domain/phraseOfDay";
+import { LodAudio } from "../audio/LodAudio";
 import { availableNewCards, buildDailyQueue, dueCards } from "../../domain/queue";
 import { a1Progress, solidCards, streak } from "../../domain/stats";
 import { ButtonLink, Panel, ProgressBar, UnverifiedBadge } from "../components/ui";
@@ -33,6 +35,11 @@ function PhraseOfDay() {
         {card.fr} · <span className={styles.podPhon}>[{card.phonetic}]</span>
       </p>
       {!card.verified && <UnverifiedBadge />}
+      {LOD_AUDIO[card.id] && (
+        <div className={styles.podAudio}>
+          <LodAudio audio={LOD_AUDIO[card.id]} />
+        </div>
+      )}
       <label className={styles.check}>
         <input
           type="checkbox"

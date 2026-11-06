@@ -13,6 +13,24 @@ export type Card = {
   verified: boolean; // false tant que non relu par un locuteur natif
 };
 
+/** Un enregistrement de lod.lu (URL réelles obtenues par scripts/fetch-lod-audio.mjs, jamais devinées). */
+export type LodClip = {
+  articleId: string;
+  aac: string;
+  ogg?: string;
+};
+
+/** Prononciation d'un mot de la phrase. `lemma` diffère de `form` pour une forme fléchie (« geet » → goen). */
+export type LodWord = LodClip & { form: string; lemma: string };
+
+/** Phrase lue par un locuteur : identique à la carte (`exact`) ou exemple lod.lu qui la contient. */
+export type LodSentence = LodClip & { text: string; exact: boolean };
+
+export type CardAudio = {
+  words: LodWord[];
+  sentence?: LodSentence;
+};
+
 export type Module = {
   id: string;
   title: string;

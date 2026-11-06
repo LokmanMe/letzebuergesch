@@ -156,3 +156,8 @@
   align-items: center;
   min-height: 44px;
 }
+
+.podAudio {
+  width: 100%;
+  margin-top: 6px;
+}

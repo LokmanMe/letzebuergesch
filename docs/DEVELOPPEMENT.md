@@ -99,3 +99,17 @@ Une fois en ligne, ouvre l'URL sur ton téléphone puis « Ajouter à l'écran d
 - **Scénarios** : type `Scenario` dans `src/domain/scenario.ts`.
 - **Badges** : règles dans `src/achievements/rules.ts`.
 - **Nouvelles routes** (`/quiz`, `/scenarios`, `/cartes-perso`, `/badges`) : à déclarer dans `src/ui/App.tsx`.
+
+## Audio lod.lu
+
+`src/content/lodAudio.json` est généré par un script qui interroge l'API publique de lod.lu (recherche puis article) pour chaque mot des cartes, et ne garde que les URL d'enregistrements renvoyées par l'API (`https://lod.lu/uploads/...`). Aucune URL n'est devinée ; un test le vérifie.
+
+```bash
+node scripts/fetch-lod-audio.mjs
+```
+
+À relancer après avoir ajouté ou modifié des cartes, puis relire le résultat (le script affiche le nombre de mots et de phrases trouvés par carte). Si un mot fléchi est rattaché au mauvais article, ajoute-le à `LEMMA_OVERRIDES` dans le script.
+
+Les sons sont lus directement depuis lod.lu (pas de copie dans le dépôt) : ils demandent une connexion. lod.lu n'envoie pas d'en-têtes CORS, donc l'appli ne peut pas interroger son API depuis le navigateur ; c'est pour ça que la résolution se fait au moment du build, via ce script.
+
+Licence : le jeu de données LOD est publié en CC0 sur data.public.lu ; les enregistrements d'exemples à voix masculine sont en CC BY-NC (usage non commercial).

@@ -37,7 +37,7 @@ Chaque jour, l'appli te propose une petite session : quelques phrases à revoir 
 1. Une phrase s'affiche **en français**.
 2. Essaie de la dire **dans ta tête en luxembourgeois**.
 3. Appuie sur **« Voir la réponse »** : tu vois la phrase en luxembourgeois, sa prononciation écrite « à la française » et parfois une petite astuce.
-4. Le lien **« Écouter sur lod.lu »** ouvre le dictionnaire officiel luxembourgeois, où tu peux entendre la prononciation.
+4. **Écoute la prononciation** 🔊 avec de vraies voix luxembourgeoises, tirées du dictionnaire officiel [lod.lu](https://lod.lu) (voir plus bas).
 5. Dis honnêtement comment ça s'est passé :
 
 | Bouton | Quand l'utiliser | Ce qui se passe |
@@ -45,6 +45,17 @@ Chaque jour, l'appli te propose une petite session : quelques phrases à revoir 
 | **Raté** | Tu ne savais pas, ou tu t'es trompé | La carte repart au début : tu la revois **à la fin de la session**, puis **demain** |
 | **Difficile** | Tu as trouvé, mais avec peine | La carte garde le même rythme |
 | **Facile** | Tu as trouvé sans effort | La carte revient **de moins en moins souvent** |
+
+### L'écoute 🔊
+
+Chaque carte propose les enregistrements du dictionnaire officiel **lod.lu**, lus par des locuteurs natifs :
+
+- **Un bouton par mot** de la phrase. Pour un mot conjugué ou accordé, tu entends sa forme de base, indiquée par une flèche (par exemple *geet → goen*).
+- **« Mot à mot »** enchaîne tous les mots de la phrase. Attention : les mots sont enregistrés séparément, donc l'intonation n'est pas celle d'une vraie phrase.
+- **« Écouter la phrase »** apparaît quand le dictionnaire a enregistré la phrase entière, par exemple *Villmools merci!* ou *Ech kommen aus Frankräich*.
+- **« Exemple du dictionnaire »** fait entendre une phrase proche, quand lod.lu en a une, par exemple *wéi geet et (Iech)?* pour *Wéi geet et?*
+
+L'écoute est aussi disponible sur la phrase du jour. Elle demande une connexion Internet : le reste de l'appli marche hors ligne.
 
 ### Le rythme des révisions
 
@@ -86,7 +97,7 @@ Chaque jour, une phrase à **placer pour de vrai** : avec un collègue, à la bo
 - **Réinitialiser** : repartir de zéro.
 
 ### ⌨️ Raccourcis clavier (sur ordinateur)
-**Espace** pour voir la réponse, puis **1** (Raté), **2** (Difficile) ou **3** (Facile).
+**Espace** pour voir la réponse, **E** pour écouter, puis **1** (Raté), **2** (Difficile) ou **3** (Facile).
 
 ---
 
@@ -114,3 +125,9 @@ Avec 8 nouvelles cartes par jour, tu auras vu toutes les phrases en **un peu moi
 - Ta progression est enregistrée **uniquement sur ton appareil**, dans ton navigateur. Rien n'est envoyé sur Internet.
 - Chaque appareil a sa propre progression. Pour passer de l'ordinateur au téléphone : **Réglages → Exporter**, puis **Importer** le fichier sur l'autre appareil.
 - Si tu effaces les données de ton navigateur, la progression est perdue : pense à exporter de temps en temps.
+
+---
+
+## Crédits
+
+Enregistrements audio : **Lëtzebuerger Online Dictionnaire (LOD)**, Zenter fir d'Lëtzebuerger Sprooch, [lod.lu](https://lod.lu), données publiées en open data sur [data.public.lu](https://data.public.lu/fr/datasets/letzebuerger-online-dictionnaire-lod-linguistesch-daten/). Les sons sont lus directement depuis lod.lu : ils ne sont pas copiés dans ce dépôt.

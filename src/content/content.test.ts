@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { lodSearchUrl, mergeCards } from "../domain/content";
-import { MODULES, RAW_MODULES } from "./index";
+import { LOD_AUDIO, MODULES, RAW_MODULES } from "./index";
 import { validateModules } from "./schema";
 
 const cards = MODULES.flatMap((m) => m.cards);
@@ -22,6 +22,28 @@ describe("contenu officiel", () => {
 
   it("les ids suivent le format module-NNN", () => {
     for (const c of cards) expect(c.id).toMatch(new RegExp(`^${c.moduleId}-\\d{3}$`));
+  });
+});
+
+describe("enregistrements lod.lu", () => {
+  const entries = Object.entries(LOD_AUDIO);
+  const clips = entries.flatMap(([, a]) => [...a.words, ...(a.sentence ? [a.sentence] : [])]);
+
+  it("toutes les URL sont des fichiers hébergés par lod.lu (aucune URL inventée)", () => {
+    for (const c of clips) {
+      expect(c.aac).toMatch(/^https:\/\/lod\.lu\/uploads\/.+\.m4a$/);
+      if (c.ogg) expect(c.ogg).toMatch(/^https:\/\/lod\.lu\/uploads\/.+\.ogg$/);
+      expect(c.articleId).toMatch(/^[A-Z0-9]+$/);
+    }
+  });
+
+  it("ne concerne que des cartes existantes", () => {
+    const ids = new Set(cards.map((c) => c.id));
+    for (const [id] of entries) expect(ids.has(id)).toBe(true);
+  });
+
+  it("couvre la grande majorité des cartes", () => {
+    expect(entries.length).toBeGreaterThanOrEqual(cards.length * 0.8);
   });
 });
 

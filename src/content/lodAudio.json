@@ -1,0 +1,2501 @@
+{
+  "source": "Lëtzebuerger Online Dictionnaire (LOD), Zenter fir d'Lëtzebuerger Sprooch — https://lod.lu",
+  "generatedAt": "2026-11-06",
+  "cards": {
+    "cafeteria-001": {
+      "words": [
+        {
+          "form": "Ech",
+          "lemma": "ech",
+          "articleId": "ECH1",
+          "aac": "https://lod.lu/uploads/AAC/ech1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/ech1.ogg"
+        },
+        {
+          "form": "hätt",
+          "lemma": "hunn",
+          "articleId": "HUNN3",
+          "aac": "https://lod.lu/uploads/AAC/hunn3.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/hunn3.ogg"
+        },
+        {
+          "form": "gär",
+          "lemma": "gär",
+          "articleId": "GAR1",
+          "aac": "https://lod.lu/uploads/AAC/gar1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/gar1.ogg"
+        },
+        {
+          "form": "e",
+          "lemma": "E",
+          "articleId": "E2",
+          "aac": "https://lod.lu/uploads/AAC/e2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/e2.ogg"
+        },
+        {
+          "form": "Kaffi",
+          "lemma": "Kaffi",
+          "articleId": "KAFFI1",
+          "aac": "https://lod.lu/uploads/AAC/kaffi1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/kaffi1.ogg"
+        }
+      ]
+    },
+    "cafeteria-002": {
+      "words": [
+        {
+          "form": "E",
+          "lemma": "E",
+          "articleId": "E2",
+          "aac": "https://lod.lu/uploads/AAC/e2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/e2.ogg"
+        },
+        {
+          "form": "Kaffi",
+          "lemma": "Kaffi",
+          "articleId": "KAFFI1",
+          "aac": "https://lod.lu/uploads/AAC/kaffi1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/kaffi1.ogg"
+        },
+        {
+          "form": "mat",
+          "lemma": "mat",
+          "articleId": "MAT1",
+          "aac": "https://lod.lu/uploads/AAC/mat1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/mat1.ogg"
+        },
+        {
+          "form": "Mëllech",
+          "lemma": "Mëllech",
+          "articleId": "MELLECH1",
+          "aac": "https://lod.lu/uploads/AAC/mellech1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/mellech1.ogg"
+        },
+        {
+          "form": "wann",
+          "lemma": "wann",
+          "articleId": "WANN2",
+          "aac": "https://lod.lu/uploads/AAC/wann2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/wann2.ogg"
+        },
+        {
+          "form": "ech",
+          "lemma": "ech",
+          "articleId": "ECH1",
+          "aac": "https://lod.lu/uploads/AAC/ech1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/ech1.ogg"
+        },
+        {
+          "form": "gelift",
+          "lemma": "gelift",
+          "articleId": "GELIFT1",
+          "aac": "https://lod.lu/uploads/AAC/gelift1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/gelift1.ogg"
+        }
+      ]
+    },
+    "cafeteria-003": {
+      "words": [
+        {
+          "form": "E",
+          "lemma": "E",
+          "articleId": "E2",
+          "aac": "https://lod.lu/uploads/AAC/e2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/e2.ogg"
+        },
+        {
+          "form": "Glas",
+          "lemma": "Glas",
+          "articleId": "GLAS1",
+          "aac": "https://lod.lu/uploads/AAC/glas1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/glas1.ogg"
+        },
+        {
+          "form": "Waasser",
+          "lemma": "Waasser",
+          "articleId": "WAASSER2",
+          "aac": "https://lod.lu/uploads/AAC/waasser2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/waasser2.ogg"
+        }
+      ]
+    },
+    "cafeteria-004": {
+      "words": [
+        {
+          "form": "E",
+          "lemma": "E",
+          "articleId": "E2",
+          "aac": "https://lod.lu/uploads/AAC/e2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/e2.ogg"
+        },
+        {
+          "form": "Béier",
+          "lemma": "Béier",
+          "articleId": "BEIER1",
+          "aac": "https://lod.lu/uploads/AAC/beier1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/beier1.ogg"
+        }
+      ]
+    },
+    "cafeteria-005": {
+      "words": [
+        {
+          "form": "Wéi",
+          "lemma": "Wéi",
+          "articleId": "WEI6",
+          "aac": "https://lod.lu/uploads/AAC/wei6.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/wei6.ogg"
+        },
+        {
+          "form": "vill",
+          "lemma": "vill",
+          "articleId": "VILL1",
+          "aac": "https://lod.lu/uploads/AAC/vill1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/vill1.ogg"
+        },
+        {
+          "form": "kascht",
+          "lemma": "Kascht",
+          "articleId": "KASCHT1",
+          "aac": "https://lod.lu/uploads/AAC/kascht1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/kascht1.ogg"
+        },
+        {
+          "form": "dat",
+          "lemma": "dat",
+          "articleId": "DAT1",
+          "aac": "https://lod.lu/uploads/AAC/dat1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/dat1.ogg"
+        }
+      ]
+    },
+    "cafeteria-006": {
+      "words": [
+        {
+          "form": "Kann",
+          "lemma": "kënnen",
+          "articleId": "KENNEN1",
+          "aac": "https://lod.lu/uploads/AAC/kennen1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/kennen1.ogg"
+        },
+        {
+          "form": "ech",
+          "lemma": "ech",
+          "articleId": "ECH1",
+          "aac": "https://lod.lu/uploads/AAC/ech1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/ech1.ogg"
+        },
+        {
+          "form": "mat",
+          "lemma": "mat",
+          "articleId": "MAT1",
+          "aac": "https://lod.lu/uploads/AAC/mat1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/mat1.ogg"
+        },
+        {
+          "form": "der",
+          "lemma": "der",
+          "articleId": "DER1",
+          "aac": "https://lod.lu/uploads/AAC/der1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/der1.ogg"
+        },
+        {
+          "form": "Kaart",
+          "lemma": "Kaart",
+          "articleId": "KAART1",
+          "aac": "https://lod.lu/uploads/AAC/kaart1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/kaart1.ogg"
+        },
+        {
+          "form": "bezuelen",
+          "lemma": "bezuelen",
+          "articleId": "BEZUELEN1",
+          "aac": "https://lod.lu/uploads/AAC/bezuelen1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/bezuelen1.ogg"
+        }
+      ]
+    },
+    "cafeteria-007": {
+      "words": [
+        {
+          "form": "Rechnung",
+          "lemma": "Rechnung",
+          "articleId": "RECHNUNG1",
+          "aac": "https://lod.lu/uploads/AAC/rechnung1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/rechnung1.ogg"
+        },
+        {
+          "form": "wann",
+          "lemma": "wann",
+          "articleId": "WANN2",
+          "aac": "https://lod.lu/uploads/AAC/wann2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/wann2.ogg"
+        },
+        {
+          "form": "ech",
+          "lemma": "ech",
+          "articleId": "ECH1",
+          "aac": "https://lod.lu/uploads/AAC/ech1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/ech1.ogg"
+        },
+        {
+          "form": "gelift",
+          "lemma": "gelift",
+          "articleId": "GELIFT1",
+          "aac": "https://lod.lu/uploads/AAC/gelift1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/gelift1.ogg"
+        }
+      ]
+    },
+    "cafeteria-008": {
+      "words": [
+        {
+          "form": "Soss",
+          "lemma": "soss",
+          "articleId": "SOSS1",
+          "aac": "https://lod.lu/uploads/AAC/soss1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/soss1.ogg"
+        },
+        {
+          "form": "nach",
+          "lemma": "nach",
+          "articleId": "NACH1",
+          "aac": "https://lod.lu/uploads/AAC/nach1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/nach1.ogg"
+        },
+        {
+          "form": "eppes",
+          "lemma": "eppes",
+          "articleId": "EPPES1",
+          "aac": "https://lod.lu/uploads/AAC/eppes1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/eppes1.ogg"
+        }
+      ]
+    },
+    "cafeteria-009": {
+      "words": [
+        {
+          "form": "Nee",
+          "lemma": "Nee",
+          "articleId": "NEE2",
+          "aac": "https://lod.lu/uploads/AAC/nee2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/nee2.ogg"
+        },
+        {
+          "form": "merci",
+          "lemma": "merci",
+          "articleId": "MERCI2",
+          "aac": "https://lod.lu/uploads/AAC/merci2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/merci2.ogg"
+        },
+        {
+          "form": "dat",
+          "lemma": "dat",
+          "articleId": "DAT1",
+          "aac": "https://lod.lu/uploads/AAC/dat1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/dat1.ogg"
+        },
+        {
+          "form": "ass",
+          "lemma": "Ass",
+          "articleId": "ASS1",
+          "aac": "https://lod.lu/uploads/AAC/ass1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/ass1.ogg"
+        },
+        {
+          "form": "alles",
+          "lemma": "alles",
+          "articleId": "ALLES1",
+          "aac": "https://lod.lu/uploads/AAC/alles1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/alles1.ogg"
+        }
+      ]
+    },
+    "cafeteria-010": {
+      "words": [
+        {
+          "form": "Fir",
+          "lemma": "fir",
+          "articleId": "FIR2",
+          "aac": "https://lod.lu/uploads/AAC/fir2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/fir2.ogg"
+        },
+        {
+          "form": "matzehuelen",
+          "lemma": "mathuelen",
+          "articleId": "MATHUELEN1",
+          "aac": "https://lod.lu/uploads/AAC/mathuelen1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/mathuelen1.ogg"
+        },
+        {
+          "form": "wann",
+          "lemma": "wann",
+          "articleId": "WANN2",
+          "aac": "https://lod.lu/uploads/AAC/wann2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/wann2.ogg"
+        },
+        {
+          "form": "ech",
+          "lemma": "ech",
+          "articleId": "ECH1",
+          "aac": "https://lod.lu/uploads/AAC/ech1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/ech1.ogg"
+        },
+        {
+          "form": "gelift",
+          "lemma": "gelift",
+          "articleId": "GELIFT1",
+          "aac": "https://lod.lu/uploads/AAC/gelift1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/gelift1.ogg"
+        }
+      ]
+    },
+    "cafeteria-011": {
+      "words": [
+        {
+          "form": "Eng",
+          "lemma": "eng",
+          "articleId": "ENG1",
+          "aac": "https://lod.lu/uploads/AAC/eng1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/eng1.ogg"
+        },
+        {
+          "form": "Tut",
+          "lemma": "Tut",
+          "articleId": "TUT2",
+          "aac": "https://lod.lu/uploads/AAC/tut2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/tut2.ogg"
+        },
+        {
+          "form": "wann",
+          "lemma": "wann",
+          "articleId": "WANN2",
+          "aac": "https://lod.lu/uploads/AAC/wann2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/wann2.ogg"
+        },
+        {
+          "form": "ech",
+          "lemma": "ech",
+          "articleId": "ECH1",
+          "aac": "https://lod.lu/uploads/AAC/ech1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/ech1.ogg"
+        },
+        {
+          "form": "gelift",
+          "lemma": "gelift",
+          "articleId": "GELIFT1",
+          "aac": "https://lod.lu/uploads/AAC/gelift1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/gelift1.ogg"
+        }
+      ]
+    },
+    "cafeteria-012": {
+      "words": [
+        {
+          "form": "Dat",
+          "lemma": "dat",
+          "articleId": "DAT1",
+          "aac": "https://lod.lu/uploads/AAC/dat1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/dat1.ogg"
+        },
+        {
+          "form": "ass",
+          "lemma": "Ass",
+          "articleId": "ASS1",
+          "aac": "https://lod.lu/uploads/AAC/ass1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/ass1.ogg"
+        },
+        {
+          "form": "lecker",
+          "lemma": "lecker",
+          "articleId": "LECKER1",
+          "aac": "https://lod.lu/uploads/AAC/lecker1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/lecker1.ogg"
+        }
+      ]
+    },
+    "cafeteria-013": {
+      "words": [
+        {
+          "form": "Gudden",
+          "lemma": "gutt",
+          "articleId": "GUTT3",
+          "aac": "https://lod.lu/uploads/AAC/gutt3.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/gutt3.ogg"
+        },
+        {
+          "form": "Appetit",
+          "lemma": "Appetit",
+          "articleId": "APPETIT1",
+          "aac": "https://lod.lu/uploads/AAC/appetit1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/appetit1.ogg"
+        }
+      ],
+      "sentence": {
+        "text": "(ech wënschen iech en) gudden Appetit!",
+        "exact": false,
+        "articleId": "APPETIT1",
+        "aac": "https://lod.lu/uploads/examples/AAC/ce/ce27b66629c840c5f2ebb4c4bcd3a8f0.m4a",
+        "ogg": "https://lod.lu/uploads/examples/OGG/ce/ce27b66629c840c5f2ebb4c4bcd3a8f0.ogg"
+      }
+    },
+    "cafeteria-014": {
+      "words": [
+        {
+          "form": "Prost",
+          "lemma": "prost",
+          "articleId": "PROST1",
+          "aac": "https://lod.lu/uploads/AAC/prost1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/prost1.ogg"
+        }
+      ]
+    },
+    "cafeteria-015": {
+      "words": [
+        {
+          "form": "Ech",
+          "lemma": "ech",
+          "articleId": "ECH1",
+          "aac": "https://lod.lu/uploads/AAC/ech1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/ech1.ogg"
+        },
+        {
+          "form": "hunn",
+          "lemma": "hunn",
+          "articleId": "HUNN1",
+          "aac": "https://lod.lu/uploads/AAC/hunn1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/hunn1.ogg"
+        },
+        {
+          "form": "Duuscht",
+          "lemma": "Duuscht",
+          "articleId": "DUUSCHT1",
+          "aac": "https://lod.lu/uploads/AAC/duuscht1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/duuscht1.ogg"
+        }
+      ],
+      "sentence": {
+        "text": "ech hunn Duuscht, ech muss eppes drénken",
+        "exact": false,
+        "articleId": "DUUSCHT1",
+        "aac": "https://lod.lu/uploads/examples/AAC/cb/cbc8ecf789797ce8cd9197d6a76091f0.m4a",
+        "ogg": "https://lod.lu/uploads/examples/OGG/cb/cbc8ecf789797ce8cd9197d6a76091f0.ogg"
+      }
+    },
+    "cafeteria-016": {
+      "words": [
+        {
+          "form": "Ech",
+          "lemma": "ech",
+          "articleId": "ECH1",
+          "aac": "https://lod.lu/uploads/AAC/ech1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/ech1.ogg"
+        },
+        {
+          "form": "hu",
+          "lemma": "hunn",
+          "articleId": "HUNN1",
+          "aac": "https://lod.lu/uploads/AAC/hunn1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/hunn1.ogg"
+        },
+        {
+          "form": "keen",
+          "lemma": "keen",
+          "articleId": "KEEN1",
+          "aac": "https://lod.lu/uploads/AAC/keen1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/keen1.ogg"
+        },
+        {
+          "form": "Honger",
+          "lemma": "Honger",
+          "articleId": "HONGER1",
+          "aac": "https://lod.lu/uploads/AAC/honger1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/honger1.ogg"
+        }
+      ]
+    },
+    "cafeteria-017": {
+      "words": [
+        {
+          "form": "Wou",
+          "lemma": "wou",
+          "articleId": "WOU1",
+          "aac": "https://lod.lu/uploads/AAC/wou1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/wou1.ogg"
+        },
+        {
+          "form": "sinn",
+          "lemma": "sinn",
+          "articleId": "SINN1",
+          "aac": "https://lod.lu/uploads/AAC/sinn1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/sinn1.ogg"
+        },
+        {
+          "form": "Toiletten",
+          "lemma": "Toilette",
+          "articleId": "TOILETTE1",
+          "aac": "https://lod.lu/uploads/AAC/toilette1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/toilette1.ogg"
+        }
+      ]
+    },
+    "greetings-001": {
+      "words": [
+        {
+          "form": "Moien",
+          "lemma": "Moien",
+          "articleId": "MOIEN1",
+          "aac": "https://lod.lu/uploads/AAC/moien1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/moien1.ogg"
+        }
+      ]
+    },
+    "greetings-002": {
+      "words": [
+        {
+          "form": "Moien",
+          "lemma": "Moien",
+          "articleId": "MOIEN1",
+          "aac": "https://lod.lu/uploads/AAC/moien1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/moien1.ogg"
+        }
+      ]
+    },
+    "greetings-003": {
+      "words": [
+        {
+          "form": "Gudden",
+          "lemma": "gutt",
+          "articleId": "GUTT3",
+          "aac": "https://lod.lu/uploads/AAC/gutt3.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/gutt3.ogg"
+        },
+        {
+          "form": "Owend",
+          "lemma": "Owend",
+          "articleId": "OWEND1",
+          "aac": "https://lod.lu/uploads/AAC/owend1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/owend1.ogg"
+        }
+      ],
+      "sentence": {
+        "text": "gudden Owend, wéi geet et Iech?",
+        "exact": false,
+        "articleId": "OWEND1",
+        "aac": "https://lod.lu/uploads/examples/AAC/9a/9a4981c8b5b541ca3318b9a165f6c700.m4a",
+        "ogg": "https://lod.lu/uploads/examples/OGG/9a/9a4981c8b5b541ca3318b9a165f6c700.ogg"
+      }
+    },
+    "greetings-004": {
+      "words": [
+        {
+          "form": "Gutt",
+          "lemma": "Gutt",
+          "articleId": "GUTT1",
+          "aac": "https://lod.lu/uploads/AAC/gutt1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/gutt1.ogg"
+        },
+        {
+          "form": "Nuecht",
+          "lemma": "Nuecht",
+          "articleId": "NUECHT1",
+          "aac": "https://lod.lu/uploads/AAC/nuecht1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/nuecht1.ogg"
+        }
+      ]
+    },
+    "greetings-005": {
+      "words": [
+        {
+          "form": "Äddi",
+          "lemma": "Äddi",
+          "articleId": "ADDI1",
+          "aac": "https://lod.lu/uploads/AAC/addi1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/addi1.ogg"
+        }
+      ]
+    },
+    "greetings-006": {
+      "words": [
+        {
+          "form": "Bis",
+          "lemma": "Bis",
+          "articleId": "BIS3",
+          "aac": "https://lod.lu/uploads/AAC/bis3.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/bis3.ogg"
+        },
+        {
+          "form": "spéider",
+          "lemma": "spéider",
+          "articleId": "SPEIDER1",
+          "aac": "https://lod.lu/uploads/AAC/speider1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/speider1.ogg"
+        }
+      ]
+    },
+    "greetings-007": {
+      "words": [
+        {
+          "form": "Bis",
+          "lemma": "Bis",
+          "articleId": "BIS3",
+          "aac": "https://lod.lu/uploads/AAC/bis3.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/bis3.ogg"
+        },
+        {
+          "form": "geschwënn",
+          "lemma": "geschwënn",
+          "articleId": "GESCHWENN1",
+          "aac": "https://lod.lu/uploads/AAC/geschwenn1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/geschwenn1.ogg"
+        }
+      ],
+      "sentence": {
+        "text": "bis geschwënn!",
+        "exact": true,
+        "articleId": "GESCHWENN1",
+        "aac": "https://lod.lu/uploads/examples/AAC/5d/5d1b3d3f4159aebb90f223abb86a918b.m4a",
+        "ogg": "https://lod.lu/uploads/examples/OGG/5d/5d1b3d3f4159aebb90f223abb86a918b.ogg"
+      }
+    },
+    "greetings-008": {
+      "words": [
+        {
+          "form": "Merci",
+          "lemma": "Merci",
+          "articleId": "MERCI1",
+          "aac": "https://lod.lu/uploads/AAC/merci1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/merci1.ogg"
+        }
+      ]
+    },
+    "greetings-009": {
+      "words": [
+        {
+          "form": "Villmools",
+          "lemma": "villmools",
+          "articleId": "VILLMOOLS1",
+          "aac": "https://lod.lu/uploads/AAC/villmools1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/villmools1.ogg"
+        },
+        {
+          "form": "merci",
+          "lemma": "merci",
+          "articleId": "MERCI2",
+          "aac": "https://lod.lu/uploads/AAC/merci2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/merci2.ogg"
+        }
+      ],
+      "sentence": {
+        "text": "villmools merci!",
+        "exact": true,
+        "articleId": "VILLMOOLS1",
+        "aac": "https://lod.lu/uploads/examples/AAC/9d/9d16b75707f3da1fe3111042019ade8c.m4a",
+        "ogg": "https://lod.lu/uploads/examples/OGG/9d/9d16b75707f3da1fe3111042019ade8c.ogg"
+      }
+    },
+    "greetings-010": {
+      "words": [
+        {
+          "form": "Wann",
+          "lemma": "Wann",
+          "articleId": "WANN4",
+          "aac": "https://lod.lu/uploads/AAC/wann4.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/wann4.ogg"
+        },
+        {
+          "form": "ech",
+          "lemma": "ech",
+          "articleId": "ECH1",
+          "aac": "https://lod.lu/uploads/AAC/ech1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/ech1.ogg"
+        },
+        {
+          "form": "gelift",
+          "lemma": "gelift",
+          "articleId": "GELIFT1",
+          "aac": "https://lod.lu/uploads/AAC/gelift1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/gelift1.ogg"
+        }
+      ]
+    },
+    "greetings-011": {
+      "words": [
+        {
+          "form": "Gär",
+          "lemma": "gär",
+          "articleId": "GAR1",
+          "aac": "https://lod.lu/uploads/AAC/gar1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/gar1.ogg"
+        },
+        {
+          "form": "geschitt",
+          "lemma": "geschéien",
+          "articleId": "GESCHEIEN1",
+          "aac": "https://lod.lu/uploads/AAC/gescheien1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/gescheien1.ogg"
+        }
+      ]
+    },
+    "greetings-012": {
+      "words": [
+        {
+          "form": "Entschëllegt",
+          "lemma": "entschëllegen",
+          "articleId": "ENTSCHELLEGEN1",
+          "aac": "https://lod.lu/uploads/AAC/entschellegen1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/entschellegen1.ogg"
+        }
+      ]
+    },
+    "greetings-013": {
+      "words": [
+        {
+          "form": "Et",
+          "lemma": "et",
+          "articleId": "ET1",
+          "aac": "https://lod.lu/uploads/AAC/et1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/et1.ogg"
+        },
+        {
+          "form": "deet",
+          "lemma": "dinn",
+          "articleId": "DINN1",
+          "aac": "https://lod.lu/uploads/AAC/dinn1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/dinn1.ogg"
+        },
+        {
+          "form": "mer",
+          "lemma": "mer",
+          "articleId": "MER1",
+          "aac": "https://lod.lu/uploads/AAC/mer1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/mer1.ogg"
+        }
+      ]
+    },
+    "greetings-014": {
+      "words": [
+        {
+          "form": "Jo",
+          "lemma": "Jo",
+          "articleId": "JO2",
+          "aac": "https://lod.lu/uploads/AAC/jo2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/jo2.ogg"
+        }
+      ]
+    },
+    "greetings-015": {
+      "words": [
+        {
+          "form": "Neen",
+          "lemma": "Neen",
+          "articleId": "NEEN1",
+          "aac": "https://lod.lu/uploads/AAC/neen1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/neen1.ogg"
+        }
+      ]
+    },
+    "greetings-016": {
+      "words": [
+        {
+          "form": "Wëllkomm",
+          "lemma": "wëllkomm",
+          "articleId": "WELLKOMM1",
+          "aac": "https://lod.lu/uploads/AAC/wellkomm1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/wellkomm1.ogg"
+        }
+      ]
+    },
+    "intro-001": {
+      "words": [
+        {
+          "form": "Ech",
+          "lemma": "ech",
+          "articleId": "ECH1",
+          "aac": "https://lod.lu/uploads/AAC/ech1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/ech1.ogg"
+        },
+        {
+          "form": "heeschen",
+          "lemma": "heeschen",
+          "articleId": "HEESCHEN1",
+          "aac": "https://lod.lu/uploads/AAC/heeschen1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/heeschen1.ogg"
+        }
+      ]
+    },
+    "intro-002": {
+      "words": [
+        {
+          "form": "Wéi",
+          "lemma": "Wéi",
+          "articleId": "WEI6",
+          "aac": "https://lod.lu/uploads/AAC/wei6.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/wei6.ogg"
+        },
+        {
+          "form": "heeschs",
+          "lemma": "heeschen",
+          "articleId": "HEESCHEN1",
+          "aac": "https://lod.lu/uploads/AAC/heeschen1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/heeschen1.ogg"
+        },
+        {
+          "form": "du",
+          "lemma": "du",
+          "articleId": "DU1",
+          "aac": "https://lod.lu/uploads/AAC/du1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/du1.ogg"
+        }
+      ],
+      "sentence": {
+        "text": "wéi heeschs du?",
+        "exact": true,
+        "articleId": "HEESCHEN1",
+        "aac": "https://lod.lu/uploads/examples/AAC/1b/1b3d09cd6408058d530540cd16c578a6.m4a",
+        "ogg": "https://lod.lu/uploads/examples/OGG/1b/1b3d09cd6408058d530540cd16c578a6.ogg"
+      }
+    },
+    "intro-003": {
+      "words": [
+        {
+          "form": "Wéi",
+          "lemma": "Wéi",
+          "articleId": "WEI6",
+          "aac": "https://lod.lu/uploads/AAC/wei6.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/wei6.ogg"
+        },
+        {
+          "form": "heescht",
+          "lemma": "heeschen",
+          "articleId": "HEESCHEN1",
+          "aac": "https://lod.lu/uploads/AAC/heeschen1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/heeschen1.ogg"
+        },
+        {
+          "form": "Dir",
+          "lemma": "Dir",
+          "articleId": "DIR3",
+          "aac": "https://lod.lu/uploads/AAC/dir3.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/dir3.ogg"
+        }
+      ]
+    },
+    "intro-004": {
+      "words": [
+        {
+          "form": "Freet",
+          "lemma": "freeën",
+          "articleId": "FREEEN1",
+          "aac": "https://lod.lu/uploads/AAC/freeen1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/freeen1.ogg"
+        },
+        {
+          "form": "mech",
+          "lemma": "mech",
+          "articleId": "MECH1",
+          "aac": "https://lod.lu/uploads/AAC/mech1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/mech1.ogg"
+        }
+      ]
+    },
+    "intro-005": {
+      "words": [
+        {
+          "form": "Ech",
+          "lemma": "ech",
+          "articleId": "ECH1",
+          "aac": "https://lod.lu/uploads/AAC/ech1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/ech1.ogg"
+        },
+        {
+          "form": "kommen",
+          "lemma": "kommen",
+          "articleId": "KOMMEN1",
+          "aac": "https://lod.lu/uploads/AAC/kommen1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/kommen1.ogg"
+        },
+        {
+          "form": "aus",
+          "lemma": "aus",
+          "articleId": "AUS1",
+          "aac": "https://lod.lu/uploads/AAC/aus1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/aus1.ogg"
+        },
+        {
+          "form": "Frankräich",
+          "lemma": "Frankräich",
+          "articleId": "FRANKRAICH1",
+          "aac": "https://lod.lu/uploads/AAC/frankraich1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/frankraich1.ogg"
+        }
+      ],
+      "sentence": {
+        "text": "ech kommen aus Frankräich",
+        "exact": true,
+        "articleId": "FRANKRAICH1",
+        "aac": "https://lod.lu/uploads/examples/AAC/76/76efe8ad6ead39607b146e6ef8a1016f.m4a",
+        "ogg": "https://lod.lu/uploads/examples/OGG/76/76efe8ad6ead39607b146e6ef8a1016f.ogg"
+      }
+    },
+    "intro-006": {
+      "words": [
+        {
+          "form": "Ech",
+          "lemma": "ech",
+          "articleId": "ECH1",
+          "aac": "https://lod.lu/uploads/AAC/ech1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/ech1.ogg"
+        },
+        {
+          "form": "kommen",
+          "lemma": "kommen",
+          "articleId": "KOMMEN1",
+          "aac": "https://lod.lu/uploads/AAC/kommen1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/kommen1.ogg"
+        },
+        {
+          "form": "aus",
+          "lemma": "aus",
+          "articleId": "AUS1",
+          "aac": "https://lod.lu/uploads/AAC/aus1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/aus1.ogg"
+        },
+        {
+          "form": "der",
+          "lemma": "der",
+          "articleId": "DER1",
+          "aac": "https://lod.lu/uploads/AAC/der1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/der1.ogg"
+        },
+        {
+          "form": "Belsch",
+          "lemma": "Belsch",
+          "articleId": "BELSCH2",
+          "aac": "https://lod.lu/uploads/AAC/belsch2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/belsch2.ogg"
+        }
+      ]
+    },
+    "intro-007": {
+      "words": [
+        {
+          "form": "Ech",
+          "lemma": "ech",
+          "articleId": "ECH1",
+          "aac": "https://lod.lu/uploads/AAC/ech1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/ech1.ogg"
+        },
+        {
+          "form": "wunnen",
+          "lemma": "wunnen",
+          "articleId": "WUNNEN1",
+          "aac": "https://lod.lu/uploads/AAC/wunnen1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/wunnen1.ogg"
+        },
+        {
+          "form": "a",
+          "lemma": "a",
+          "articleId": "A2",
+          "aac": "https://lod.lu/uploads/AAC/a2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/a2.ogg"
+        },
+        {
+          "form": "Frankräich",
+          "lemma": "Frankräich",
+          "articleId": "FRANKRAICH1",
+          "aac": "https://lod.lu/uploads/AAC/frankraich1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/frankraich1.ogg"
+        }
+      ]
+    },
+    "intro-008": {
+      "words": [
+        {
+          "form": "Ech",
+          "lemma": "ech",
+          "articleId": "ECH1",
+          "aac": "https://lod.lu/uploads/AAC/ech1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/ech1.ogg"
+        },
+        {
+          "form": "schaffen",
+          "lemma": "schaffen",
+          "articleId": "SCHAFFEN3",
+          "aac": "https://lod.lu/uploads/AAC/schaffen3.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/schaffen3.ogg"
+        },
+        {
+          "form": "zu",
+          "lemma": "zu",
+          "articleId": "ZU1",
+          "aac": "https://lod.lu/uploads/AAC/zu1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/zu1.ogg"
+        },
+        {
+          "form": "Lëtzebuerg",
+          "lemma": "Lëtzebuerg",
+          "articleId": "LETZEBUERG1",
+          "aac": "https://lod.lu/uploads/AAC/letzebuerg1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/letzebuerg1.ogg"
+        }
+      ]
+    },
+    "intro-009": {
+      "words": [
+        {
+          "form": "Ech",
+          "lemma": "ech",
+          "articleId": "ECH1",
+          "aac": "https://lod.lu/uploads/AAC/ech1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/ech1.ogg"
+        },
+        {
+          "form": "sinn",
+          "lemma": "sinn",
+          "articleId": "SINN1",
+          "aac": "https://lod.lu/uploads/AAC/sinn1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/sinn1.ogg"
+        },
+        {
+          "form": "Grenzgänger",
+          "lemma": "Grenzgänger",
+          "articleId": "GRENZGANGER1",
+          "aac": "https://lod.lu/uploads/AAC/grenzganger1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/grenzganger1.ogg"
+        }
+      ]
+    },
+    "intro-010": {
+      "words": [
+        {
+          "form": "Ech",
+          "lemma": "ech",
+          "articleId": "ECH1",
+          "aac": "https://lod.lu/uploads/AAC/ech1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/ech1.ogg"
+        },
+        {
+          "form": "sinn",
+          "lemma": "sinn",
+          "articleId": "SINN1",
+          "aac": "https://lod.lu/uploads/AAC/sinn1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/sinn1.ogg"
+        },
+        {
+          "form": "nei",
+          "lemma": "nei",
+          "articleId": "NEI1",
+          "aac": "https://lod.lu/uploads/AAC/nei1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/nei1.ogg"
+        },
+        {
+          "form": "hei",
+          "lemma": "hei",
+          "articleId": "HEI3",
+          "aac": "https://lod.lu/uploads/AAC/hei3.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/hei3.ogg"
+        }
+      ]
+    },
+    "intro-011": {
+      "words": [
+        {
+          "form": "Ech",
+          "lemma": "ech",
+          "articleId": "ECH1",
+          "aac": "https://lod.lu/uploads/AAC/ech1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/ech1.ogg"
+        },
+        {
+          "form": "schaffen",
+          "lemma": "schaffen",
+          "articleId": "SCHAFFEN3",
+          "aac": "https://lod.lu/uploads/AAC/schaffen3.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/schaffen3.ogg"
+        },
+        {
+          "form": "hei",
+          "lemma": "hei",
+          "articleId": "HEI3",
+          "aac": "https://lod.lu/uploads/AAC/hei3.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/hei3.ogg"
+        },
+        {
+          "form": "zënter",
+          "lemma": "zënter",
+          "articleId": "ZENTER2",
+          "aac": "https://lod.lu/uploads/AAC/zenter2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/zenter2.ogg"
+        },
+        {
+          "form": "dräi",
+          "lemma": "dräi",
+          "articleId": "DRAI1",
+          "aac": "https://lod.lu/uploads/AAC/drai1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/drai1.ogg"
+        },
+        {
+          "form": "Méint",
+          "lemma": "Mount",
+          "articleId": "MOUNT1",
+          "aac": "https://lod.lu/uploads/AAC/mount1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/mount1.ogg"
+        }
+      ]
+    },
+    "intro-012": {
+      "words": [
+        {
+          "form": "Wou",
+          "lemma": "wou",
+          "articleId": "WOU1",
+          "aac": "https://lod.lu/uploads/AAC/wou1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/wou1.ogg"
+        },
+        {
+          "form": "schaffs",
+          "lemma": "schaffen",
+          "articleId": "SCHAFFEN3",
+          "aac": "https://lod.lu/uploads/AAC/schaffen3.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/schaffen3.ogg"
+        },
+        {
+          "form": "du",
+          "lemma": "du",
+          "articleId": "DU1",
+          "aac": "https://lod.lu/uploads/AAC/du1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/du1.ogg"
+        }
+      ]
+    },
+    "intro-013": {
+      "words": [
+        {
+          "form": "Ech",
+          "lemma": "ech",
+          "articleId": "ECH1",
+          "aac": "https://lod.lu/uploads/AAC/ech1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/ech1.ogg"
+        },
+        {
+          "form": "sinn",
+          "lemma": "sinn",
+          "articleId": "SINN1",
+          "aac": "https://lod.lu/uploads/AAC/sinn1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/sinn1.ogg"
+        },
+        {
+          "form": "Fransous",
+          "lemma": "Fransous",
+          "articleId": "FRANSOUS1",
+          "aac": "https://lod.lu/uploads/AAC/fransous1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/fransous1.ogg"
+        }
+      ]
+    },
+    "intro-014": {
+      "words": [
+        {
+          "form": "Ech",
+          "lemma": "ech",
+          "articleId": "ECH1",
+          "aac": "https://lod.lu/uploads/AAC/ech1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/ech1.ogg"
+        },
+        {
+          "form": "Lëtzebuergesch",
+          "lemma": "Lëtzebuergesch",
+          "articleId": "LETZEBUERGESCH2",
+          "aac": "https://lod.lu/uploads/AAC/letzebuergesch2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/letzebuergesch2.ogg"
+        }
+      ]
+    },
+    "intro-015": {
+      "words": [
+        {
+          "form": "An",
+          "lemma": "An",
+          "articleId": "AN1",
+          "aac": "https://lod.lu/uploads/AAC/an1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/an1.ogg"
+        },
+        {
+          "form": "du",
+          "lemma": "du",
+          "articleId": "DU1",
+          "aac": "https://lod.lu/uploads/AAC/du1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/du1.ogg"
+        },
+        {
+          "form": "Dir",
+          "lemma": "Dir",
+          "articleId": "DIR3",
+          "aac": "https://lod.lu/uploads/AAC/dir3.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/dir3.ogg"
+        }
+      ]
+    },
+    "intro-016": {
+      "words": [
+        {
+          "form": "Ech",
+          "lemma": "ech",
+          "articleId": "ECH1",
+          "aac": "https://lod.lu/uploads/AAC/ech1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/ech1.ogg"
+        },
+        {
+          "form": "sinn",
+          "lemma": "sinn",
+          "articleId": "SINN1",
+          "aac": "https://lod.lu/uploads/AAC/sinn1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/sinn1.ogg"
+        },
+        {
+          "form": "drësseg",
+          "lemma": "drësseg",
+          "articleId": "DRESSEG1",
+          "aac": "https://lod.lu/uploads/AAC/dresseg1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/dresseg1.ogg"
+        },
+        {
+          "form": "Joer",
+          "lemma": "Joer",
+          "articleId": "JOER1",
+          "aac": "https://lod.lu/uploads/AAC/joer1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/joer1.ogg"
+        },
+        {
+          "form": "al",
+          "lemma": "al",
+          "articleId": "AL2",
+          "aac": "https://lod.lu/uploads/AAC/al2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/al2.ogg"
+        }
+      ]
+    },
+    "joker-001": {
+      "words": [
+        {
+          "form": "Ech",
+          "lemma": "ech",
+          "articleId": "ECH1",
+          "aac": "https://lod.lu/uploads/AAC/ech1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/ech1.ogg"
+        },
+        {
+          "form": "just",
+          "lemma": "just",
+          "articleId": "JUST2",
+          "aac": "https://lod.lu/uploads/AAC/just2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/just2.ogg"
+        },
+        {
+          "form": "e",
+          "lemma": "E",
+          "articleId": "E2",
+          "aac": "https://lod.lu/uploads/AAC/e2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/e2.ogg"
+        },
+        {
+          "form": "Lëtzebuergesch",
+          "lemma": "Lëtzebuergesch",
+          "articleId": "LETZEBUERGESCH2",
+          "aac": "https://lod.lu/uploads/AAC/letzebuergesch2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/letzebuergesch2.ogg"
+        }
+      ]
+    },
+    "joker-002": {
+      "words": [
+        {
+          "form": "Kënnt",
+          "lemma": "kënnen",
+          "articleId": "KENNEN1",
+          "aac": "https://lod.lu/uploads/AAC/kennen1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/kennen1.ogg"
+        },
+        {
+          "form": "Dir",
+          "lemma": "Dir",
+          "articleId": "DIR3",
+          "aac": "https://lod.lu/uploads/AAC/dir3.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/dir3.ogg"
+        },
+        {
+          "form": "méi",
+          "lemma": "méi",
+          "articleId": "MEI1",
+          "aac": "https://lod.lu/uploads/AAC/mei1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/mei1.ogg"
+        },
+        {
+          "form": "lues",
+          "lemma": "lues",
+          "articleId": "LUES1",
+          "aac": "https://lod.lu/uploads/AAC/lues1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/lues1.ogg"
+        },
+        {
+          "form": "schwätzen",
+          "lemma": "schwätzen",
+          "articleId": "SCHWATZEN1",
+          "aac": "https://lod.lu/uploads/AAC/schwatzen1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/schwatzen1.ogg"
+        }
+      ]
+    },
+    "joker-003": {
+      "words": [
+        {
+          "form": "Ech",
+          "lemma": "ech",
+          "articleId": "ECH1",
+          "aac": "https://lod.lu/uploads/AAC/ech1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/ech1.ogg"
+        },
+        {
+          "form": "verstinn",
+          "lemma": "verstoen",
+          "articleId": "VERSTOEN1",
+          "aac": "https://lod.lu/uploads/AAC/verstoen1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/verstoen1.ogg"
+        },
+        {
+          "form": "net",
+          "lemma": "net",
+          "articleId": "NET1",
+          "aac": "https://lod.lu/uploads/AAC/net1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/net1.ogg"
+        }
+      ]
+    },
+    "joker-004": {
+      "words": [
+        {
+          "form": "Kënnt",
+          "lemma": "kënnen",
+          "articleId": "KENNEN1",
+          "aac": "https://lod.lu/uploads/AAC/kennen1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/kennen1.ogg"
+        },
+        {
+          "form": "Dir",
+          "lemma": "Dir",
+          "articleId": "DIR3",
+          "aac": "https://lod.lu/uploads/AAC/dir3.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/dir3.ogg"
+        },
+        {
+          "form": "dat",
+          "lemma": "dat",
+          "articleId": "DAT1",
+          "aac": "https://lod.lu/uploads/AAC/dat1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/dat1.ogg"
+        },
+        {
+          "form": "widderhuelen",
+          "lemma": "widderhuelen",
+          "articleId": "WIDDERHUELEN1",
+          "aac": "https://lod.lu/uploads/AAC/widderhuelen1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/widderhuelen1.ogg"
+        }
+      ]
+    },
+    "joker-005": {
+      "words": [
+        {
+          "form": "Nach",
+          "lemma": "nach",
+          "articleId": "NACH1",
+          "aac": "https://lod.lu/uploads/AAC/nach1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/nach1.ogg"
+        },
+        {
+          "form": "eng",
+          "lemma": "eng",
+          "articleId": "ENG1",
+          "aac": "https://lod.lu/uploads/AAC/eng1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/eng1.ogg"
+        },
+        {
+          "form": "Kéier",
+          "lemma": "Kéier",
+          "articleId": "KEIER1",
+          "aac": "https://lod.lu/uploads/AAC/keier1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/keier1.ogg"
+        },
+        {
+          "form": "wann",
+          "lemma": "wann",
+          "articleId": "WANN2",
+          "aac": "https://lod.lu/uploads/AAC/wann2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/wann2.ogg"
+        },
+        {
+          "form": "ech",
+          "lemma": "ech",
+          "articleId": "ECH1",
+          "aac": "https://lod.lu/uploads/AAC/ech1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/ech1.ogg"
+        },
+        {
+          "form": "gelift",
+          "lemma": "gelift",
+          "articleId": "GELIFT1",
+          "aac": "https://lod.lu/uploads/AAC/gelift1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/gelift1.ogg"
+        }
+      ]
+    },
+    "joker-006": {
+      "words": [
+        {
+          "form": "Wat",
+          "lemma": "wat",
+          "articleId": "WAT1",
+          "aac": "https://lod.lu/uploads/AAC/wat1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/wat1.ogg"
+        },
+        {
+          "form": "heescht",
+          "lemma": "heeschen",
+          "articleId": "HEESCHEN1",
+          "aac": "https://lod.lu/uploads/AAC/heeschen1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/heeschen1.ogg"
+        },
+        {
+          "form": "dat",
+          "lemma": "dat",
+          "articleId": "DAT1",
+          "aac": "https://lod.lu/uploads/AAC/dat1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/dat1.ogg"
+        }
+      ],
+      "sentence": {
+        "text": "wat heescht dat do?",
+        "exact": false,
+        "articleId": "HEESCHEN1",
+        "aac": "https://lod.lu/uploads/examples/AAC/a6/a6f1b6ac91cef3ee492e058721b6fd19.m4a",
+        "ogg": "https://lod.lu/uploads/examples/OGG/a6/a6f1b6ac91cef3ee492e058721b6fd19.ogg"
+      }
+    },
+    "joker-007": {
+      "words": [
+        {
+          "form": "Wéi",
+          "lemma": "Wéi",
+          "articleId": "WEI6",
+          "aac": "https://lod.lu/uploads/AAC/wei6.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/wei6.ogg"
+        },
+        {
+          "form": "seet",
+          "lemma": "seeën",
+          "articleId": "SEEEN1",
+          "aac": "https://lod.lu/uploads/AAC/seeen1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/seeen1.ogg"
+        },
+        {
+          "form": "een",
+          "lemma": "een",
+          "articleId": "EEN1",
+          "aac": "https://lod.lu/uploads/AAC/een1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/een1.ogg"
+        },
+        {
+          "form": "op",
+          "lemma": "op",
+          "articleId": "OP1",
+          "aac": "https://lod.lu/uploads/AAC/op1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/op1.ogg"
+        },
+        {
+          "form": "Lëtzebuergesch",
+          "lemma": "Lëtzebuergesch",
+          "articleId": "LETZEBUERGESCH2",
+          "aac": "https://lod.lu/uploads/AAC/letzebuergesch2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/letzebuergesch2.ogg"
+        }
+      ]
+    },
+    "joker-008": {
+      "words": [
+        {
+          "form": "Wéi",
+          "lemma": "Wéi",
+          "articleId": "WEI6",
+          "aac": "https://lod.lu/uploads/AAC/wei6.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/wei6.ogg"
+        },
+        {
+          "form": "schreift",
+          "lemma": "schreiwen",
+          "articleId": "SCHREIWEN1",
+          "aac": "https://lod.lu/uploads/AAC/schreiwen1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/schreiwen1.ogg"
+        },
+        {
+          "form": "een",
+          "lemma": "een",
+          "articleId": "EEN1",
+          "aac": "https://lod.lu/uploads/AAC/een1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/een1.ogg"
+        },
+        {
+          "form": "dat",
+          "lemma": "dat",
+          "articleId": "DAT1",
+          "aac": "https://lod.lu/uploads/AAC/dat1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/dat1.ogg"
+        }
+      ],
+      "sentence": {
+        "text": "wéi schreift een dat Wuert?",
+        "exact": false,
+        "articleId": "SCHREIWEN1",
+        "aac": "https://lod.lu/uploads/examples/AAC/5a/5ab48f2f098df9e826f7925478057d41.m4a",
+        "ogg": "https://lod.lu/uploads/examples/OGG/5a/5ab48f2f098df9e826f7925478057d41.ogg"
+      }
+    },
+    "joker-009": {
+      "words": [
+        {
+          "form": "Schwätzt",
+          "lemma": "schwätzen",
+          "articleId": "SCHWATZEN1",
+          "aac": "https://lod.lu/uploads/AAC/schwatzen1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/schwatzen1.ogg"
+        },
+        {
+          "form": "Dir",
+          "lemma": "Dir",
+          "articleId": "DIR3",
+          "aac": "https://lod.lu/uploads/AAC/dir3.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/dir3.ogg"
+        },
+        {
+          "form": "Franséisch",
+          "lemma": "Franséisch",
+          "articleId": "FRANSEISCH2",
+          "aac": "https://lod.lu/uploads/AAC/franseisch2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/franseisch2.ogg"
+        }
+      ]
+    },
+    "joker-010": {
+      "words": [
+        {
+          "form": "Ech",
+          "lemma": "ech",
+          "articleId": "ECH1",
+          "aac": "https://lod.lu/uploads/AAC/ech1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/ech1.ogg"
+        },
+        {
+          "form": "weess",
+          "lemma": "Weess",
+          "articleId": "WEESS1",
+          "aac": "https://lod.lu/uploads/AAC/weess1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/weess1.ogg"
+        },
+        {
+          "form": "net",
+          "lemma": "net",
+          "articleId": "NET1",
+          "aac": "https://lod.lu/uploads/AAC/net1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/net1.ogg"
+        }
+      ]
+    },
+    "joker-011": {
+      "words": [
+        {
+          "form": "Ee",
+          "lemma": "Ee",
+          "articleId": "EE1",
+          "aac": "https://lod.lu/uploads/AAC/ee1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/ee1.ogg"
+        },
+        {
+          "form": "Moment",
+          "lemma": "Moment",
+          "articleId": "MOMENT1",
+          "aac": "https://lod.lu/uploads/AAC/moment1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/moment1.ogg"
+        },
+        {
+          "form": "wann",
+          "lemma": "wann",
+          "articleId": "WANN2",
+          "aac": "https://lod.lu/uploads/AAC/wann2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/wann2.ogg"
+        },
+        {
+          "form": "ech",
+          "lemma": "ech",
+          "articleId": "ECH1",
+          "aac": "https://lod.lu/uploads/AAC/ech1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/ech1.ogg"
+        },
+        {
+          "form": "gelift",
+          "lemma": "gelift",
+          "articleId": "GELIFT1",
+          "aac": "https://lod.lu/uploads/AAC/gelift1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/gelift1.ogg"
+        }
+      ]
+    },
+    "joker-012": {
+      "words": [
+        {
+          "form": "Dat",
+          "lemma": "dat",
+          "articleId": "DAT1",
+          "aac": "https://lod.lu/uploads/AAC/dat1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/dat1.ogg"
+        },
+        {
+          "form": "ass",
+          "lemma": "Ass",
+          "articleId": "ASS1",
+          "aac": "https://lod.lu/uploads/AAC/ass1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/ass1.ogg"
+        },
+        {
+          "form": "schwéier",
+          "lemma": "schwéier",
+          "articleId": "SCHWEIER2",
+          "aac": "https://lod.lu/uploads/AAC/schweier2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/schweier2.ogg"
+        }
+      ]
+    },
+    "joker-013": {
+      "words": [
+        {
+          "form": "Kanns",
+          "lemma": "kënnen",
+          "articleId": "KENNEN1",
+          "aac": "https://lod.lu/uploads/AAC/kennen1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/kennen1.ogg"
+        },
+        {
+          "form": "du",
+          "lemma": "du",
+          "articleId": "DU1",
+          "aac": "https://lod.lu/uploads/AAC/du1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/du1.ogg"
+        },
+        {
+          "form": "mir",
+          "lemma": "mir",
+          "articleId": "MIR1",
+          "aac": "https://lod.lu/uploads/AAC/mir1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/mir1.ogg"
+        },
+        {
+          "form": "hëllefen",
+          "lemma": "hëllefen",
+          "articleId": "HELLEFEN1",
+          "aac": "https://lod.lu/uploads/AAC/hellefen1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/hellefen1.ogg"
+        }
+      ]
+    },
+    "joker-014": {
+      "words": [
+        {
+          "form": "Ech",
+          "lemma": "ech",
+          "articleId": "ECH1",
+          "aac": "https://lod.lu/uploads/AAC/ech1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/ech1.ogg"
+        },
+        {
+          "form": "léieren",
+          "lemma": "léieren",
+          "articleId": "LEIEREN2",
+          "aac": "https://lod.lu/uploads/AAC/leieren2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/leieren2.ogg"
+        },
+        {
+          "form": "nach",
+          "lemma": "nach",
+          "articleId": "NACH1",
+          "aac": "https://lod.lu/uploads/AAC/nach1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/nach1.ogg"
+        }
+      ]
+    },
+    "numbers-days-001": {
+      "words": [
+        {
+          "form": "eent",
+          "lemma": "eent",
+          "articleId": "EENT1",
+          "aac": "https://lod.lu/uploads/AAC/eent1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/eent1.ogg"
+        },
+        {
+          "form": "zwee",
+          "lemma": "zwee",
+          "articleId": "ZWEE2",
+          "aac": "https://lod.lu/uploads/AAC/zwee2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/zwee2.ogg"
+        },
+        {
+          "form": "dräi",
+          "lemma": "dräi",
+          "articleId": "DRAI1",
+          "aac": "https://lod.lu/uploads/AAC/drai1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/drai1.ogg"
+        }
+      ],
+      "sentence": {
+        "text": "eent, zwee, dräi, lass!",
+        "exact": false,
+        "articleId": "ZWEE2",
+        "aac": "https://lod.lu/uploads/examples/AAC/5a/5a920248549e56a418bcc0d99d5b4e46.m4a",
+        "ogg": "https://lod.lu/uploads/examples/OGG/5a/5a920248549e56a418bcc0d99d5b4e46.ogg"
+      }
+    },
+    "numbers-days-002": {
+      "words": [
+        {
+          "form": "véier",
+          "lemma": "véier",
+          "articleId": "VEIER1",
+          "aac": "https://lod.lu/uploads/AAC/veier1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/veier1.ogg"
+        },
+        {
+          "form": "fënnef",
+          "lemma": "fënnef",
+          "articleId": "FENNEF1",
+          "aac": "https://lod.lu/uploads/AAC/fennef1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/fennef1.ogg"
+        },
+        {
+          "form": "sechs",
+          "lemma": "sechs",
+          "articleId": "SECHS1",
+          "aac": "https://lod.lu/uploads/AAC/sechs1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/sechs1.ogg"
+        }
+      ]
+    },
+    "numbers-days-003": {
+      "words": [
+        {
+          "form": "siwen",
+          "lemma": "siwen",
+          "articleId": "SIWEN1",
+          "aac": "https://lod.lu/uploads/AAC/siwen1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/siwen1.ogg"
+        },
+        {
+          "form": "aacht",
+          "lemma": "aacht",
+          "articleId": "AACHT1",
+          "aac": "https://lod.lu/uploads/AAC/aacht1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/aacht1.ogg"
+        },
+        {
+          "form": "néng",
+          "lemma": "néng",
+          "articleId": "NENG1",
+          "aac": "https://lod.lu/uploads/AAC/neng1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/neng1.ogg"
+        },
+        {
+          "form": "zéng",
+          "lemma": "zéng",
+          "articleId": "ZENG1",
+          "aac": "https://lod.lu/uploads/AAC/zeng1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/zeng1.ogg"
+        }
+      ]
+    },
+    "numbers-days-004": {
+      "words": [
+        {
+          "form": "eelef",
+          "lemma": "eelef",
+          "articleId": "EELEF1",
+          "aac": "https://lod.lu/uploads/AAC/eelef1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/eelef1.ogg"
+        },
+        {
+          "form": "zwielef",
+          "lemma": "zwielef",
+          "articleId": "ZWIELEF1",
+          "aac": "https://lod.lu/uploads/AAC/zwielef1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/zwielef1.ogg"
+        },
+        {
+          "form": "dräizéng",
+          "lemma": "dräizéng",
+          "articleId": "DRAIZENG1",
+          "aac": "https://lod.lu/uploads/AAC/draizeng1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/draizeng1.ogg"
+        }
+      ]
+    },
+    "numbers-days-005": {
+      "words": [
+        {
+          "form": "véierzéng",
+          "lemma": "véierzéng",
+          "articleId": "VEIERZENG1",
+          "aac": "https://lod.lu/uploads/AAC/veierzeng1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/veierzeng1.ogg"
+        },
+        {
+          "form": "fofzéng",
+          "lemma": "fofzéng",
+          "articleId": "FOFZENG1",
+          "aac": "https://lod.lu/uploads/AAC/fofzeng1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/fofzeng1.ogg"
+        },
+        {
+          "form": "siechzéng",
+          "lemma": "siechzéng",
+          "articleId": "SIECHZENG1",
+          "aac": "https://lod.lu/uploads/AAC/siechzeng1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/siechzeng1.ogg"
+        }
+      ]
+    },
+    "numbers-days-006": {
+      "words": [
+        {
+          "form": "siwwenzéng",
+          "lemma": "siwwenzéng",
+          "articleId": "SIWWENZENG1",
+          "aac": "https://lod.lu/uploads/AAC/siwwenzeng1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/siwwenzeng1.ogg"
+        },
+        {
+          "form": "uechtzéng",
+          "lemma": "uechtzéng",
+          "articleId": "UECHTZENG1",
+          "aac": "https://lod.lu/uploads/AAC/uechtzeng1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/uechtzeng1.ogg"
+        },
+        {
+          "form": "nonzéng",
+          "lemma": "nonzéng",
+          "articleId": "NONZENG1",
+          "aac": "https://lod.lu/uploads/AAC/nonzeng1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/nonzeng1.ogg"
+        },
+        {
+          "form": "zwanzeg",
+          "lemma": "zwanzeg",
+          "articleId": "ZWANZEG1",
+          "aac": "https://lod.lu/uploads/AAC/zwanzeg1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/zwanzeg1.ogg"
+        }
+      ]
+    },
+    "numbers-days-007": {
+      "words": [
+        {
+          "form": "Méindeg",
+          "lemma": "Méindeg",
+          "articleId": "MEINDEG1",
+          "aac": "https://lod.lu/uploads/AAC/meindeg1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/meindeg1.ogg"
+        }
+      ]
+    },
+    "numbers-days-008": {
+      "words": [
+        {
+          "form": "Dënschdeg",
+          "lemma": "Dënschdeg",
+          "articleId": "DENSCHDEG1",
+          "aac": "https://lod.lu/uploads/AAC/denschdeg1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/denschdeg1.ogg"
+        }
+      ]
+    },
+    "numbers-days-009": {
+      "words": [
+        {
+          "form": "Mëttwoch",
+          "lemma": "Mëttwoch",
+          "articleId": "METTWOCH1",
+          "aac": "https://lod.lu/uploads/AAC/mettwoch1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/mettwoch1.ogg"
+        }
+      ]
+    },
+    "numbers-days-010": {
+      "words": [
+        {
+          "form": "Donneschdeg",
+          "lemma": "Donneschdeg",
+          "articleId": "DONNESCHDEG1",
+          "aac": "https://lod.lu/uploads/AAC/donneschdeg1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/donneschdeg1.ogg"
+        }
+      ]
+    },
+    "numbers-days-011": {
+      "words": [
+        {
+          "form": "Freideg",
+          "lemma": "Freideg",
+          "articleId": "FREIDEG1",
+          "aac": "https://lod.lu/uploads/AAC/freideg1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/freideg1.ogg"
+        }
+      ]
+    },
+    "numbers-days-012": {
+      "words": [
+        {
+          "form": "Samschdeg",
+          "lemma": "Samschdeg",
+          "articleId": "SAMSCHDEG1",
+          "aac": "https://lod.lu/uploads/AAC/samschdeg1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/samschdeg1.ogg"
+        }
+      ]
+    },
+    "numbers-days-013": {
+      "words": [
+        {
+          "form": "Sonndeg",
+          "lemma": "Sonndeg",
+          "articleId": "SONNDEG1",
+          "aac": "https://lod.lu/uploads/AAC/sonndeg1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/sonndeg1.ogg"
+        }
+      ]
+    },
+    "numbers-days-014": {
+      "words": [
+        {
+          "form": "haut",
+          "lemma": "haut",
+          "articleId": "HAUT1",
+          "aac": "https://lod.lu/uploads/AAC/haut1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/haut1.ogg"
+        },
+        {
+          "form": "muer",
+          "lemma": "muer",
+          "articleId": "MUER1",
+          "aac": "https://lod.lu/uploads/AAC/muer1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/muer1.ogg"
+        },
+        {
+          "form": "gëschter",
+          "lemma": "gëschter",
+          "articleId": "GESCHTER1",
+          "aac": "https://lod.lu/uploads/AAC/geschter1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/geschter1.ogg"
+        }
+      ]
+    },
+    "numbers-days-015": {
+      "words": [
+        {
+          "form": "Wat",
+          "lemma": "wat",
+          "articleId": "WAT1",
+          "aac": "https://lod.lu/uploads/AAC/wat1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/wat1.ogg"
+        },
+        {
+          "form": "fir",
+          "lemma": "fir",
+          "articleId": "FIR2",
+          "aac": "https://lod.lu/uploads/AAC/fir2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/fir2.ogg"
+        },
+        {
+          "form": "een",
+          "lemma": "een",
+          "articleId": "EEN1",
+          "aac": "https://lod.lu/uploads/AAC/een1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/een1.ogg"
+        },
+        {
+          "form": "Dag",
+          "lemma": "Dag",
+          "articleId": "DAG1",
+          "aac": "https://lod.lu/uploads/AAC/dag1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/dag1.ogg"
+        },
+        {
+          "form": "ass",
+          "lemma": "Ass",
+          "articleId": "ASS1",
+          "aac": "https://lod.lu/uploads/AAC/ass1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/ass1.ogg"
+        },
+        {
+          "form": "haut",
+          "lemma": "haut",
+          "articleId": "HAUT1",
+          "aac": "https://lod.lu/uploads/AAC/haut1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/haut1.ogg"
+        }
+      ]
+    },
+    "numbers-days-016": {
+      "words": [
+        {
+          "form": "de",
+          "lemma": "de",
+          "articleId": "DE1",
+          "aac": "https://lod.lu/uploads/AAC/de1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/de1.ogg"
+        },
+        {
+          "form": "Weekend",
+          "lemma": "Weekend",
+          "articleId": "WEEKEND1",
+          "aac": "https://lod.lu/uploads/AAC/weekend1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/weekend1.ogg"
+        }
+      ]
+    },
+    "office-001": {
+      "words": [
+        {
+          "form": "Wéi",
+          "lemma": "Wéi",
+          "articleId": "WEI6",
+          "aac": "https://lod.lu/uploads/AAC/wei6.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/wei6.ogg"
+        },
+        {
+          "form": "geet",
+          "lemma": "goen",
+          "articleId": "GOEN1",
+          "aac": "https://lod.lu/uploads/AAC/goen1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/goen1.ogg"
+        },
+        {
+          "form": "et",
+          "lemma": "et",
+          "articleId": "ET1",
+          "aac": "https://lod.lu/uploads/AAC/et1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/et1.ogg"
+        }
+      ],
+      "sentence": {
+        "text": "wéi geet et (Iech)?",
+        "exact": false,
+        "articleId": "GOEN1",
+        "aac": "https://lod.lu/uploads/examples/AAC/d9/d9efd5844746edc69d3dafdc70cfef2d.m4a",
+        "ogg": "https://lod.lu/uploads/examples/OGG/d9/d9efd5844746edc69d3dafdc70cfef2d.ogg"
+      }
+    },
+    "office-002": {
+      "words": [
+        {
+          "form": "Et",
+          "lemma": "et",
+          "articleId": "ET1",
+          "aac": "https://lod.lu/uploads/AAC/et1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/et1.ogg"
+        },
+        {
+          "form": "geet",
+          "lemma": "goen",
+          "articleId": "GOEN1",
+          "aac": "https://lod.lu/uploads/AAC/goen1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/goen1.ogg"
+        },
+        {
+          "form": "gutt",
+          "lemma": "gutt",
+          "articleId": "GUTT3",
+          "aac": "https://lod.lu/uploads/AAC/gutt3.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/gutt3.ogg"
+        },
+        {
+          "form": "merci",
+          "lemma": "merci",
+          "articleId": "MERCI2",
+          "aac": "https://lod.lu/uploads/AAC/merci2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/merci2.ogg"
+        }
+      ]
+    },
+    "office-003": {
+      "words": [
+        {
+          "form": "Et",
+          "lemma": "et",
+          "articleId": "ET1",
+          "aac": "https://lod.lu/uploads/AAC/et1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/et1.ogg"
+        },
+        {
+          "form": "geet",
+          "lemma": "goen",
+          "articleId": "GOEN1",
+          "aac": "https://lod.lu/uploads/AAC/goen1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/goen1.ogg"
+        }
+      ]
+    },
+    "office-004": {
+      "words": [
+        {
+          "form": "Schéinen",
+          "lemma": "schéin",
+          "articleId": "SCHEIN1",
+          "aac": "https://lod.lu/uploads/AAC/schein1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/schein1.ogg"
+        },
+        {
+          "form": "Dag",
+          "lemma": "Dag",
+          "articleId": "DAG1",
+          "aac": "https://lod.lu/uploads/AAC/dag1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/dag1.ogg"
+        }
+      ]
+    },
+    "office-005": {
+      "words": [
+        {
+          "form": "Schéinen",
+          "lemma": "schéin",
+          "articleId": "SCHEIN1",
+          "aac": "https://lod.lu/uploads/AAC/schein1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/schein1.ogg"
+        },
+        {
+          "form": "Owend",
+          "lemma": "Owend",
+          "articleId": "OWEND1",
+          "aac": "https://lod.lu/uploads/AAC/owend1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/owend1.ogg"
+        }
+      ]
+    },
+    "office-006": {
+      "words": [
+        {
+          "form": "Schéint",
+          "lemma": "schéin",
+          "articleId": "SCHEIN1",
+          "aac": "https://lod.lu/uploads/AAC/schein1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/schein1.ogg"
+        },
+        {
+          "form": "Weekend",
+          "lemma": "Weekend",
+          "articleId": "WEEKEND1",
+          "aac": "https://lod.lu/uploads/AAC/weekend1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/weekend1.ogg"
+        }
+      ]
+    },
+    "office-007": {
+      "words": [
+        {
+          "form": "Bis",
+          "lemma": "Bis",
+          "articleId": "BIS3",
+          "aac": "https://lod.lu/uploads/AAC/bis3.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/bis3.ogg"
+        },
+        {
+          "form": "muer",
+          "lemma": "muer",
+          "articleId": "MUER1",
+          "aac": "https://lod.lu/uploads/AAC/muer1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/muer1.ogg"
+        }
+      ]
+    },
+    "office-008": {
+      "words": [
+        {
+          "form": "Vakanz",
+          "lemma": "Vakanz",
+          "articleId": "VAKANZ1",
+          "aac": "https://lod.lu/uploads/AAC/vakanz1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/vakanz1.ogg"
+        }
+      ]
+    },
+    "office-009": {
+      "words": [
+        {
+          "form": "Alles",
+          "lemma": "alles",
+          "articleId": "ALLES1",
+          "aac": "https://lod.lu/uploads/AAC/alles1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/alles1.ogg"
+        },
+        {
+          "form": "Guddes",
+          "lemma": "gutt",
+          "articleId": "GUTT2",
+          "aac": "https://lod.lu/uploads/AAC/gutt2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/gutt2.ogg"
+        },
+        {
+          "form": "fir",
+          "lemma": "fir",
+          "articleId": "FIR2",
+          "aac": "https://lod.lu/uploads/AAC/fir2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/fir2.ogg"
+        },
+        {
+          "form": "Gebuertsdag",
+          "lemma": "Gebuertsdag",
+          "articleId": "GEBUERTSDAG1",
+          "aac": "https://lod.lu/uploads/AAC/gebuertsdag1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/gebuertsdag1.ogg"
+        }
+      ]
+    },
+    "office-010": {
+      "words": [
+        {
+          "form": "Schéint",
+          "lemma": "schéin",
+          "articleId": "SCHEIN1",
+          "aac": "https://lod.lu/uploads/AAC/schein1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/schein1.ogg"
+        },
+        {
+          "form": "neit",
+          "lemma": "nei",
+          "articleId": "NEI1",
+          "aac": "https://lod.lu/uploads/AAC/nei1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/nei1.ogg"
+        },
+        {
+          "form": "Joer",
+          "lemma": "Joer",
+          "articleId": "JOER1",
+          "aac": "https://lod.lu/uploads/AAC/joer1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/joer1.ogg"
+        }
+      ]
+    },
+    "office-011": {
+      "words": [
+        {
+          "form": "Vill",
+          "lemma": "vill",
+          "articleId": "VILL1",
+          "aac": "https://lod.lu/uploads/AAC/vill1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/vill1.ogg"
+        },
+        {
+          "form": "Gléck",
+          "lemma": "Gléck",
+          "articleId": "GLECK1",
+          "aac": "https://lod.lu/uploads/AAC/gleck1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/gleck1.ogg"
+        }
+      ]
+    },
+    "office-012": {
+      "words": [
+        {
+          "form": "Merci",
+          "lemma": "Merci",
+          "articleId": "MERCI1",
+          "aac": "https://lod.lu/uploads/AAC/merci1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/merci1.ogg"
+        },
+        {
+          "form": "fir",
+          "lemma": "fir",
+          "articleId": "FIR2",
+          "aac": "https://lod.lu/uploads/AAC/fir2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/fir2.ogg"
+        },
+        {
+          "form": "deng",
+          "lemma": "deng",
+          "articleId": "DENG2",
+          "aac": "https://lod.lu/uploads/AAC/deng2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/deng2.ogg"
+        },
+        {
+          "form": "Hëllef",
+          "lemma": "Hëllef",
+          "articleId": "HELLEF1",
+          "aac": "https://lod.lu/uploads/AAC/hellef1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/hellef1.ogg"
+        }
+      ]
+    },
+    "office-013": {
+      "words": [
+        {
+          "form": "Problem",
+          "lemma": "Problem",
+          "articleId": "PROBLEM1",
+          "aac": "https://lod.lu/uploads/AAC/problem1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/problem1.ogg"
+        }
+      ]
+    },
+    "office-014": {
+      "words": [
+        {
+          "form": "Komm",
+          "lemma": "kommen",
+          "articleId": "KOMMEN1",
+          "aac": "https://lod.lu/uploads/AAC/kommen1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/kommen1.ogg"
+        },
+        {
+          "form": "mir",
+          "lemma": "mir",
+          "articleId": "MIR1",
+          "aac": "https://lod.lu/uploads/AAC/mir1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/mir1.ogg"
+        },
+        {
+          "form": "drénken",
+          "lemma": "drénken",
+          "articleId": "DRENKEN1",
+          "aac": "https://lod.lu/uploads/AAC/drenken1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/drenken1.ogg"
+        },
+        {
+          "form": "e",
+          "lemma": "E",
+          "articleId": "E2",
+          "aac": "https://lod.lu/uploads/AAC/e2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/e2.ogg"
+        },
+        {
+          "form": "Kaffi",
+          "lemma": "Kaffi",
+          "articleId": "KAFFI1",
+          "aac": "https://lod.lu/uploads/AAC/kaffi1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/kaffi1.ogg"
+        }
+      ]
+    },
+    "office-015": {
+      "words": [
+        {
+          "form": "Ech",
+          "lemma": "ech",
+          "articleId": "ECH1",
+          "aac": "https://lod.lu/uploads/AAC/ech1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/ech1.ogg"
+        },
+        {
+          "form": "muss",
+          "lemma": "mussen",
+          "articleId": "MUSSEN2",
+          "aac": "https://lod.lu/uploads/AAC/mussen2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/mussen2.ogg"
+        },
+        {
+          "form": "goen",
+          "lemma": "goen",
+          "articleId": "GOEN1",
+          "aac": "https://lod.lu/uploads/AAC/goen1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/goen1.ogg"
+        }
+      ]
+    },
+    "office-016": {
+      "words": [
+        {
+          "form": "Haut",
+          "lemma": "Haut",
+          "articleId": "HAUT2",
+          "aac": "https://lod.lu/uploads/AAC/haut2.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/haut2.ogg"
+        },
+        {
+          "form": "ass",
+          "lemma": "Ass",
+          "articleId": "ASS1",
+          "aac": "https://lod.lu/uploads/AAC/ass1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/ass1.ogg"
+        },
+        {
+          "form": "schéint",
+          "lemma": "schéin",
+          "articleId": "SCHEIN1",
+          "aac": "https://lod.lu/uploads/AAC/schein1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/schein1.ogg"
+        },
+        {
+          "form": "Wieder",
+          "lemma": "Wieder",
+          "articleId": "WIEDER1",
+          "aac": "https://lod.lu/uploads/AAC/wieder1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/wieder1.ogg"
+        }
+      ]
+    },
+    "office-017": {
+      "words": [
+        {
+          "form": "Et",
+          "lemma": "et",
+          "articleId": "ET1",
+          "aac": "https://lod.lu/uploads/AAC/et1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/et1.ogg"
+        },
+        {
+          "form": "reent",
+          "lemma": "reenen",
+          "articleId": "REENEN1",
+          "aac": "https://lod.lu/uploads/AAC/reenen1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/reenen1.ogg"
+        }
+      ]
+    },
+    "office-018": {
+      "words": [
+        {
+          "form": "Et",
+          "lemma": "et",
+          "articleId": "ET1",
+          "aac": "https://lod.lu/uploads/AAC/et1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/et1.ogg"
+        },
+        {
+          "form": "ass",
+          "lemma": "Ass",
+          "articleId": "ASS1",
+          "aac": "https://lod.lu/uploads/AAC/ass1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/ass1.ogg"
+        },
+        {
+          "form": "kal",
+          "lemma": "kal",
+          "articleId": "KAL1",
+          "aac": "https://lod.lu/uploads/AAC/kal1.m4a",
+          "ogg": "https://lod.lu/uploads/OGG/kal1.ogg"
+        }
+      ],
+      "sentence": {
+        "text": "et ass kal ginn",
+        "exact": false,
+        "articleId": "ET1",
+        "aac": "https://lod.lu/uploads/examples/AAC/44/4437c347c10692e292cfbe7cf516420d.m4a",
+        "ogg": "https://lod.lu/uploads/examples/OGG/44/4437c347c10692e292cfbe7cf516420d.ogg"
+      }
+    }
+  }
+}

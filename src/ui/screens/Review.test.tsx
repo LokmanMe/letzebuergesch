@@ -44,7 +44,8 @@ describe("écran de révision", () => {
     fireEvent.click(screen.getByRole("button", { name: "Voir la réponse" }));
     expect(screen.getByText("Moien!")).toBeTruthy();
     expect(screen.getByText("à vérifier")).toBeTruthy();
-    const lod = screen.getByRole("link", { name: /Écouter sur lod.lu/ });
+    const lod = screen.getByRole("link", { name: /dictionnaire lod.lu/ });
+    expect(screen.getByRole("button", { name: "Écouter Moien"})).toBeTruthy();
     expect(lod.getAttribute("href")).toBe("https://lod.lu/sich/lb/Moien");
     expect(lod.getAttribute("target")).toBe("_blank");
 

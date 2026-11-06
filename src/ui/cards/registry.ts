@@ -11,6 +11,8 @@ export type CardRendererProps = {
   card: Card;
   revealed: boolean;
   onReveal: () => void;
+  /** Incrémenté par le raccourci « E » : le composant joue l'audio de la carte s'il en a. */
+  audioSignal?: number;
 };
 
 /** Un composant par type de carte : ajouter un type = ajouter une entrée ici. */

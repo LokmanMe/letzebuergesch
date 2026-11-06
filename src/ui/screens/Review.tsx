@@ -3,6 +3,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import { buildDailyQueue, buildFlashQueue } from "../../domain/queue";
 import { advanceSession, applyRating, startSession, type SessionItem } from "../../domain/session";
 import type { Rating } from "../../domain/types";
+import { stop as stopAudio } from "../audio/player";
 import { cardRenderers } from "../cards/registry";
 import { Button, ButtonLink, Panel } from "../components/ui";
 import { useAppState } from "../state/AppStateContext";
@@ -26,12 +27,17 @@ export function Review() {
   const [total] = useState(queue.length);
   const [revealed, setRevealed] = useState(false);
   const [counts, setCounts] = useState<Record<Rating, number>>({ again: 0, hard: 0, easy: 0 });
+  const [audioSignal, setAudioSignal] = useState(0);
 
   const current = queue[0];
+
+  useEffect(() => () => stopAudio(), []);
 
   const rate = useCallback(
     (rating: Rating) => {
       if (!current) return;
+      stopAudio();
+      setAudioSignal(0); // sinon la carte suivante jouerait toute seule à l'affichage
       update((s) => applyRating(s, current.card.id, rating, today, current.isRetry));
       if (!current.isRetry) setCounts((c) => ({ ...c, [rating]: c[rating] + 1 }));
       setQueue((q) => advanceSession(q, rating));
@@ -48,6 +54,9 @@ export function Review() {
       if (!revealed && (e.key === " " || e.key === "Enter") && !target?.closest("button, a")) {
         e.preventDefault();
         setRevealed(true);
+      } else if (revealed && e.key.toLowerCase() === "e") {
+        e.preventDefault();
+        setAudioSignal((n) => n + 1);
       } else if (revealed) {
         const r = RATINGS.find((x) => x.key === e.key);
         if (r) {
@@ -116,7 +125,7 @@ export function Review() {
 
       {current.isRetry && <p className={styles.retry}>Deuxième essai — pour s'entraîner, sans effet sur le planning.</p>}
 
-      <Renderer key={`${current.card.id}-${current.isRetry}`} card={current.card} revealed={revealed} onReveal={() => setRevealed(true)} />
+      <Renderer key={`${current.card.id}-${current.isRetry}`} card={current.card} revealed={revealed} onReveal={() => setRevealed(true)} audioSignal={audioSignal} />
 
       {revealed && (
         <div className={styles.ratings} role="group" aria-label="Noter ma réponse">
@@ -133,7 +142,7 @@ export function Review() {
           ))}
         </div>
       )}
-      <p className={styles.hint}>Clavier : Espace pour voir la réponse, puis 1 / 2 / 3.</p>
+      <p className={styles.hint}>Clavier : Espace pour voir la réponse, E pour écouter, puis 1 / 2 / 3.</p>
     </main>
   );
 }
