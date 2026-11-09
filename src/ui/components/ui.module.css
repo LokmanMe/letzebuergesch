@@ -66,3 +66,33 @@
   border-radius: 999px;
   transition: width 0.3s ease;
 }
+
+.dots {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 8px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  --dot: var(--accent);
+}
+
+.dotsSolid {
+  --dot: var(--easy);
+}
+
+.dotOn,
+.dotOff {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.dotOn {
+  background: var(--dot);
+}
+
+.dotOff {
+  box-shadow: inset 0 0 0 1.5px var(--text-muted);
+  opacity: 0.5;
+}

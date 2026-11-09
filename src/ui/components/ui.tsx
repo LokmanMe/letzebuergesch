@@ -45,3 +45,20 @@ export function ProgressBar({ value, label }: { value: number; label: string }) 
     </div>
   );
 }
+
+/** Niveau de maîtrise d'une phrase : 5 points, remplis selon sa progression (vert quand elle est solide). */
+export function MasteryDots({ level, className }: { level: number; className?: string }) {
+  const solid = level >= 4;
+  return (
+    <span
+      className={[styles.dots, solid && styles.dotsSolid, className].filter(Boolean).join(" ")}
+      role="img"
+      aria-label={`Maîtrise : ${level} sur 5${solid ? ", solide" : ""}`}
+      title={`Maîtrise : ${level} / 5`}
+    >
+      {[1, 2, 3, 4, 5].map((i) => (
+        <span key={i} className={i <= level ? styles.dotOn : styles.dotOff} aria-hidden="true" />
+      ))}
+    </span>
+  );
+}

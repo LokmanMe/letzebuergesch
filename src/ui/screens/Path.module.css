@@ -219,3 +219,9 @@
   background: var(--easy);
   color: var(--surface);
 }
+
+.dots {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+}

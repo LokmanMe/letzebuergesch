@@ -65,17 +65,17 @@ L'écoute est aussi disponible sur la phrase du jour. Elle demande une connexion
 
 ### Le rythme des révisions
 
-Chaque carte est rangée dans une des 5 « boîtes ». Plus tu la connais, plus elle monte, et plus elle revient tard :
+Chaque phrase a un niveau de maîtrise, affiché avec 5 points. Plus tu la connais, plus elle gagne de points, et plus elle revient tard :
 
-| Boîte | Prochaine révision |
+| Maîtrise | Prochaine révision |
 |---|---|
-| 1 | le lendemain |
-| 2 | dans 3 jours |
-| 3 | dans 1 semaine |
-| 4 | dans 2 semaines |
-| 5 | dans 1 mois |
+| ●○○○○ | le lendemain |
+| ●●○○○ | dans 3 jours |
+| ●●●○○ | dans 1 semaine |
+| ●●●●○ | dans 2 semaines |
+| ●●●●● | dans 1 mois |
 
-**Facile** fait monter la carte d'une boîte, **Difficile** la laisse où elle est, **Raté** la renvoie en boîte 1. Une carte en boîte 4 ou 5 est considérée comme **solide**.
+**Facile** ajoute un point, **Difficile** ne change rien, **Raté** fait repartir la phrase à un point. À partir de 4 points, la phrase est **solide** (les points passent au vert).
 
 ---
 
@@ -96,7 +96,7 @@ Les 97 phrases sont rangées en **14 étapes** sur un chemin, dans l'ordre où t
 
 - **🔒 Verrouillée** : pas encore commencée. Les étapes se débloquent toutes seules au fil des sessions.
 - **Tu es ici** : l'étape en cours, avec le nombre de phrases déjà découvertes.
-- **Étoiles** d'une étape terminée : ★ toutes les phrases découvertes, ★★ toutes en boîte 3, ★★★ toutes solides (étape dorée).
+- **Étoiles** d'une étape terminée : ★ toutes les phrases découvertes, ★★ toutes à 3 points, ★★★ toutes solides (étape dorée).
 - Touche une étape pour voir ses phrases et leur niveau.
 - Au bout du chemin : 🏆 le niveau A1.
 

@@ -61,9 +61,4 @@
   grid-column: 2;
   grid-row: 1 / span 2;
   align-self: center;
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 2px 8px;
-  border-radius: 999px;
-  background: var(--surface-2);
 }

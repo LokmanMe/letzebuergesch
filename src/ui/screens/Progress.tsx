@@ -5,7 +5,7 @@ import { phraseHistory } from "../../domain/phraseOfDay";
 import { activity, fragileCards, solidCards } from "../../domain/stats";
 import type { Card } from "../../domain/types";
 import { ActivityChart } from "../components/ActivityChart";
-import { Panel } from "../components/ui";
+import { MasteryDots, Panel } from "../components/ui";
 import { useAppState } from "../state/AppStateContext";
 import styles from "./Progress.module.css";
 
@@ -19,9 +19,7 @@ function CardList({ cards, empty, boxes }: { cards: Card[]; empty: string; boxes
             {c.lb}
           </span>
           <span className={styles.fr}>{c.fr}</span>
-          <span className={styles.box} aria-label={`boîte ${boxes[c.id]}`}>
-            B{boxes[c.id]}
-          </span>
+          <MasteryDots level={boxes[c.id]} className={styles.box} />
         </li>
       ))}
     </ul>
@@ -55,7 +53,7 @@ export function Progress() {
         <h2 id="solid-title" className={styles.h2}>
           Phrases solides <span className={styles.count}>({solid.length})</span>
         </h2>
-        <p className={styles.hint}>Boîtes 4 et 5 : bien ancrées.</p>
+        <p className={styles.hint}>4 ou 5 points de maîtrise : bien ancrées.</p>
         <CardList cards={solid} boxes={boxes} empty="Pas encore de phrase solide : continue, ça vient vite !" />
       </Panel>
 
@@ -63,7 +61,7 @@ export function Progress() {
         <h2 id="fragile-title" className={styles.h2}>
           Phrases fragiles <span className={styles.count}>({fragile.length})</span>
         </h2>
-        <p className={styles.hint}>Boîtes 1 et 2 : elles reviendront souvent.</p>
+        <p className={styles.hint}>1 ou 2 points de maîtrise : elles reviendront souvent.</p>
         <CardList cards={fragile} boxes={boxes} empty="Aucune phrase fragile." />
       </Panel>
 

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { buildStages, currentStageIndex, stageProgress, type StageProgress } from "../../domain/path";
 import { buildDailyQueue } from "../../domain/queue";
-import { ButtonLink, Panel } from "../components/ui";
+import { ButtonLink, MasteryDots, Panel } from "../components/ui";
 import { useAppState } from "../state/AppStateContext";
 import styles from "./Path.module.css";
 
@@ -64,7 +64,7 @@ export function Path() {
           {done} étape{done > 1 ? "s" : ""} terminée{done > 1 ? "s" : ""} sur {stages.length} · <span className={styles.starOn}>★</span> {stars} / {stages.length * 3}
         </p>
         <p className={styles.legend}>
-          ★ toutes découvertes · ★★ toutes en boîte 3 · ★★★ toutes solides
+          ★ toutes découvertes · ★★ toutes à ●●●○○ · ★★★ toutes solides
         </p>
       </header>
 
@@ -120,7 +120,7 @@ export function Path() {
                                 {card.lb}
                               </span>
                               <span className={styles.fr}>{card.fr}</span>
-                              <span className={`${styles.box} ${box >= 4 ? styles.boxSolid : ""}`}>B{box}</span>
+                              <MasteryDots level={box} className={styles.dots} />
                             </>
                           ) : (
                             <>
