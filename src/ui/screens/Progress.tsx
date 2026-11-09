@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { ACHIEVEMENTS } from "../../achievements/rules";
 import { parseLocalDate } from "../../domain/dates";
 import { phraseHistory } from "../../domain/phraseOfDay";
 import { activity, fragileCards, solidCards } from "../../domain/stats";
@@ -8,6 +9,41 @@ import { ActivityChart } from "../components/ActivityChart";
 import { MasteryDots, Panel } from "../components/ui";
 import { useAppState } from "../state/AppStateContext";
 import styles from "./Progress.module.css";
+
+const shortDate = (d: string) => parseLocalDate(d).toLocaleDateString("fr-FR", { day: "numeric", month: "short" });
+
+function Badges({ unlocked }: { unlocked: Record<string, string> }) {
+  const count = ACHIEVEMENTS.filter((a) => a.id in unlocked).length;
+  return (
+    <Panel aria-labelledby="badges-title" id="badges">
+      <h2 id="badges-title" className={styles.h2}>
+        Badges{" "}
+        <span className={styles.count}>
+          ({count} / {ACHIEVEMENTS.length})
+        </span>
+      </h2>
+      <ul className={styles.badges}>
+        {ACHIEVEMENTS.map((a) => {
+          const date = unlocked[a.id];
+          return (
+            <li key={a.id} className={date ? styles.badgeOn : styles.badgeOff}>
+              <span className={styles.badgeIcon} aria-hidden="true">
+                {date ? a.icon : "🔒"}
+              </span>
+              <strong className={styles.badgeTitle}>{a.title}</strong>
+              <span className={styles.badgeDesc}>{a.description}</span>
+              {date ? (
+                <span className={styles.badgeDate}>Obtenu le {shortDate(date)}</span>
+              ) : (
+                <span className="visually-hidden">Pas encore obtenu</span>
+              )}
+            </li>
+          );
+        })}
+      </ul>
+    </Panel>
+  );
+}
 
 function CardList({ cards, empty, boxes }: { cards: Card[]; empty: string; boxes: Record<string, number> }) {
   if (cards.length === 0) return <p className={styles.empty}>{empty}</p>;
@@ -48,6 +84,8 @@ export function Progress() {
         </h2>
         <ActivityChart data={activity(state, today, 30)} />
       </Panel>
+
+      <Badges unlocked={state.achievements} />
 
       <Panel aria-labelledby="solid-title">
         <h2 id="solid-title" className={styles.h2}>

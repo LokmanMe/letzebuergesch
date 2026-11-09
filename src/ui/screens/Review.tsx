@@ -11,6 +11,7 @@ import {
   startSession,
   type SessionItem,
 } from "../../domain/session";
+import { cardDirection } from "../../domain/direction";
 import { dailyGoalProgress } from "../../domain/stats";
 import type { Rating } from "../../domain/types";
 import { stop as stopAudio } from "../audio/player";
@@ -70,6 +71,9 @@ export function Review() {
   const discovering = current?.phase === "discover";
   // En découverte, la réponse est visible d'emblée.
   const answerShown = revealed || discovering;
+  // La progression d'une carte ne change qu'au moment où on passe à la suivante : le sens reste stable à l'écran.
+  const direction = current ? cardDirection(state.settings.direction, state.progress[current.card.id]) : "fr-lb";
+  const reverse = !discovering && direction === "lb-fr";
 
   useEffect(() => () => stopAudio(), []);
 
@@ -100,7 +104,7 @@ export function Review() {
       const target = e.target instanceof Element ? e.target : null;
       if (target?.closest("input, textarea, select")) return;
       const onControl = Boolean(target?.closest("button, a"));
-      if (answerShown && e.key.toLowerCase() === "e") {
+      if ((answerShown || reverse) && e.key.toLowerCase() === "e") {
         e.preventDefault();
         setAudioSignal((n) => n + 1);
       } else if (discovering && (e.key === " " || e.key === "Enter") && !onControl) {
@@ -119,7 +123,7 @@ export function Review() {
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [current, answerShown, discovering, next]);
+  }, [current, answerShown, discovering, reverse, next]);
 
   const title =
     mode === "eclair" ? "Révision éclair" : mode === "entrainement" ? "Entraînement libre" : mode === "plus" ? "Nouvelles phrases" : "Session du jour";
@@ -244,6 +248,7 @@ export function Review() {
         key={`${current.card.id}-${current.phase}`}
         card={current.card}
         mode={discovering ? "discover" : "recall"}
+        direction={direction}
         revealed={answerShown}
         onReveal={() => setRevealed(true)}
         audioSignal={audioSignal}

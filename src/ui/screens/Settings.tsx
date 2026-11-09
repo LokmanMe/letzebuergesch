@@ -2,10 +2,21 @@ import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { defaultState } from "../../storage/defaultState";
 import { InvalidStateError } from "../../storage/migrations";
+import type { DirectionSetting } from "../../domain/types";
 import { Button, Panel } from "../components/ui";
 import { downloadFile } from "../download";
 import { useAppState } from "../state/AppStateContext";
 import styles from "./Settings.module.css";
+
+const DIRECTIONS: { value: DirectionSetting; label: string; hint: string }[] = [
+  {
+    value: "progressive",
+    label: "Progressif (recommandé)",
+    hint: "À l'envers tant que la phrase est récente (1 ou 2 points) : tu lis le luxembourgeois et tu cherches le français. Ensuite, dans l'autre sens.",
+  },
+  { value: "fr-lb", label: "Français → luxembourgeois", hint: "Toujours trouver comment le dire. Le plus exigeant." },
+  { value: "lb-fr", label: "Luxembourgeois → français", hint: "Toujours trouver ce que ça veut dire. Entraîne la compréhension." },
+];
 
 type Message = { kind: "ok" | "error"; text: string } | null;
 
@@ -105,6 +116,29 @@ export function Settings() {
         <p className={styles.hint}>
           15 par défaut. Chaque carte découverte, révisée ou rejouée en fin de session compte.
         </p>
+      </Panel>
+
+      <Panel aria-labelledby="direction-title">
+        <fieldset className={styles.fieldset}>
+          <legend id="direction-title" className={styles.h2}>
+            Sens des cartes
+          </legend>
+          {DIRECTIONS.map((d) => (
+            <label key={d.value} className={styles.radio}>
+              <input
+                type="radio"
+                name="direction"
+                value={d.value}
+                checked={state.settings.direction === d.value}
+                onChange={() => update((s) => ({ ...s, settings: { ...s.settings, direction: d.value } }))}
+              />
+              <span>
+                <strong>{d.label}</strong>
+                <span className={styles.hint}>{d.hint}</span>
+              </span>
+            </label>
+          ))}
+        </fieldset>
       </Panel>
 
       <Panel aria-labelledby="backup-title">

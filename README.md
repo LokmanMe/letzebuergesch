@@ -52,6 +52,12 @@ La phrase revient **à la fin de la session** pour un premier essai de mémoire 
 | **Difficile** | Tu as trouvé, mais avec peine | La carte garde le même rythme |
 | **Facile** | Tu as trouvé sans effort | La carte revient **de moins en moins souvent** |
 
+### Les cartes à l'envers ⇄
+
+Une phrase récente (1 ou 2 points de maîtrise) s'affiche **à l'envers** : tu lis le luxembourgeois, tu peux l'écouter, et tu cherches ce que ça veut dire **en français**. C'est plus facile pour démarrer et ça entraîne la compréhension. Dès que la phrase atteint 3 points, elle passe dans l'autre sens : trouver comment la dire en luxembourgeois.
+
+Tu peux changer ça dans **Réglages → Sens des cartes** : toujours français → luxembourgeois, ou toujours luxembourgeois → français.
+
 ### L'écoute 🔊
 
 Chaque carte propose les enregistrements du dictionnaire officiel **lod.lu**, lus par des locuteurs natifs :
@@ -84,6 +90,7 @@ Chaque phrase a un niveau de maîtrise, affiché avec 5 points. Plus tu la conna
 ### 🏠 Accueil
 - **🎯 Objectif du jour** : un anneau qui se remplit à chaque carte travaillée (découverte, révisée ou rejouée en fin de session) et passe au vert une fois l'objectif atteint (15 cartes par défaut).
 - **🔥 Série** : le nombre de jours d'affilée où tu as révisé. La journée n'est pas perdue tant qu'elle n'est pas finie.
+- **🏅 Badges** : le nombre de badges obtenus. Touche-le pour les voir tous.
 - **Objectif A1** : la part des phrases devenues solides. À 100 %, tu maîtrises toutes les phrases de l'appli.
 - **Compteurs** : cartes à réviser aujourd'hui, nouvelles cartes disponibles, cartes solides.
 - **Session du jour** : d'abord les révisions prévues, puis les nouvelles cartes (8 par jour par défaut).
@@ -109,11 +116,13 @@ Chaque jour, une phrase à **placer pour de vrai** : avec un collègue, à la bo
 ### 📈 Progression
 - La courbe de ton activité sur les 30 derniers jours (touche ou survole un point pour le détail).
 - La liste de tes phrases **solides** et de tes phrases **fragiles** (celles qui reviennent souvent).
+- Tes **🏅 badges** : 16 à débloquer, par exemple découvrir 25 phrases, tenir une série de 7 jours, atteindre l'objectif du jour, 50 cartes en une journée, maîtriser un thème entier ou placer 5 phrases du jour. Une notification « Badge débloqué ! » s'affiche au moment où tu en gagnes un, et un badge obtenu reste acquis.
 - L'historique de tes phrases du jour.
 
 ### ⚙️ Réglages
 - **Nouvelles cartes par jour** : de 1 à 30 (8 par défaut). Plus tu en ajoutes, plus il y aura de révisions les jours suivants.
 - **Objectif du jour** : de 5 à 100 cartes travaillées (15 par défaut).
+- **Sens des cartes** : progressif (par défaut), toujours français → luxembourgeois, ou toujours luxembourgeois → français.
 - **Exporter / Importer** : sauvegarde ta progression dans un fichier, ou récupère-la sur un autre appareil.
 - **Relecture** : la liste complète des phrases, avec un export pour Excel.
 - **Réinitialiser** : repartir de zéro.

@@ -1,5 +1,5 @@
 import type { ComponentType } from "react";
-import type { Card } from "../../domain/types";
+import type { Card, Direction } from "../../domain/types";
 import { PhraseCard } from "./PhraseCard";
 
 /**
@@ -11,6 +11,8 @@ export type CardRendererProps = {
   card: Card;
   /** "discover" : première rencontre, la réponse est montrée d'emblée (pas de question). */
   mode?: "recall" | "discover";
+  /** Sens du rappel : "fr-lb" (trouver le luxembourgeois, par défaut) ou "lb-fr" (à l'envers : trouver le français). */
+  direction?: Direction;
   revealed: boolean;
   onReveal: () => void;
   /** Incrémenté par le raccourci « E » : le composant joue l'audio de la carte s'il en a. */

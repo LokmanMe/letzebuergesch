@@ -1,4 +1,5 @@
 import { HashRouter, NavLink, Navigate, Outlet, Route, Routes, useLocation } from "react-router-dom";
+import { AchievementWatcher } from "./components/AchievementWatcher";
 import { AppStateProvider } from "./state/AppStateContext";
 import { Home } from "./screens/Home";
 import { Path } from "./screens/Path";
@@ -42,7 +43,7 @@ function ReviewRoute() {
   return <Review key={key} />;
 }
 
-/** Une route par écran. V2 : /quiz, /scenarios, /cartes-perso, /badges. */
+/** Une route par écran. V2 : /quiz, /scenarios, /cartes-perso. */
 export function AppRoutes() {
   return (
     <Routes>
@@ -65,6 +66,7 @@ export function App() {
   return (
     <AppStateProvider>
       <HashRouter>
+        <AchievementWatcher />
         <AppRoutes />
       </HashRouter>
     </AppStateProvider>

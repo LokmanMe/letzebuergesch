@@ -37,7 +37,7 @@ afterEach(cleanup);
 
 describe("écran de révision", () => {
   it("carte nouvelle : mode découverte, réponse et audio visibles d'emblée, un seul bouton", () => {
-    const storage = renderReview({ ...defaultState(), settings: { newPerDay: 2, dailyGoal: 15 } });
+    const storage = renderReview({ ...defaultState(), settings: { newPerDay: 2, dailyGoal: 15, direction: "progressive" as const } });
     expect(screen.getByText("1 / 2")).toBeTruthy();
     expect(screen.getByText(/Nouvelle/)).toBeTruthy();
     expect(screen.getByText("Moien!")).toBeTruthy();
@@ -55,7 +55,7 @@ describe("écran de révision", () => {
   });
 
   it("après découverte, premier essai en fin de session sans effet sur le planning", () => {
-    const storage = renderReview({ ...defaultState(), settings: { newPerDay: 1, dailyGoal: 15 } });
+    const storage = renderReview({ ...defaultState(), settings: { newPerDay: 1, dailyGoal: 15, direction: "progressive" as const } });
     fireEvent.keyDown(window, { key: "Enter" });
     expect(screen.getByText(/Premier essai/)).toBeTruthy();
     expect(screen.getByRole("button", { name: "Voir la réponse" })).toBeTruthy();
@@ -71,7 +71,7 @@ describe("écran de révision", () => {
     const seen = {
       ...defaultState(),
       progress: { "greetings-001": { box: 2 as const, due: "2000-01-01", firstSeen: "2000-01-01", lastReviewed: "2000-01-01", reviews: 1, lapses: 0 } },
-      settings: { newPerDay: 0, dailyGoal: 15 },
+      settings: { newPerDay: 0, dailyGoal: 15, direction: "progressive" as const },
     };
     const storage = renderReview(seen);
     expect(screen.queryByText(/Nouvelle/)).toBeNull();
@@ -83,5 +83,32 @@ describe("écran de révision", () => {
     fireEvent.keyDown(window, { key: "3" });
     expect(storage.saved.progress["greetings-001"].box).toBe(1);
     expect(screen.getByText("Raté : 1")).toBeTruthy();
+  });
+
+  it("carte à l'envers : on lit le luxembourgeois, on peut l'écouter, la réponse est en français", () => {
+    const seen = {
+      ...defaultState(),
+      progress: { "greetings-001": { box: 1 as const, due: "2000-01-01", firstSeen: "2000-01-01", lastReviewed: "2000-01-01", reviews: 1, lapses: 0 } },
+      settings: { newPerDay: 0, dailyGoal: 15, direction: "progressive" as const },
+    };
+    renderReview(seen);
+    expect(screen.getByText(/À l'envers/)).toBeTruthy();
+    expect(screen.getByText("Moien!")).toBeTruthy();
+    expect(screen.getByRole("button", { name: "Écouter Moien" })).toBeTruthy();
+    expect(screen.queryByText(/Bonjour/)).toBeNull();
+    fireEvent.click(screen.getByRole("button", { name: "Voir la réponse" }));
+    expect(screen.getByText(/Bonjour/)).toBeTruthy();
+  });
+
+  it("sens imposé français → luxembourgeois : la question est en français", () => {
+    const seen = {
+      ...defaultState(),
+      progress: { "greetings-001": { box: 1 as const, due: "2000-01-01", firstSeen: "2000-01-01", lastReviewed: "2000-01-01", reviews: 1, lapses: 0 } },
+      settings: { newPerDay: 0, dailyGoal: 15, direction: "fr-lb" as const },
+    };
+    renderReview(seen);
+    expect(screen.queryByText(/À l'envers/)).toBeNull();
+    expect(screen.getByText(/Bonjour/)).toBeTruthy();
+    expect(screen.queryByText("Moien!")).toBeNull();
   });
 });

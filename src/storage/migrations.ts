@@ -32,6 +32,13 @@ const MIGRATIONS: Record<number, (s: Raw) => Raw> = {
       ? Object.fromEntries(Object.entries(s.log).map(([d, l]) => [d, isObject(l) ? { ...l, practiced: 0 } : l]))
       : s.log,
   }),
+  // Version 3 : sens des cartes (réglage) et badges débloqués.
+  2: (s) => ({
+    ...s,
+    schemaVersion: 3,
+    settings: { ...(isObject(s.settings) ? s.settings : {}), direction: "progressive" },
+    achievements: {},
+  }),
 };
 
 function sanitizeProgress(v: unknown): Record<string, CardProgress> {
@@ -105,6 +112,11 @@ function sanitizeCustomCards(v: unknown): Card[] {
   );
 }
 
+function sanitizeAchievements(v: unknown): Record<string, string> {
+  if (!isObject(v)) throw new InvalidStateError("badges invalides");
+  return Object.fromEntries(Object.entries(v).filter(([, d]) => isValidLocalDate(d))) as Record<string, string>;
+}
+
 /** Convertit des données brutes (localStorage ou fichier importé) en état courant valide. Lève InvalidStateError sinon. */
 export function migrate(raw: unknown): AppState {
   if (!isObject(raw)) throw new InvalidStateError("le fichier ne contient pas un objet JSON");
@@ -126,12 +138,18 @@ export function migrate(raw: unknown): AppState {
   const dailyGoal =
     isNonNegInt(settings.dailyGoal) && settings.dailyGoal > 0 ? Math.min(settings.dailyGoal, 200) : defaults.settings.dailyGoal;
 
+  const direction =
+    settings.direction === "fr-lb" || settings.direction === "lb-fr" || settings.direction === "progressive"
+      ? settings.direction
+      : defaults.settings.direction;
+
   return {
     schemaVersion: CURRENT_SCHEMA_VERSION,
-    settings: { newPerDay, dailyGoal },
+    settings: { newPerDay, dailyGoal, direction },
     progress: sanitizeProgress(s.progress ?? {}),
     log: sanitizeLog(s.log ?? {}),
     phraseOfDay: sanitizePhraseOfDay(s.phraseOfDay ?? {}),
     customCards: sanitizeCustomCards(s.customCards ?? []),
+    achievements: sanitizeAchievements(s.achievements ?? {}),
   };
 }

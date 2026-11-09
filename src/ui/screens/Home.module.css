@@ -207,3 +207,29 @@
 .pathEmoji {
   font-size: 1.8rem;
 }
+
+.chips {
+  display: flex;
+  gap: 8px;
+}
+
+.chips a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Sur petit écran, titre et pastilles (série, badges) tiennent sur une ligne, sinon passent à la ligne. */
+.header {
+  flex-wrap: wrap;
+}
+
+@media (max-width: 400px) {
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .chips .streak {
+    padding: 5px 9px;
+    font-size: 0.95rem;
+  }
+}

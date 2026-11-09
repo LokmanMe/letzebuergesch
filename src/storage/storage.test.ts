@@ -28,7 +28,7 @@ describe("localStorageStorage", () => {
 
   it("aller-retour export → import", () => {
     const storage = createLocalStorageStorage(memoryBackend());
-    const s = { ...applyRating(defaultState(), "x", "hard", "2026-03-10"), settings: { newPerDay: 12, dailyGoal: 15 } };
+    const s = { ...applyRating(defaultState(), "x", "hard", "2026-03-10"), settings: { newPerDay: 12, dailyGoal: 15, direction: "progressive" as const } };
     expect(storage.import(storage.export(s))).toEqual(s);
   });
 
@@ -54,7 +54,7 @@ describe("localStorageStorage", () => {
 describe("migrations", () => {
   it("un état sans schemaVersion (v0) est migré vers la version courante avec des valeurs par défaut", () => {
     const s = migrate({ progress: {} });
-    expect(s.schemaVersion).toBe(2);
+    expect(s.schemaVersion).toBe(3);
     expect(s.settings.dailyGoal).toBe(15);
     expect(s.settings.newPerDay).toBe(8);
     expect(s.customCards).toEqual([]);
@@ -70,11 +70,25 @@ describe("migrations", () => {
       customCards: [],
     };
     const s = migrate(v1);
-    expect(s.schemaVersion).toBe(2);
-    expect(s.settings).toEqual({ newPerDay: 10, dailyGoal: 15 });
+    expect(s.schemaVersion).toBe(3);
+    expect(s.settings).toEqual({ newPerDay: 10, dailyGoal: 15, direction: "progressive" as const });
     expect(s.log["2026-03-05"]).toEqual({ reviewed: 12, newIntroduced: 8, practiced: 0 });
     expect(s.progress.a.box).toBe(3);
     expect(s.phraseOfDay["2026-03-05"].done).toBe(true);
+  });
+
+  it("v2 → v3 : sens progressif par défaut, aucun badge, réglages conservés", () => {
+    const s = migrate({ schemaVersion: 2, settings: { newPerDay: 5, dailyGoal: 30 }, progress: {}, log: {}, phraseOfDay: {}, customCards: [] });
+    expect(s.schemaVersion).toBe(3);
+    expect(s.settings).toEqual({ newPerDay: 5, dailyGoal: 30, direction: "progressive" });
+    expect(s.achievements).toEqual({});
+  });
+
+  it("v3 : sens et badges importés, valeurs invalides écartées", () => {
+    const s = migrate({ schemaVersion: 3, settings: { direction: "lb-fr" }, achievements: { "streak-3": "2026-03-10", bad: "hier" } });
+    expect(s.settings.direction).toBe("lb-fr");
+    expect(s.achievements).toEqual({ "streak-3": "2026-03-10" });
+    expect(migrate({ schemaVersion: 3, settings: { direction: "n importe" } }).settings.direction).toBe("progressive");
   });
 
   it("complète firstSeen manquant à partir de lastReviewed", () => {

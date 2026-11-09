@@ -62,3 +62,58 @@
   grid-row: 1 / span 2;
   align-self: center;
 }
+
+.badges {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+}
+
+.badges li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 12px 8px;
+  border-radius: 14px;
+  text-align: center;
+  background: var(--surface-2);
+}
+
+.badgeOn {
+  box-shadow: inset 0 0 0 2px #d9a400;
+}
+
+.badgeOff {
+  opacity: 0.55;
+}
+
+.badgeIcon {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.badgeOff .badgeIcon {
+  filter: grayscale(1);
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+.badgeTitle {
+  font-size: 0.9rem;
+}
+
+.badgeDesc {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.badgeDate {
+  margin-top: 2px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #b88a00;
+}

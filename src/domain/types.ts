@@ -67,13 +67,22 @@ export type PhraseOfDayEntry = {
   done: boolean;
 };
 
+/**
+ * Sens des cartes en révision.
+ * - "progressive" : luxembourgeois → français tant que la phrase est récente (1 ou 2 points), puis français → luxembourgeois.
+ * - "fr-lb" : toujours trouver le luxembourgeois ; "lb-fr" : toujours trouver le français.
+ */
+export type DirectionSetting = "progressive" | "fr-lb" | "lb-fr";
+export type Direction = "fr-lb" | "lb-fr";
+
 export type Settings = {
   newPerDay: number;
   /** Objectif du jour : nombre de cartes travaillées (découvertes, révisées ou entraînées). */
   dailyGoal: number;
+  direction: DirectionSetting;
 };
 
-export const CURRENT_SCHEMA_VERSION = 2;
+export const CURRENT_SCHEMA_VERSION = 3;
 
 export type AppState = {
   schemaVersion: typeof CURRENT_SCHEMA_VERSION;
@@ -83,4 +92,6 @@ export type AppState = {
   phraseOfDay: Record<LocalDate, PhraseOfDayEntry>;
   /** Cartes ajoutées par l'utilisateur (V2). Fusionnées avec le contenu officiel au chargement. */
   customCards: Card[];
+  /** Badges débloqués : id → date du déblocage. */
+  achievements: Record<string, LocalDate>;
 };

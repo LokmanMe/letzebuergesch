@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { ACHIEVEMENTS } from "../../achievements/rules";
 import { LOD_AUDIO } from "../../content";
 import { pickPhraseOfDay, setPhraseOfDayDone } from "../../domain/phraseOfDay";
 import { LodAudio } from "../audio/LodAudio";
@@ -68,6 +69,7 @@ export function Home() {
   const solid = solidCards(cards, state).length;
   const progress = a1Progress(cards, state);
   const days = streak(state, today);
+  const badges = ACHIEVEMENTS.filter((a) => a.id in state.achievements).length;
   const sessionSize = buildDailyQueue(cards, state, today).length;
   const reviewedToday = state.log[today]?.reviewed ?? 0;
   const workedToday = reviewedToday + (state.log[today]?.newIntroduced ?? 0) > 0;
@@ -78,9 +80,14 @@ export function Home() {
     <main className={styles.page}>
       <header className={styles.header}>
         <h1 className={styles.title}>Lëtzebuergesch</h1>
-        <p className={styles.streak} aria-label={`Série : ${days} jour${days > 1 ? "s" : ""} consécutif${days > 1 ? "s" : ""}`}>
-          <span aria-hidden="true">🔥</span> {days} jour{days > 1 ? "s" : ""}
-        </p>
+        <div className={styles.chips}>
+          <p className={styles.streak} aria-label={`Série : ${days} jour${days > 1 ? "s" : ""} consécutif${days > 1 ? "s" : ""}`}>
+            <span aria-hidden="true">🔥</span> {days} jour{days > 1 ? "s" : ""}
+          </p>
+          <Link to="/progression#badges" className={styles.streak} aria-label={`Badges : ${badges} sur ${ACHIEVEMENTS.length}`}>
+            <span aria-hidden="true">🏅</span> {badges}
+          </Link>
+        </div>
       </header>
 
       <Panel aria-labelledby="today-title" className={styles.today}>
