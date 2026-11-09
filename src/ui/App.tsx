@@ -37,8 +37,9 @@ function Layout({ withNav }: { withNav: boolean }) {
 
 /** Nouvelle session (état remis à zéro) à chaque changement de mode, ex. jour → entraînement. */
 function ReviewRoute() {
-  const { search } = useLocation();
-  return <Review key={search} />;
+  // Chaque navigation (même vers le même mode, ex. « encore 8 phrases ») démarre une nouvelle session.
+  const { key } = useLocation();
+  return <Review key={key} />;
 }
 
 /** Une route par écran. V2 : /quiz, /scenarios, /cartes-perso, /badges. */

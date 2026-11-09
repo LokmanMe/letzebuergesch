@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { LOD_AUDIO } from "../../content";
 import { pickPhraseOfDay, setPhraseOfDayDone } from "../../domain/phraseOfDay";
 import { LodAudio } from "../audio/LodAudio";
-import { availableNewCards, buildDailyQueue, dueCards } from "../../domain/queue";
+import { availableNewCards, buildDailyQueue, dueCards, unseenCards } from "../../domain/queue";
 import { buildStages, currentStageIndex, stageProgress } from "../../domain/path";
 import { a1Progress, dailyGoalProgress, solidCards, streak } from "../../domain/stats";
 import { GoalRing } from "../components/GoalRing";
@@ -70,6 +70,9 @@ export function Home() {
   const days = streak(state, today);
   const sessionSize = buildDailyQueue(cards, state, today).length;
   const reviewedToday = state.log[today]?.reviewed ?? 0;
+  const workedToday = reviewedToday + (state.log[today]?.newIntroduced ?? 0) > 0;
+  const nextBatch = Math.min(state.settings.newPerDay, unseenCards(cards, state).length);
+  const hasSeen = Object.keys(state.progress).length > 0;
 
   return (
     <main className={styles.page}>
@@ -133,14 +136,24 @@ export function Home() {
             Session du jour · {sessionSize} carte{sessionSize > 1 ? "s" : ""}
           </ButtonLink>
         ) : (
-          <p className={styles.doneMsg}>
-            {reviewedToday > 0 ? "Session du jour terminée. Bis muer !" : "Rien à réviser aujourd'hui."}
-          </p>
-        )}
-        {sessionSize === 0 && !goal.reached && Object.keys(state.progress).length > 0 && (
-          <ButtonLink to="/revision?mode=entrainement" variant="primary" block className={styles.mainBtn}>
-            🎯 Entraînement libre · compléter l'objectif
-          </ButtonLink>
+          <>
+            <p className={styles.doneMsg}>
+              {workedToday ? "Session du jour terminée ✅ Envie de continuer ?" : "Rien à réviser pour l'instant."}
+            </p>
+            {nextBatch > 0 && (
+              <ButtonLink to="/revision?mode=plus" variant="primary" block className={styles.mainBtn}>
+                ✨ Apprendre {nextBatch} nouvelle{nextBatch > 1 ? "s" : ""} phrase{nextBatch > 1 ? "s" : ""}
+              </ButtonLink>
+            )}
+            {hasSeen && (
+              <ButtonLink to="/revision?mode=entrainement" variant={nextBatch > 0 && goal.reached ? "default" : "primary"} block className={styles.mainBtn}>
+                🎯 Entraînement libre{goal.reached ? "" : " · compléter l'objectif"}
+              </ButtonLink>
+            )}
+            {nextBatch > 0 && workedToday && (
+              <p className={styles.small}>Chaque nouvelle phrase revient demain : plus tu en ajoutes, plus la session de demain sera longue.</p>
+            )}
+          </>
         )}
         {due > 0 && (
           <ButtonLink to="/revision?mode=eclair" block>

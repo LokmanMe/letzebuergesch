@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { defaultState } from "../storage/defaultState";
-import { availableNewCards, buildDailyQueue, buildFlashQueue, dueCards, newCardsRemaining } from "./queue";
+import { availableNewCards, buildBonusQueue, buildDailyQueue, buildFlashQueue, dueCards, newCardsRemaining } from "./queue";
 import { advanceSession, applyDiscovery, applyRating, startSession } from "./session";
 import type { AppState, Box, Card, CardProgress } from "./types";
 
@@ -106,5 +106,23 @@ describe("session", () => {
     expect(s.progress["m-002"]).toMatchObject({ box: 2, due: "2026-03-14" });
     s = applyRating(s, "m-002", "again", "2026-03-14");
     expect(s.progress["m-002"]).toMatchObject({ box: 1, lapses: 1 });
+  });
+});
+
+describe("nouvelles phrases en plus", () => {
+  it("propose le lot suivant même quand la limite du jour est atteinte", () => {
+    const progress = Object.fromEntries(Array.from({ length: 8 }, (_, i) => [card(i + 1).id, p(1, "2026-03-11")]));
+    const state = stateWith(progress, { log: { [T]: { reviewed: 0, newIntroduced: 8, practiced: 8 } } });
+    expect(buildDailyQueue(cards, state, T)).toEqual([]);
+    expect(buildBonusQueue(cards, state, T, 8).map((c) => c.id)).toEqual(
+      Array.from({ length: 8 }, (_, i) => card(i + 9).id),
+    );
+  });
+
+  it("garde les révisions dues en tête et s'arrête à la fin du contenu", () => {
+    const progress = Object.fromEntries(cards.slice(0, 28).map((c) => [c.id, p(2, "2026-03-20")]));
+    progress["m-003"] = p(2, T);
+    const queue = buildBonusQueue(cards, stateWith(progress), T, 8).map((c) => c.id);
+    expect(queue).toEqual(["m-003", "m-029", "m-030"]);
   });
 });

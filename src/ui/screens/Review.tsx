@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { buildDailyQueue, buildFlashQueue, buildPracticeQueue } from "../../domain/queue";
+import { buildBonusQueue, buildDailyQueue, buildFlashQueue, buildPracticeQueue, PRACTICE_DEFAULT, unseenCards } from "../../domain/queue";
 import { buildStages, currentStageIndex } from "../../domain/path";
 import {
   advanceSession,
@@ -29,15 +29,16 @@ const RATINGS: { rating: Rating; label: string; aria: string; key: string }[] = 
 export function Review() {
   const [params] = useSearchParams();
   const modeParam = params.get("mode");
-  const mode = modeParam === "eclair" || modeParam === "entrainement" ? modeParam : "jour";
+  const mode = modeParam === "eclair" || modeParam === "entrainement" || modeParam === "plus" ? modeParam : "jour";
   const { state, update, cards, modules, today } = useAppState();
 
   // La file est figée au démarrage de la session.
   const [queue, setQueue] = useState<SessionItem[]>(() => {
     if (mode === "entrainement") {
       const g = dailyGoalProgress(state, today);
-      return startPractice(buildPracticeQueue(cards, state, g.goal - g.done));
+      return startPractice(buildPracticeQueue(cards, state, g.reached ? PRACTICE_DEFAULT : g.goal - g.done));
     }
+    if (mode === "plus") return startSession(buildBonusQueue(cards, state, today, state.settings.newPerDay), state);
     return startSession(mode === "eclair" ? buildFlashQueue(cards, state, today) : buildDailyQueue(cards, state, today), state);
   });
   const [practiced, setPracticed] = useState(0);
@@ -120,14 +121,23 @@ export function Review() {
     return () => window.removeEventListener("keydown", onKey);
   }, [current, answerShown, discovering, next]);
 
-  const title = mode === "eclair" ? "Révision éclair" : mode === "entrainement" ? "Entraînement libre" : "Session du jour";
+  const title =
+    mode === "eclair" ? "Révision éclair" : mode === "entrainement" ? "Entraînement libre" : mode === "plus" ? "Nouvelles phrases" : "Session du jour";
+  const unseenLeft = unseenCards(cards, state).length;
+  const nextBatch = Math.min(state.settings.newPerDay, unseenLeft);
 
   if (total === 0) {
     return (
       <main className={styles.page}>
         <h1 className={styles.title}>{title}</h1>
         <Panel>
-          <p>{mode === "eclair" ? "Aucune carte à réviser pour l'instant." : "Rien à faire aujourd'hui : tout est à jour !"}</p>
+          <p>
+            {mode === "eclair"
+              ? "Aucune carte à réviser pour l'instant."
+              : mode === "plus"
+                ? "Tu as déjà découvert toutes les phrases !"
+                : "Rien à faire aujourd'hui : tout est à jour !"}
+          </p>
           <ButtonLink to="/" variant="primary" block>
             Retour à l'accueil
           </ButtonLink>
@@ -173,11 +183,14 @@ export function Review() {
                 : `Objectif du jour : ${goal.done} / ${goal.goal} cartes. Encore ${goal.goal - goal.done} !`}
             </p>
           </div>
-          {!goal.reached && (
-            <Link to="/revision?mode=entrainement" className={styles.unlocked}>
-              🎯 Compléter l'objectif : entraînement libre ›
+          {nextBatch > 0 && (
+            <Link to="/revision?mode=plus" className={styles.unlocked}>
+              ✨ Apprendre {nextBatch} nouvelle{nextBatch > 1 ? "s" : ""} phrase{nextBatch > 1 ? "s" : ""} ›
             </Link>
           )}
+          <Link to="/revision?mode=entrainement" className={styles.unlocked}>
+            🎯 {goal.reached ? "Continuer : entraînement libre" : "Compléter l'objectif : entraînement libre"} ›
+          </Link>
           {stageNow > stageAtStart && (
             <Link to="/parcours" className={styles.unlocked}>
               🗺️{" "}

@@ -62,3 +62,15 @@ export function buildPracticeQueue(cards: Card[], state: AppState, size: number)
     })
     .slice(0, Math.max(PRACTICE_MIN, size));
 }
+
+/** Taille d'un entraînement libre quand l'objectif du jour est déjà atteint. */
+export const PRACTICE_DEFAULT = 10;
+
+/**
+ * Nouvelles phrases en plus : une fois la session du jour finie, on peut découvrir
+ * le lot suivant sans attendre demain (au-delà de la limite quotidienne).
+ * Les révisions dues passent d'abord, pour ne jamais les laisser de côté.
+ */
+export function buildBonusQueue(cards: Card[], state: AppState, today: LocalDate, size: number): Card[] {
+  return [...dueCards(cards, state, today), ...unseenCards(cards, state).slice(0, Math.max(1, size))];
+}

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { buildStages, currentStageIndex, stageProgress, type StageProgress } from "../../domain/path";
-import { buildDailyQueue } from "../../domain/queue";
+import { buildDailyQueue, unseenCards } from "../../domain/queue";
 import { ButtonLink, MasteryDots, Panel } from "../components/ui";
 import { useAppState } from "../state/AppStateContext";
 import styles from "./Path.module.css";
@@ -43,6 +43,7 @@ function statusLabel(p: StageProgress): string {
 export function Path() {
   const { state, modules, cards, cardsById, today } = useAppState();
   const sessionSize = buildDailyQueue(cards, state, today).length;
+  const hasUnseen = unseenCards(cards, state).length > 0;
   const stages = buildStages(modules, state.customCards);
   const progress = stageProgress(stages, state);
   const current = currentStageIndex(stages, state);
@@ -132,16 +133,11 @@ export function Path() {
                       );
                     })}
                   </ul>
-                  {isCurrent &&
-                    (sessionSize > 0 ? (
-                      <ButtonLink to="/revision?mode=jour" variant="primary" block>
-                        Continuer cette étape
-                      </ButtonLink>
-                    ) : (
-                      <p className={styles.detailHead}>
-                        Les prochaines phrases arrivent demain ({state.settings.newPerDay} nouvelles par jour).
-                      </p>
-                    ))}
+                  {isCurrent && (sessionSize > 0 || hasUnseen) && (
+                    <ButtonLink to={sessionSize > 0 ? "/revision?mode=jour" : "/revision?mode=plus"} variant="primary" block>
+                      Continuer cette étape
+                    </ButtonLink>
+                  )}
                 </Panel>
               )}
             </li>

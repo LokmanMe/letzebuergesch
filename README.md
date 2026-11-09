@@ -88,7 +88,8 @@ Chaque phrase a un niveau de maîtrise, affiché avec 5 points. Plus tu la conna
 - **Compteurs** : cartes à réviser aujourd'hui, nouvelles cartes disponibles, cartes solides.
 - **Session du jour** : d'abord les révisions prévues, puis les nouvelles cartes (8 par jour par défaut).
 - **⚡ Révision éclair** : 3 minutes chrono, 10 cartes à revoir maximum, pas de nouvelles. Parfait pour une pause café.
-- **🎯 Entraînement libre** : si la session du jour est finie mais que l'objectif n'est pas atteint, rejoue des phrases déjà vues (les plus fragiles d'abord). Sans effet sur le planning des révisions.
+- **✨ Apprendre de nouvelles phrases** : une fois la session du jour finie, tu peux continuer sans attendre demain avec le lot suivant de nouvelles phrases, autant de fois que tu veux. Chaque phrase découverte revient le lendemain : plus tu en ajoutes, plus la session suivante sera longue.
+- **🎯 Entraînement libre** : rejoue des phrases déjà vues (les plus fragiles d'abord), pour compléter l'objectif du jour ou juste pour t'entraîner. Sans effet sur le planning des révisions.
 - **Parcours** : un raccourci vers ton étape en cours.
 
 ### 🗺️ Parcours
