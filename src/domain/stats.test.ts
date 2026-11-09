@@ -1,7 +1,8 @@
 import { describe, expect, it } from "vitest";
 import { defaultState } from "../storage/defaultState";
 import { pickPhraseOfDay, phraseHistory, setPhraseOfDayDone } from "./phraseOfDay";
-import { a1Progress, activity, fragileCards, solidCards, streak } from "./stats";
+import { applyDiscovery, applyPractice } from "./session";
+import { a1Progress, activity, dailyGoalProgress, fragileCards, solidCards, streak } from "./stats";
 import type { AppState, Box, Card } from "./types";
 
 const T = "2026-03-10";
@@ -16,7 +17,7 @@ const cards: Card[] = ["a", "b", "c", "d"].map((x, i) => ({
 }));
 const withLog = (days: string[]): AppState => ({
   ...defaultState(),
-  log: Object.fromEntries(days.map((d) => [d, { reviewed: 3, newIntroduced: 0 }])),
+  log: Object.fromEntries(days.map((d) => [d, { reviewed: 3, newIntroduced: 0, practiced: 0 }])),
 });
 const withBoxes = (boxes: Record<string, Box>): AppState => ({
   ...defaultState(),
@@ -81,5 +82,22 @@ describe("phrase du jour", () => {
       { date: T, cardId: "b" },
       { date: "2026-03-08", cardId: "a" },
     ]);
+  });
+});
+
+describe("objectif du jour", () => {
+  it("compte découvertes, révisions et essais d'entraînement", () => {
+    let s = applyDiscovery(defaultState(), "a", T);
+    s = applyDiscovery(s, "b", T);
+    s = applyPractice(s, T);
+    expect(dailyGoalProgress(s, T)).toEqual({ done: 3, goal: 15, reached: false });
+    expect(s.log[T]).toEqual({ reviewed: 2, newIntroduced: 2, practiced: 1 });
+    expect(streak(s, T)).toBe(1);
+  });
+
+  it("atteint quand le total dépasse l'objectif réglé", () => {
+    const s = { ...withLog([T]), settings: { newPerDay: 8, dailyGoal: 3 } };
+    expect(dailyGoalProgress(s, T)).toEqual({ done: 3, goal: 3, reached: true });
+    expect(dailyGoalProgress(s, "2026-03-11").done).toBe(0);
   });
 });

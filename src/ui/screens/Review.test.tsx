@@ -37,7 +37,7 @@ afterEach(cleanup);
 
 describe("écran de révision", () => {
   it("carte nouvelle : mode découverte, réponse et audio visibles d'emblée, un seul bouton", () => {
-    const storage = renderReview({ ...defaultState(), settings: { newPerDay: 2 } });
+    const storage = renderReview({ ...defaultState(), settings: { newPerDay: 2, dailyGoal: 15 } });
     expect(screen.getByText("1 / 2")).toBeTruthy();
     expect(screen.getByText(/Nouvelle/)).toBeTruthy();
     expect(screen.getByText("Moien!")).toBeTruthy();
@@ -55,7 +55,7 @@ describe("écran de révision", () => {
   });
 
   it("après découverte, premier essai en fin de session sans effet sur le planning", () => {
-    const storage = renderReview({ ...defaultState(), settings: { newPerDay: 1 } });
+    const storage = renderReview({ ...defaultState(), settings: { newPerDay: 1, dailyGoal: 15 } });
     fireEvent.keyDown(window, { key: "Enter" });
     expect(screen.getByText(/Premier essai/)).toBeTruthy();
     expect(screen.getByRole("button", { name: "Voir la réponse" })).toBeTruthy();
@@ -71,7 +71,7 @@ describe("écran de révision", () => {
     const seen = {
       ...defaultState(),
       progress: { "greetings-001": { box: 2 as const, due: "2000-01-01", firstSeen: "2000-01-01", lastReviewed: "2000-01-01", reviews: 1, lapses: 0 } },
-      settings: { newPerDay: 0 },
+      settings: { newPerDay: 0, dailyGoal: 15 },
     };
     const storage = renderReview(seen);
     expect(screen.queryByText(/Nouvelle/)).toBeNull();

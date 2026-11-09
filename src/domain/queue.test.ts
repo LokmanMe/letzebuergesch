@@ -41,15 +41,15 @@ describe("file du jour", () => {
   });
 
   it("la limite tient compte des nouvelles cartes déjà vues aujourd'hui", () => {
-    const s = stateWith(state.progress, { log: { [T]: { reviewed: 6, newIntroduced: 6 } } });
+    const s = stateWith(state.progress, { log: { [T]: { reviewed: 6, newIntroduced: 6, practiced: 0 } } });
     expect(newCardsRemaining(s, T)).toBe(2);
     expect(availableNewCards(cards, s, T)).toHaveLength(2);
-    const over = stateWith(state.progress, { log: { [T]: { reviewed: 10, newIntroduced: 10 } } });
+    const over = stateWith(state.progress, { log: { [T]: { reviewed: 10, newIntroduced: 10, practiced: 0 } } });
     expect(newCardsRemaining(over, T)).toBe(0);
   });
 
   it("la limite se réinitialise le lendemain", () => {
-    const s = stateWith({}, { log: { [T]: { reviewed: 8, newIntroduced: 8 } } });
+    const s = stateWith({}, { log: { [T]: { reviewed: 8, newIntroduced: 8, practiced: 0 } } });
     expect(newCardsRemaining(s, T)).toBe(0);
     expect(newCardsRemaining(s, "2026-03-11")).toBe(8);
   });
@@ -95,14 +95,14 @@ describe("session", () => {
   it("applyDiscovery : boîte 1, à revoir demain, compte comme nouvelle carte du jour", () => {
     const s = applyDiscovery(defaultState(), "m-001", T);
     expect(s.progress["m-001"]).toMatchObject({ box: 1, due: "2026-03-11", firstSeen: T, reviews: 1, lapses: 0 });
-    expect(s.log[T]).toEqual({ reviewed: 1, newIntroduced: 1 });
+    expect(s.log[T]).toEqual({ reviewed: 1, newIntroduced: 1, practiced: 0 });
     expect(applyDiscovery(s, "m-001", T)).toBe(s); // déjà connue : rien ne change
   });
 
   it("applyRating met à jour progression et journal", () => {
     let s = applyDiscovery(defaultState(), "m-002", T);
     s = applyRating(s, "m-002", "easy", "2026-03-11");
-    expect(s.log["2026-03-11"]).toEqual({ reviewed: 1, newIntroduced: 0 });
+    expect(s.log["2026-03-11"]).toEqual({ reviewed: 1, newIntroduced: 0, practiced: 0 });
     expect(s.progress["m-002"]).toMatchObject({ box: 2, due: "2026-03-14" });
     s = applyRating(s, "m-002", "again", "2026-03-14");
     expect(s.progress["m-002"]).toMatchObject({ box: 1, lapses: 1 });

@@ -1,0 +1,50 @@
+.ring {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.track {
+  fill: none;
+  stroke: var(--surface-2);
+}
+
+.fill {
+  fill: none;
+  stroke: var(--accent);
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.6s ease, stroke 0.3s ease;
+}
+
+.reached .fill {
+  stroke: var(--easy);
+}
+
+.center {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 1.25rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.reached .center {
+  color: var(--easy);
+  font-size: 1.6rem;
+  animation: pop 0.5s ease-out;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.4);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

@@ -4,8 +4,11 @@ import { LOD_AUDIO } from "../../content";
 import { pickPhraseOfDay, setPhraseOfDayDone } from "../../domain/phraseOfDay";
 import { LodAudio } from "../audio/LodAudio";
 import { availableNewCards, buildDailyQueue, dueCards } from "../../domain/queue";
-import { a1Progress, solidCards, streak } from "../../domain/stats";
+import { buildStages, currentStageIndex, stageProgress } from "../../domain/path";
+import { a1Progress, dailyGoalProgress, solidCards, streak } from "../../domain/stats";
+import { GoalRing } from "../components/GoalRing";
 import { ButtonLink, Panel, ProgressBar, UnverifiedBadge } from "../components/ui";
+import { stageEmoji } from "./Path";
 import { useAppState } from "../state/AppStateContext";
 import styles from "./Home.module.css";
 
@@ -53,8 +56,14 @@ function PhraseOfDay() {
 }
 
 export function Home() {
-  const { state, cards, today } = useAppState();
+  const { state, cards, modules, today } = useAppState();
   const due = dueCards(cards, state, today).length;
+  const goal = dailyGoalProgress(state, today);
+  const stages = buildStages(modules, state.customCards);
+  const stageIdx = currentStageIndex(stages, state);
+  const stageInfo = stageProgress(stages, state);
+  const totalStars = stageInfo.reduce((n, s) => n + s.stars, 0);
+  const currentStage = stages[stageIdx];
   const fresh = availableNewCards(cards, state, today).length;
   const solid = solidCards(cards, state).length;
   const progress = a1Progress(cards, state);
@@ -70,6 +79,25 @@ export function Home() {
           <span aria-hidden="true">🔥</span> {days} jour{days > 1 ? "s" : ""}
         </p>
       </header>
+
+      <Panel aria-labelledby="today-title" className={styles.today}>
+        <GoalRing done={goal.done} goal={goal.goal} />
+        <div>
+          <h2 id="today-title" className={styles.sectionTitle}>
+            Objectif du jour
+          </h2>
+          <p className={styles.todayCount}>
+            {goal.done} / {goal.goal} cartes
+          </p>
+          <p className={styles.small}>
+            {goal.reached
+              ? "Objectif atteint, bravo ! 🎯"
+              : goal.done === 0
+                ? "Lance ta session pour commencer."
+                : `Encore ${goal.goal - goal.done} pour l'atteindre.`}
+          </p>
+        </div>
+      </Panel>
 
       <Panel aria-labelledby="goal-title">
         <div className={styles.goalRow}>
@@ -109,6 +137,11 @@ export function Home() {
             {reviewedToday > 0 ? "Session du jour terminée. Bis muer !" : "Rien à réviser aujourd'hui."}
           </p>
         )}
+        {sessionSize === 0 && !goal.reached && Object.keys(state.progress).length > 0 && (
+          <ButtonLink to="/revision?mode=entrainement" variant="primary" block className={styles.mainBtn}>
+            🎯 Entraînement libre · compléter l'objectif
+          </ButtonLink>
+        )}
         {due > 0 && (
           <ButtonLink to="/revision?mode=eclair" block>
             ⚡ Révision éclair · 3 min
@@ -117,6 +150,22 @@ export function Home() {
       </div>
 
       <PhraseOfDay />
+
+      <Link to="/parcours" className={styles.pathTeaser}>
+        <span className={styles.pathEmoji} aria-hidden="true">
+          {currentStage ? stageEmoji(currentStage.moduleId) : "🏆"}
+        </span>
+        <span>
+          <strong>Parcours · étape {Math.min(stageIdx + 1, stages.length)} / {stages.length}</strong>
+          <span className={styles.small}>
+            {currentStage
+              ? `${currentStage.title}${currentStage.parts > 1 ? ` (${currentStage.part}/${currentStage.parts})` : ""}`
+              : "Toutes les étapes sont débloquées !"}{" "}
+            · ★ {totalStars} / {stages.length * 3}
+          </span>
+        </span>
+        <span aria-hidden="true">›</span>
+      </Link>
 
       <p className={styles.footer}>
         <Link to="/progression#phrases">Historique des phrases du jour</Link>

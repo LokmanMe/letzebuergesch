@@ -1,10 +1,21 @@
 import { useCallback, useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { buildDailyQueue, buildFlashQueue } from "../../domain/queue";
-import { advanceSession, applyDiscovery, applyRating, startSession, type SessionItem } from "../../domain/session";
+import { buildDailyQueue, buildFlashQueue, buildPracticeQueue } from "../../domain/queue";
+import { buildStages, currentStageIndex } from "../../domain/path";
+import {
+  advanceSession,
+  applyDiscovery,
+  applyPractice,
+  applyRating,
+  startPractice,
+  startSession,
+  type SessionItem,
+} from "../../domain/session";
+import { dailyGoalProgress } from "../../domain/stats";
 import type { Rating } from "../../domain/types";
 import { stop as stopAudio } from "../audio/player";
 import { cardRenderers } from "../cards/registry";
+import { GoalRing } from "../components/GoalRing";
 import { Button, ButtonLink, Panel } from "../components/ui";
 import { useAppState } from "../state/AppStateContext";
 import styles from "./Review.module.css";
@@ -17,18 +28,42 @@ const RATINGS: { rating: Rating; label: string; aria: string; key: string }[] = 
 
 export function Review() {
   const [params] = useSearchParams();
-  const mode = params.get("mode") === "eclair" ? "eclair" : "jour";
-  const { state, update, cards, today } = useAppState();
+  const modeParam = params.get("mode");
+  const mode = modeParam === "eclair" || modeParam === "entrainement" ? modeParam : "jour";
+  const { state, update, cards, modules, today } = useAppState();
 
   // La file est figée au démarrage de la session.
-  const [queue, setQueue] = useState<SessionItem[]>(() =>
-    startSession(mode === "eclair" ? buildFlashQueue(cards, state, today) : buildDailyQueue(cards, state, today), state),
-  );
+  const [queue, setQueue] = useState<SessionItem[]>(() => {
+    if (mode === "entrainement") {
+      const g = dailyGoalProgress(state, today);
+      return startPractice(buildPracticeQueue(cards, state, g.goal - g.done));
+    }
+    return startSession(mode === "eclair" ? buildFlashQueue(cards, state, today) : buildDailyQueue(cards, state, today), state);
+  });
+  const [practiced, setPracticed] = useState(0);
   const [total] = useState(queue.length);
   const [revealed, setRevealed] = useState(false);
   const [counts, setCounts] = useState<Record<Rating, number>>({ again: 0, hard: 0, easy: 0 });
   const [discovered, setDiscovered] = useState(0);
   const [audioSignal, setAudioSignal] = useState(0);
+
+  // Pour fêter l'objectif du jour et les étapes du parcours débloquées pendant la session.
+  const goal = dailyGoalProgress(state, today);
+  const [goalReachedAtStart] = useState(goal.reached);
+  const [goalToast, setGoalToast] = useState(false);
+  const stages = buildStages(modules, state.customCards);
+  const [stageAtStart] = useState(() => currentStageIndex(stages, state));
+  const stageNow = currentStageIndex(stages, state);
+
+  useEffect(() => {
+    if (goal.reached && !goalReachedAtStart) setGoalToast(true);
+  }, [goal.reached, goalReachedAtStart]);
+
+  useEffect(() => {
+    if (!goalToast) return;
+    const t = window.setTimeout(() => setGoalToast(false), 3500);
+    return () => window.clearTimeout(t);
+  }, [goalToast]);
 
   const current = queue[0];
   const discovering = current?.phase === "discover";
@@ -48,6 +83,9 @@ export function Review() {
       } else if (current.phase === "review" && outcome !== "noted") {
         update((s) => applyRating(s, current.card.id, outcome, today));
         setCounts((c) => ({ ...c, [outcome]: c[outcome] + 1 }));
+      } else if (current.phase === "practice") {
+        update((s) => applyPractice(s, today));
+        if (current.practiceReason === "free") setPracticed((n) => n + 1);
       }
       setQueue((q) => advanceSession(q, outcome));
       setRevealed(false);
@@ -82,7 +120,7 @@ export function Review() {
     return () => window.removeEventListener("keydown", onKey);
   }, [current, answerShown, discovering, next]);
 
-  const title = mode === "eclair" ? "Révision éclair" : "Session du jour";
+  const title = mode === "eclair" ? "Révision éclair" : mode === "entrainement" ? "Entraînement libre" : "Session du jour";
 
   if (total === 0) {
     return (
@@ -121,7 +159,33 @@ export function Review() {
             <li className={styles.easy}>Facile : {counts.easy}</li>
           </ul>
           )}
+          {practiced > 0 && (
+            <p className={styles.big}>
+              🎯 {practiced} carte{practiced > 1 ? "s" : ""} rejouée{practiced > 1 ? "s" : ""}
+            </p>
+          )}
           {discovered > 0 && <p>Les nouvelles phrases reviendront demain pour un premier vrai rappel.</p>}
+          <div className={styles.goalLine}>
+            <GoalRing done={goal.done} goal={goal.goal} size={56} />
+            <p>
+              {goal.reached
+                ? `Objectif du jour atteint : ${goal.done} cartes 🎯`
+                : `Objectif du jour : ${goal.done} / ${goal.goal} cartes. Encore ${goal.goal - goal.done} !`}
+            </p>
+          </div>
+          {!goal.reached && (
+            <Link to="/revision?mode=entrainement" className={styles.unlocked}>
+              🎯 Compléter l'objectif : entraînement libre ›
+            </Link>
+          )}
+          {stageNow > stageAtStart && (
+            <Link to="/parcours" className={styles.unlocked}>
+              🗺️{" "}
+              {stageNow >= stages.length
+                ? "Toutes les étapes du parcours sont débloquées !"
+                : `Nouvelle étape débloquée : ${stages[stageNow].title}${stages[stageNow].parts > 1 ? ` ${stages[stageNow].part}/${stages[stageNow].parts}` : ""} ›`}
+            </Link>
+          )}
           <p>Äddi, bis muer ! N'oublie pas de placer ta phrase du jour.</p>
           <ButtonLink to="/" variant="primary" block>
             Retour à l'accueil
@@ -132,7 +196,8 @@ export function Review() {
   }
 
   const Renderer = cardRenderers[current.card.type];
-  const done = total - queue.filter((i) => i.phase !== "practice").length;
+  // Les essais de fin de session (après découverte ou Raté) ne comptent pas dans « x / total ».
+  const done = total - queue.filter((i) => i.phase !== "practice" || i.practiceReason === "free").length;
 
   return (
     <main className={styles.page}>
@@ -146,11 +211,19 @@ export function Review() {
         </span>
       </header>
 
+      {goalToast && (
+        <p className={styles.toast} role="status">
+          🎯 Objectif du jour atteint !
+        </p>
+      )}
+
       {current.phase === "practice" && (
         <p className={styles.retry}>
           {current.practiceReason === "discovered"
             ? "Premier essai : retrouve la phrase découverte tout à l'heure. Sans effet sur le planning."
-            : "Deuxième essai, pour s'entraîner. Sans effet sur le planning."}
+            : current.practiceReason === "free"
+              ? "Entraînement libre : sans effet sur le planning."
+              : "Deuxième essai, pour s'entraîner. Sans effet sur le planning."}
         </p>
       )}
 

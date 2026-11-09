@@ -1,20 +1,31 @@
 import { introduce, review } from "./leitner";
-import type { AppState, Card, CardProgress, LocalDate, Rating } from "./types";
+import type { AppState, Card, CardProgress, DayLog, LocalDate, Rating } from "./types";
 
 function record(state: AppState, cardId: string, next: CardProgress, today: LocalDate): AppState {
   const isNew = state.progress[cardId] === undefined;
-  const dayLog = state.log[today] ?? { reviewed: 0, newIntroduced: 0 };
+  const dayLog = dayLogOf(state, today);
   return {
     ...state,
     progress: { ...state.progress, [cardId]: next },
     log: {
       ...state.log,
       [today]: {
+        ...dayLog,
         reviewed: dayLog.reviewed + 1,
         newIntroduced: dayLog.newIntroduced + (isNew ? 1 : 0),
       },
     },
   };
+}
+
+function dayLogOf(state: AppState, today: LocalDate): DayLog {
+  return state.log[today] ?? { reviewed: 0, newIntroduced: 0, practiced: 0 };
+}
+
+/** Compte un essai d'entraînement (fin de session) pour l'objectif du jour, sans toucher au planning. */
+export function applyPractice(state: AppState, today: LocalDate): AppState {
+  const dayLog = dayLogOf(state, today);
+  return { ...state, log: { ...state.log, [today]: { ...dayLog, practiced: dayLog.practiced + 1 } } };
 }
 
 /** Enregistre une notation (Raté / Difficile / Facile) dans l'état. Fonction pure. */
@@ -39,9 +50,14 @@ export type SessionPhase = "discover" | "review" | "practice";
 export type SessionItem = {
   card: Card;
   phase: SessionPhase;
-  /** Pour une carte en "practice" : pourquoi elle revient. */
-  practiceReason?: "discovered" | "missed";
+  /** Pour une carte en "practice" : pourquoi elle est là. */
+  practiceReason?: "discovered" | "missed" | "free";
 };
+
+/** Entraînement libre : toutes les cartes en "practice", sans effet sur le planning. */
+export function startPractice(cards: Card[]): SessionItem[] {
+  return cards.map((card) => ({ card, phase: "practice", practiceReason: "free" }));
+}
 
 export function startSession(cards: Card[], state: AppState): SessionItem[] {
   return cards.map((card) => ({ card, phase: state.progress[card.id] === undefined ? "discover" : "review" }));

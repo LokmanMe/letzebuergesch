@@ -15,6 +15,11 @@ export function Settings() {
   const [message, setMessage] = useState<Message>(null);
   const [confirmReset, setConfirmReset] = useState(false);
 
+  function setDailyGoal(n: number) {
+    const value = Math.max(5, Math.min(100, Math.round(n) || 5));
+    update((s) => ({ ...s, settings: { ...s.settings, dailyGoal: value } }));
+  }
+
   function setNewPerDay(n: number) {
     const value = Math.max(1, Math.min(30, Math.round(n) || 1));
     update((s) => ({ ...s, settings: { ...s.settings, newPerDay: value } }));
@@ -74,6 +79,32 @@ export function Settings() {
           </Button>
         </div>
         <p className={styles.hint}>8 par défaut. Plus de nouvelles cartes = plus de révisions les jours suivants.</p>
+
+        <label htmlFor="dailyGoal" className={styles.label}>
+          Objectif du jour (cartes travaillées)
+        </label>
+        <div className={styles.stepper}>
+          <Button onClick={() => setDailyGoal(state.settings.dailyGoal - 5)} aria-label="Objectif : 5 cartes de moins">
+            −
+          </Button>
+          <input
+            id="dailyGoal"
+            type="number"
+            inputMode="numeric"
+            min={5}
+            max={100}
+            step={5}
+            value={state.settings.dailyGoal}
+            onChange={(e) => setDailyGoal(Number(e.target.value))}
+            className={styles.number}
+          />
+          <Button onClick={() => setDailyGoal(state.settings.dailyGoal + 5)} aria-label="Objectif : 5 cartes de plus">
+            +
+          </Button>
+        </div>
+        <p className={styles.hint}>
+          15 par défaut. Chaque carte découverte, révisée ou rejouée en fin de session compte.
+        </p>
       </Panel>
 
       <Panel aria-labelledby="backup-title">

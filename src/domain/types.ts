@@ -55,8 +55,11 @@ export type CardProgress = {
 };
 
 export type DayLog = {
+  /** Cartes découvertes ou révisées (comptées pour la série et la courbe d'activité). */
   reviewed: number;
   newIntroduced: number;
+  /** Essais d'entraînement en fin de session (sans effet sur le planning). */
+  practiced: number;
 };
 
 export type PhraseOfDayEntry = {
@@ -66,9 +69,11 @@ export type PhraseOfDayEntry = {
 
 export type Settings = {
   newPerDay: number;
+  /** Objectif du jour : nombre de cartes travaillées (découvertes, révisées ou entraînées). */
+  dailyGoal: number;
 };
 
-export const CURRENT_SCHEMA_VERSION = 1;
+export const CURRENT_SCHEMA_VERSION = 2;
 
 export type AppState = {
   schemaVersion: typeof CURRENT_SCHEMA_VERSION;

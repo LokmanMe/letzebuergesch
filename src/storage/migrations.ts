@@ -23,6 +23,15 @@ const isNonNegInt = (v: unknown): v is number => Number.isInteger(v) && (v as nu
 const MIGRATIONS: Record<number, (s: Raw) => Raw> = {
   // Version 0 : état sans schemaVersion (aucune donnée réelle, sécurité).
   0: (s) => ({ ...s, schemaVersion: 1 }),
+  // Version 2 : objectif du jour (réglage) et compteur d'entraînement dans le journal.
+  1: (s) => ({
+    ...s,
+    schemaVersion: 2,
+    settings: { ...(isObject(s.settings) ? s.settings : {}), dailyGoal: 15 },
+    log: isObject(s.log)
+      ? Object.fromEntries(Object.entries(s.log).map(([d, l]) => [d, isObject(l) ? { ...l, practiced: 0 } : l]))
+      : s.log,
+  }),
 };
 
 function sanitizeProgress(v: unknown): Record<string, CardProgress> {
@@ -55,10 +64,16 @@ function sanitizeLog(v: unknown): Record<string, DayLog> {
   if (!isObject(v)) throw new InvalidStateError("journal invalide");
   const out: Record<string, DayLog> = {};
   for (const [date, d] of Object.entries(v)) {
-    if (!isValidLocalDate(date) || !isObject(d) || !isNonNegInt(d.reviewed) || !isNonNegInt(d.newIntroduced)) {
+    if (
+      !isValidLocalDate(date) ||
+      !isObject(d) ||
+      !isNonNegInt(d.reviewed) ||
+      !isNonNegInt(d.newIntroduced) ||
+      !isNonNegInt(d.practiced)
+    ) {
       throw new InvalidStateError(`journal invalide pour le ${date}`);
     }
-    out[date] = { reviewed: d.reviewed, newIntroduced: d.newIntroduced };
+    out[date] = { reviewed: d.reviewed, newIntroduced: d.newIntroduced, practiced: d.practiced };
   }
   return out;
 }
@@ -108,10 +123,12 @@ export function migrate(raw: unknown): AppState {
   const defaults = defaultState();
   const settings = isObject(s.settings) ? s.settings : {};
   const newPerDay = isNonNegInt(settings.newPerDay) ? Math.min(settings.newPerDay, 50) : defaults.settings.newPerDay;
+  const dailyGoal =
+    isNonNegInt(settings.dailyGoal) && settings.dailyGoal > 0 ? Math.min(settings.dailyGoal, 200) : defaults.settings.dailyGoal;
 
   return {
     schemaVersion: CURRENT_SCHEMA_VERSION,
-    settings: { newPerDay },
+    settings: { newPerDay, dailyGoal },
     progress: sanitizeProgress(s.progress ?? {}),
     log: sanitizeLog(s.log ?? {}),
     phraseOfDay: sanitizePhraseOfDay(s.phraseOfDay ?? {}),

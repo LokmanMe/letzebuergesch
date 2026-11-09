@@ -37,3 +37,11 @@ export function activity(state: AppState, today: LocalDate, days = 30): { date: 
     return { date, reviewed: state.log[date]?.reviewed ?? 0 };
   });
 }
+
+/** Objectif du jour : cartes travaillées aujourd'hui (découvertes, révisées et essais d'entraînement). */
+export function dailyGoalProgress(state: AppState, today: LocalDate): { done: number; goal: number; reached: boolean } {
+  const day = state.log[today];
+  const done = (day?.reviewed ?? 0) + (day?.practiced ?? 0);
+  const goal = state.settings.dailyGoal;
+  return { done, goal, reached: done >= goal };
+}

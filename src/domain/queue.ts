@@ -43,3 +43,22 @@ export function buildDailyQueue(cards: Card[], state: AppState, today: LocalDate
 export function buildFlashQueue(cards: Card[], state: AppState, today: LocalDate): Card[] {
   return dueCards(cards, state, today).slice(0, FLASH_LIMIT);
 }
+
+/** Taille minimale d'un entraînement libre. */
+export const PRACTICE_MIN = 5;
+
+/**
+ * Entraînement libre (pour compléter l'objectif du jour) : cartes déjà vues,
+ * les plus fragiles d'abord, puis les moins récemment revues. Sans effet sur le planning.
+ */
+export function buildPracticeQueue(cards: Card[], state: AppState, size: number): Card[] {
+  return cards
+    .filter((c) => state.progress[c.id] !== undefined)
+    .sort((a, b) => {
+      const pa = state.progress[a.id];
+      const pb = state.progress[b.id];
+      if (pa.box !== pb.box) return pa.box - pb.box;
+      return pa.lastReviewed < pb.lastReviewed ? -1 : pa.lastReviewed > pb.lastReviewed ? 1 : 0;
+    })
+    .slice(0, Math.max(PRACTICE_MIN, size));
+}

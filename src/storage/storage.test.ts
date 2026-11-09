@@ -28,7 +28,7 @@ describe("localStorageStorage", () => {
 
   it("aller-retour export → import", () => {
     const storage = createLocalStorageStorage(memoryBackend());
-    const s = { ...applyRating(defaultState(), "x", "hard", "2026-03-10"), settings: { newPerDay: 12 } };
+    const s = { ...applyRating(defaultState(), "x", "hard", "2026-03-10"), settings: { newPerDay: 12, dailyGoal: 15 } };
     expect(storage.import(storage.export(s))).toEqual(s);
   });
 
@@ -52,11 +52,29 @@ describe("localStorageStorage", () => {
 });
 
 describe("migrations", () => {
-  it("un état sans schemaVersion (v0) est migré en v1 avec des valeurs par défaut", () => {
+  it("un état sans schemaVersion (v0) est migré vers la version courante avec des valeurs par défaut", () => {
     const s = migrate({ progress: {} });
-    expect(s.schemaVersion).toBe(1);
+    expect(s.schemaVersion).toBe(2);
+    expect(s.settings.dailyGoal).toBe(15);
     expect(s.settings.newPerDay).toBe(8);
     expect(s.customCards).toEqual([]);
+  });
+
+  it("v1 → v2 : objectif du jour par défaut et compteur d'entraînement à 0, progression conservée", () => {
+    const v1 = {
+      schemaVersion: 1,
+      settings: { newPerDay: 10 },
+      progress: { a: { box: 3, due: "2026-03-12", firstSeen: "2026-03-01", lastReviewed: "2026-03-05", reviews: 4, lapses: 1 } },
+      log: { "2026-03-05": { reviewed: 12, newIntroduced: 8 } },
+      phraseOfDay: { "2026-03-05": { cardId: "a", done: true } },
+      customCards: [],
+    };
+    const s = migrate(v1);
+    expect(s.schemaVersion).toBe(2);
+    expect(s.settings).toEqual({ newPerDay: 10, dailyGoal: 15 });
+    expect(s.log["2026-03-05"]).toEqual({ reviewed: 12, newIntroduced: 8, practiced: 0 });
+    expect(s.progress.a.box).toBe(3);
+    expect(s.phraseOfDay["2026-03-05"].done).toBe(true);
   });
 
   it("complète firstSeen manquant à partir de lastReviewed", () => {

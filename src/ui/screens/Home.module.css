@@ -161,3 +161,49 @@
   width: 100%;
   margin-top: 6px;
 }
+
+.today {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.todayCount {
+  margin: 2px 0 0;
+  font-size: 1.3rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.today .small {
+  margin-top: 2px;
+}
+
+.pathTeaser {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  min-height: 64px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.pathTeaser strong {
+  display: block;
+  font-size: 1rem;
+}
+
+.pathTeaser .small {
+  display: block;
+  margin: 2px 0 0;
+}
+
+.pathEmoji {
+  font-size: 1.8rem;
+}

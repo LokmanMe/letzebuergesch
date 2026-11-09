@@ -82,11 +82,25 @@ Chaque carte est rangée dans une des 5 « boîtes ». Plus tu la connais, plus 
 ## Les écrans
 
 ### 🏠 Accueil
+- **🎯 Objectif du jour** : un anneau qui se remplit à chaque carte travaillée (découverte, révisée ou rejouée en fin de session) et passe au vert une fois l'objectif atteint (15 cartes par défaut).
 - **🔥 Série** : le nombre de jours d'affilée où tu as révisé. La journée n'est pas perdue tant qu'elle n'est pas finie.
 - **Objectif A1** : la part des phrases devenues solides. À 100 %, tu maîtrises toutes les phrases de l'appli.
 - **Compteurs** : cartes à réviser aujourd'hui, nouvelles cartes disponibles, cartes solides.
 - **Session du jour** : d'abord les révisions prévues, puis les nouvelles cartes (8 par jour par défaut).
 - **⚡ Révision éclair** : 3 minutes chrono, 10 cartes à revoir maximum, pas de nouvelles. Parfait pour une pause café.
+- **🎯 Entraînement libre** : si la session du jour est finie mais que l'objectif n'est pas atteint, rejoue des phrases déjà vues (les plus fragiles d'abord). Sans effet sur le planning des révisions.
+- **Parcours** : un raccourci vers ton étape en cours.
+
+### 🗺️ Parcours
+Les 97 phrases sont rangées en **14 étapes** sur un chemin, dans l'ordre où tu les découvres (un thème = 2 ou 3 étapes de 5 à 8 phrases).
+
+- **🔒 Verrouillée** : pas encore commencée. Les étapes se débloquent toutes seules au fil des sessions.
+- **Tu es ici** : l'étape en cours, avec le nombre de phrases déjà découvertes.
+- **Étoiles** d'une étape terminée : ★ toutes les phrases découvertes, ★★ toutes en boîte 3, ★★★ toutes solides (étape dorée).
+- Touche une étape pour voir ses phrases et leur niveau.
+- Au bout du chemin : 🏆 le niveau A1.
+
+Quand une session débloque une nouvelle étape, l'écran de fin te le signale.
 
 ### 💬 Phrase du jour
 Chaque jour, une phrase à **placer pour de vrai** : avec un collègue, à la boulangerie, au voisin… Coche **« Fait »** quand c'est fait. L'historique de tes phrases placées est conservé.
@@ -98,6 +112,7 @@ Chaque jour, une phrase à **placer pour de vrai** : avec un collègue, à la bo
 
 ### ⚙️ Réglages
 - **Nouvelles cartes par jour** : de 1 à 30 (8 par défaut). Plus tu en ajoutes, plus il y aura de révisions les jours suivants.
+- **Objectif du jour** : de 5 à 100 cartes travaillées (15 par défaut).
 - **Exporter / Importer** : sauvegarde ta progression dans un fichier, ou récupère-la sur un autre appareil.
 - **Relecture** : la liste complète des phrases, avec un export pour Excel.
 - **Réinitialiser** : repartir de zéro.
