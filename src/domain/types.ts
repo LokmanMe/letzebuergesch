@@ -69,10 +69,10 @@ export type PhraseOfDayEntry = {
 
 /**
  * Sens des cartes en révision.
- * - "progressive" : luxembourgeois → français tant que la phrase est récente (1 ou 2 points), puis français → luxembourgeois.
+ * - "mixed" : surtout français → luxembourgeois (toujours pour le premier rappel), environ une révision sur 4 à l'envers.
  * - "fr-lb" : toujours trouver le luxembourgeois ; "lb-fr" : toujours trouver le français.
  */
-export type DirectionSetting = "progressive" | "fr-lb" | "lb-fr";
+export type DirectionSetting = "mixed" | "fr-lb" | "lb-fr";
 export type Direction = "fr-lb" | "lb-fr";
 
 export type Settings = {

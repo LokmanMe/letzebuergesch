@@ -36,7 +36,7 @@ const MIGRATIONS: Record<number, (s: Raw) => Raw> = {
   2: (s) => ({
     ...s,
     schemaVersion: 3,
-    settings: { ...(isObject(s.settings) ? s.settings : {}), direction: "progressive" },
+    settings: { ...(isObject(s.settings) ? s.settings : {}), direction: "mixed" },
     achievements: {},
   }),
 };
@@ -138,10 +138,8 @@ export function migrate(raw: unknown): AppState {
   const dailyGoal =
     isNonNegInt(settings.dailyGoal) && settings.dailyGoal > 0 ? Math.min(settings.dailyGoal, 200) : defaults.settings.dailyGoal;
 
-  const direction =
-    settings.direction === "fr-lb" || settings.direction === "lb-fr" || settings.direction === "progressive"
-      ? settings.direction
-      : defaults.settings.direction;
+  // "progressive" (ancien mode par défaut, remplacé) devient le mode mixé.
+  const direction = settings.direction === "fr-lb" || settings.direction === "lb-fr" ? settings.direction : defaults.settings.direction;
 
   return {
     schemaVersion: CURRENT_SCHEMA_VERSION,

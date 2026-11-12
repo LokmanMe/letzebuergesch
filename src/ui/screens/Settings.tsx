@@ -10,9 +10,9 @@ import styles from "./Settings.module.css";
 
 const DIRECTIONS: { value: DirectionSetting; label: string; hint: string }[] = [
   {
-    value: "progressive",
-    label: "Progressif (recommandé)",
-    hint: "À l'envers tant que la phrase est récente (1 ou 2 points) : tu lis le luxembourgeois et tu cherches le français. Ensuite, dans l'autre sens.",
+    value: "mixed",
+    label: "Mixé (recommandé)",
+    hint: "Surtout français → luxembourgeois, pour apprendre à parler. Environ une révision sur 4 à l'envers : tu lis et écoutes le luxembourgeois, tu cherches le français. Le premier rappel d'une phrase est toujours en français → luxembourgeois.",
   },
   { value: "fr-lb", label: "Français → luxembourgeois", hint: "Toujours trouver comment le dire. Le plus exigeant." },
   { value: "lb-fr", label: "Luxembourgeois → français", hint: "Toujours trouver ce que ça veut dire. Entraîne la compréhension." },

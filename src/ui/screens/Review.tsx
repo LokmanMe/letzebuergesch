@@ -72,7 +72,7 @@ export function Review() {
   // En découverte, la réponse est visible d'emblée.
   const answerShown = revealed || discovering;
   // La progression d'une carte ne change qu'au moment où on passe à la suivante : le sens reste stable à l'écran.
-  const direction = current ? cardDirection(state.settings.direction, state.progress[current.card.id]) : "fr-lb";
+  const direction = current ? cardDirection(state.settings.direction, current.card.id, state.progress[current.card.id]) : "fr-lb";
   const reverse = !discovering && direction === "lb-fr";
 
   useEffect(() => () => stopAudio(), []);

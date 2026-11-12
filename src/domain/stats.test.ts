@@ -96,7 +96,7 @@ describe("objectif du jour", () => {
   });
 
   it("atteint quand le total dépasse l'objectif réglé", () => {
-    const s = { ...withLog([T]), settings: { newPerDay: 8, dailyGoal: 3, direction: "progressive" as const } };
+    const s = { ...withLog([T]), settings: { newPerDay: 8, dailyGoal: 3, direction: "mixed" as const } };
     expect(dailyGoalProgress(s, T)).toEqual({ done: 3, goal: 3, reached: true });
     expect(dailyGoalProgress(s, "2026-03-11").done).toBe(0);
   });

@@ -54,9 +54,11 @@ La phrase revient **à la fin de la session** pour un premier essai de mémoire 
 
 ### Les cartes à l'envers ⇄
 
-Une phrase récente (1 ou 2 points de maîtrise) s'affiche **à l'envers** : tu lis le luxembourgeois, tu peux l'écouter, et tu cherches ce que ça veut dire **en français**. C'est plus facile pour démarrer et ça entraîne la compréhension. Dès que la phrase atteint 3 points, elle passe dans l'autre sens : trouver comment la dire en luxembourgeois.
+La plupart des révisions se font **du français vers le luxembourgeois** : c'est le sens le plus exigeant, et celui qui apprend à parler. Le premier rappel d'une nouvelle phrase se fait toujours dans ce sens.
 
-Tu peux changer ça dans **Réglages → Sens des cartes** : toujours français → luxembourgeois, ou toujours luxembourgeois → français.
+Environ **une révision sur 4** s'affiche **à l'envers** : tu lis le luxembourgeois, tu peux l'écouter, et tu cherches ce que ça veut dire en français. Ça entretient la compréhension, utile pour suivre tes collègues. Les cartes ne passent pas toutes à l'envers le même jour.
+
+Tu peux changer ça dans **Réglages → Sens des cartes** : mixé (par défaut), toujours français → luxembourgeois, ou toujours luxembourgeois → français.
 
 ### L'écoute 🔊
 
@@ -122,7 +124,7 @@ Chaque jour, une phrase à **placer pour de vrai** : avec un collègue, à la bo
 ### ⚙️ Réglages
 - **Nouvelles cartes par jour** : de 1 à 30 (8 par défaut). Plus tu en ajoutes, plus il y aura de révisions les jours suivants.
 - **Objectif du jour** : de 5 à 100 cartes travaillées (15 par défaut).
-- **Sens des cartes** : progressif (par défaut), toujours français → luxembourgeois, ou toujours luxembourgeois → français.
+- **Sens des cartes** : mixé (par défaut : surtout français → luxembourgeois, une fois sur 4 à l'envers), toujours français → luxembourgeois, ou toujours luxembourgeois → français.
 - **Exporter / Importer** : sauvegarde ta progression dans un fichier, ou récupère-la sur un autre appareil.
 - **Relecture** : la liste complète des phrases, avec un export pour Excel.
 - **Réinitialiser** : repartir de zéro.
