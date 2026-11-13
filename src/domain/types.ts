@@ -82,7 +82,7 @@ export type Settings = {
   direction: DirectionSetting;
 };
 
-export const CURRENT_SCHEMA_VERSION = 3;
+export const CURRENT_SCHEMA_VERSION = 4;
 
 export type AppState = {
   schemaVersion: typeof CURRENT_SCHEMA_VERSION;
@@ -94,4 +94,27 @@ export type AppState = {
   customCards: Card[];
   /** Badges débloqués : id → date du déblocage. */
   achievements: Record<string, LocalDate>;
+  /** Leçons de grammaire lues : id → date de lecture. */
+  lessonsRead: Record<string, LocalDate>;
+};
+
+/** Une ligne d'exemple en luxembourgeois ; `cardId` pour réutiliser l'audio lod.lu d'une carte. */
+export type LessonExample = { lb: string; fr: string; cardId?: string };
+
+export type LessonQuiz = { question: string; choices: string[]; answer: number; explanation: string };
+
+/** Fiche de grammaire courte, rattachée à une étape du parcours. */
+export type Lesson = {
+  id: string;
+  icon: string;
+  title: string;
+  /** Étape du parcours après laquelle la fiche arrive (ex. "intro-1"). */
+  afterStage: string;
+  intro: string;
+  points: string[];
+  table?: { caption: string; rows: [string, string][] };
+  examples: LessonExample[];
+  pitfall?: string;
+  quiz: LessonQuiz[];
+  verified: boolean;
 };

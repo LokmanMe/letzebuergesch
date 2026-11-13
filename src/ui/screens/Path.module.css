@@ -225,3 +225,58 @@
   grid-row: 1 / span 2;
   align-self: center;
 }
+
+.grammarLink {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-weight: 600;
+}
+
+/* Leçon de grammaire : une pastille plus petite sur le chemin, entre deux étapes. */
+.lesson {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 2px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  max-width: 90%;
+}
+
+.lessonTitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lesson_new {
+  border-color: var(--accent);
+  box-shadow: 0 3px 0 var(--accent);
+}
+
+.lesson_read {
+  border-color: var(--easy);
+}
+
+.lesson_upcoming {
+  background: var(--surface-2);
+  color: var(--text-muted);
+}
+
+.lessonNew {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--accent-text);
+  background: var(--accent);
+  padding: 1px 6px;
+  border-radius: 999px;
+}

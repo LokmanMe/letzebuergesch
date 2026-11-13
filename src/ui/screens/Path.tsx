@@ -1,4 +1,7 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
+import { LESSONS } from "../../content";
+import { lessonsAfterStage, lessonStatuses } from "../../domain/grammar";
 import { buildStages, currentStageIndex, stageProgress, type StageProgress } from "../../domain/path";
 import { buildDailyQueue, unseenCards } from "../../domain/queue";
 import { ButtonLink, MasteryDots, Panel } from "../components/ui";
@@ -49,6 +52,7 @@ export function Path() {
   const current = currentStageIndex(stages, state);
   const [selected, setSelected] = useState<number | null>(current < stages.length ? current : null);
   const currentRef = useRef<HTMLLIElement>(null);
+  const lessonStatus = lessonStatuses(LESSONS, stages, state);
 
   const done = progress.filter((p) => p.status === "done").length;
   const stars = progress.reduce((n, p) => n + p.stars, 0);
@@ -67,6 +71,9 @@ export function Path() {
         <p className={styles.legend}>
           ★ toutes découvertes · ★★ toutes à ●●●○○ · ★★★ toutes solides
         </p>
+        <Link to="/grammaire" className={styles.grammarLink}>
+          📘 Leçons de grammaire ›
+        </Link>
       </header>
 
       <ol className={styles.path}>
@@ -75,7 +82,24 @@ export function Path() {
           const isCurrent = i === current;
           const open = selected === i;
           const name = `${stage.title}${stage.parts > 1 ? ` ${stage.part}/${stage.parts}` : ""}`;
-          return (
+          const lessons = lessonsAfterStage(LESSONS, stage.id).map((l) => {
+            const status = lessonStatus.get(l.id) ?? "upcoming";
+            return (
+              <li key={l.id} className={styles.step}>
+                <Link
+                  to={`/grammaire/${l.id}`}
+                  className={`${styles.lesson} ${styles[`lesson_${status}`]}`}
+                  aria-label={`Leçon : ${l.title}, ${status === "read" ? "lue" : status === "new" ? "nouvelle" : "à venir"}`}
+                >
+                  <span aria-hidden="true">{l.icon}</span>
+                  <span className={styles.lessonTitle}>{l.title}</span>
+                  {status === "new" && <span className={styles.lessonNew}>Nouvelle</span>}
+                  {status === "read" && <span aria-hidden="true">✓</span>}
+                </Link>
+              </li>
+            );
+          });
+          return [
             <li key={stage.id} ref={isCurrent ? currentRef : undefined} className={styles.step}>
               <div className={styles.node} style={{ transform: `translateX(${OFFSETS[i % OFFSETS.length]}px)` }}>
                 <button
@@ -140,8 +164,9 @@ export function Path() {
                   )}
                 </Panel>
               )}
-            </li>
-          );
+            </li>,
+            ...lessons,
+          ];
         })}
         <li className={styles.step}>
           <div className={styles.node}>

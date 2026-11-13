@@ -12,5 +12,6 @@ export function defaultState(): AppState {
     phraseOfDay: {},
     customCards: [],
     achievements: {},
+    lessonsRead: {},
   };
 }

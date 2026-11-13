@@ -54,7 +54,7 @@ describe("localStorageStorage", () => {
 describe("migrations", () => {
   it("un état sans schemaVersion (v0) est migré vers la version courante avec des valeurs par défaut", () => {
     const s = migrate({ progress: {} });
-    expect(s.schemaVersion).toBe(3);
+    expect(s.schemaVersion).toBe(4);
     expect(s.settings.dailyGoal).toBe(15);
     expect(s.settings.newPerDay).toBe(8);
     expect(s.customCards).toEqual([]);
@@ -70,7 +70,7 @@ describe("migrations", () => {
       customCards: [],
     };
     const s = migrate(v1);
-    expect(s.schemaVersion).toBe(3);
+    expect(s.schemaVersion).toBe(4);
     expect(s.settings).toEqual({ newPerDay: 10, dailyGoal: 15, direction: "mixed" as const });
     expect(s.log["2026-03-05"]).toEqual({ reviewed: 12, newIntroduced: 8, practiced: 0 });
     expect(s.progress.a.box).toBe(3);
@@ -79,7 +79,7 @@ describe("migrations", () => {
 
   it("v2 → v3 : sens mixé par défaut, aucun badge, réglages conservés", () => {
     const s = migrate({ schemaVersion: 2, settings: { newPerDay: 5, dailyGoal: 30 }, progress: {}, log: {}, phraseOfDay: {}, customCards: [] });
-    expect(s.schemaVersion).toBe(3);
+    expect(s.schemaVersion).toBe(4);
     expect(s.settings).toEqual({ newPerDay: 5, dailyGoal: 30, direction: "mixed" });
     expect(s.achievements).toEqual({});
   });

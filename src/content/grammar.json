@@ -1,0 +1,353 @@
+{
+  "lessons": [
+    {
+      "id": "regle-n",
+      "icon": "✂️",
+      "title": "La règle du « n »",
+      "afterStage": "greetings-1",
+      "intro": "Pourquoi dit-on « Gudde Moien » mais « Gudden Owend » ? C'est la règle la plus typique du luxembourgeois : le « n » en fin de mot tombe souvent.",
+      "points": [
+        "Le **n final tombe** quand le mot suivant commence par une consonne : « Gudde Moien ».",
+        "Il **reste** devant une voyelle et devant **n, d, t, z, h** : « Gudden Owend », « Gudden Dag ».",
+        "Il reste aussi en fin de phrase, avant une pause.",
+        "Pas de panique : on te comprendra même si tu te trompes. La règle vient vite à l'oreille."
+      ],
+      "examples": [
+        { "lb": "Gudde Moien!", "fr": "Bonjour ! (M : le n tombe)", "cardId": "greetings-002" },
+        { "lb": "Gudden Owend!", "fr": "Bonsoir ! (O, voyelle : le n reste)", "cardId": "greetings-003" },
+        { "lb": "Ech léiere Lëtzebuergesch.", "fr": "J'apprends le luxembourgeois. (L : le n tombe)", "cardId": "intro-014" },
+        { "lb": "Ech kommen aus Frankräich.", "fr": "Je viens de France. (a, voyelle : le n reste)", "cardId": "intro-005" }
+      ],
+      "pitfall": "On l'appelle « Eifeler Regel ». Elle s'applique aussi aux verbes : « Ech si midd » (je suis fatigué), mais « Ech sinn nei hei ».",
+      "quiz": [
+        {
+          "question": "Bonjour (soigné, dans la journée) : « Gudde Dag » ou « Gudden Dag » ?",
+          "choices": ["Gudde Dag", "Gudden Dag"],
+          "answer": 1,
+          "explanation": "Devant un D, le n reste : « Gudden Dag »."
+        },
+        {
+          "question": "Quelle phrase applique bien la règle ?",
+          "choices": ["Ech si Grenzgänger.", "Ech sinn Grenzgänger."],
+          "answer": 0,
+          "explanation": "Devant le G, le n de « sinn » tombe : « Ech si Grenzgänger »."
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "present",
+      "icon": "🔤",
+      "title": "Conjuguer au présent",
+      "afterStage": "intro-1",
+      "intro": "Bonne nouvelle : la plupart des verbes se conjuguent tous de la même façon. Il suffit de connaître les terminaisons.",
+      "points": [
+        "On part de l'infinitif en **-en** : « schaffen » (travailler), « wunnen » (habiter).",
+        "**ech** → infinitif complet : « ech schaffen ».",
+        "**du** → **-s** : « du schaffs ». **hien / si** (il / elle) → **-t** : « hie schafft ».",
+        "La règle du n s'applique : « ech schaffen hei », mais « ech léiere Lëtzebuergesch »."
+      ],
+      "table": {
+        "caption": "schaffen (travailler)",
+        "rows": [
+          ["ech schaffen", "je travaille"],
+          ["du schaffs", "tu travailles"],
+          ["hien / si schafft", "il / elle travaille"],
+          ["mir schaffen", "nous travaillons"],
+          ["dir schafft", "vous travaillez"],
+          ["si schaffen", "ils / elles travaillent"]
+        ]
+      },
+      "examples": [
+        { "lb": "Ech schaffen zu Lëtzebuerg.", "fr": "Je travaille au Luxembourg.", "cardId": "intro-008" },
+        { "lb": "Ech wunnen a Frankräich.", "fr": "J'habite en France.", "cardId": "intro-007" },
+        { "lb": "Wéi heeschs du?", "fr": "Comment tu t'appelles ?", "cardId": "intro-002" }
+      ],
+      "pitfall": "« si » veut dire à la fois « elle » et « ils / elles ». Le verbe fait la différence : « si schafft » (elle), « si schaffen » (ils).",
+      "quiz": [
+        {
+          "question": "Tu travailles : « du … »",
+          "choices": ["du schaffen", "du schaffs", "du schafft"],
+          "answer": 1,
+          "explanation": "Avec « du », le verbe prend -s : « du schaffs »."
+        },
+        {
+          "question": "J'habite : « ech … »",
+          "choices": ["ech wunnen", "ech wunns", "ech wunnt"],
+          "answer": 0,
+          "explanation": "Avec « ech », on garde l'infinitif : « ech wunnen »."
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "du-dir",
+      "icon": "🤝",
+      "title": "Tu ou vous : du ou Dir ?",
+      "afterStage": "intro-1",
+      "intro": "Comme en français, il y a un « tu » et un « vous » de politesse. Le vouvoiement s'écrit avec une majuscule : « Dir ».",
+      "points": [
+        "**du** = tu : collègues proches, amis, enfants.",
+        "**Dir** (avec majuscule) = vous de politesse : inconnus, commerçants, supérieurs.",
+        "Avec **Dir**, le verbe prend **-t** : « Wéi heescht Dir? ».",
+        "Entre collègues, on se tutoie vite au Luxembourg. Dans le doute, commence par « Dir »."
+      ],
+      "examples": [
+        { "lb": "Wéi heeschs du?", "fr": "Comment tu t'appelles ?", "cardId": "intro-002" },
+        { "lb": "Wéi heescht Dir?", "fr": "Comment vous appelez-vous ?", "cardId": "intro-003" },
+        { "lb": "An du? / An Dir?", "fr": "Et toi ? / Et vous ?", "cardId": "intro-015" }
+      ],
+      "pitfall": "« dir » en minuscule, c'est le « vous » pluriel familier (à plusieurs amis). Le verbe est le même : « dir schafft ».",
+      "quiz": [
+        {
+          "question": "Tu demandes son nom à la boulangère que tu ne connais pas :",
+          "choices": ["Wéi heeschs du?", "Wéi heescht Dir?"],
+          "answer": 1,
+          "explanation": "Avec une inconnue, on vouvoie : « Wéi heescht Dir? »."
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "sinn-hunn",
+      "icon": "🧩",
+      "title": "Être et avoir : sinn et hunn",
+      "afterStage": "intro-2",
+      "intro": "Les deux verbes les plus utiles sont irréguliers. Ils valent la peine d'être appris par cœur.",
+      "points": [
+        "**sinn** = être : « Ech sinn nei hei ».",
+        "**hunn** = avoir : « Ech hunn Duuscht » (j'ai soif).",
+        "L'âge se dit avec **sinn** : « Ech sinn drësseg Joer al » (je suis trente ans vieux).",
+        "La règle du n marche aussi ici : « Ech si Fransous », « Ech hu keen Honger »."
+      ],
+      "table": {
+        "caption": "sinn (être) · hunn (avoir)",
+        "rows": [
+          ["ech sinn · ech hunn", "je suis · j'ai"],
+          ["du bass · du hues", "tu es · tu as"],
+          ["hien / si ass · huet", "il / elle est · a"],
+          ["mir sinn · mir hunn", "nous sommes · avons"],
+          ["dir sidd · dir hutt", "vous êtes · avez"],
+          ["si sinn · si hunn", "ils sont · ont"]
+        ]
+      },
+      "examples": [
+        { "lb": "Ech sinn nei hei.", "fr": "Je suis nouveau / nouvelle ici.", "cardId": "intro-010" },
+        { "lb": "Ech sinn drësseg Joer al.", "fr": "J'ai trente ans.", "cardId": "intro-016" },
+        { "lb": "Ech hunn Duuscht.", "fr": "J'ai soif.", "cardId": "cafeteria-015" },
+        { "lb": "Dat ass schwéier!", "fr": "C'est difficile !", "cardId": "joker-012" }
+      ],
+      "pitfall": "« J'ai trente ans » ne se dit pas avec « hunn » : on dit « Ech sinn drësseg Joer al ».",
+      "quiz": [
+        {
+          "question": "Tu es : « du … »",
+          "choices": ["du sinn", "du bass", "du ass"],
+          "answer": 1,
+          "explanation": "« sinn » est irrégulier : « du bass »."
+        },
+        {
+          "question": "J'ai 25 ans :",
+          "choices": ["Ech hunn 25 Joer.", "Ech sinn 25 Joer al."],
+          "answer": 1,
+          "explanation": "L'âge se dit avec « sinn » : « Ech sinn 25 Joer al »."
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "questions",
+      "icon": "❓",
+      "title": "Poser une question",
+      "afterStage": "joker-1",
+      "intro": "Pour poser une question, on met le verbe avant le sujet. Pas besoin de « est-ce que ».",
+      "points": [
+        "Question fermée (oui / non) : **le verbe en premier**. « Schwätzt Dir Franséisch? »",
+        "Question ouverte : **mot interrogatif + verbe + sujet**. « Wou schaffs du? »",
+        "Les mots interrogatifs : **wat** (quoi), **wéi** (comment), **wou** (où), **wéini** (quand), **wien** (qui), **wéi vill** (combien), **firwat** (pourquoi)."
+      ],
+      "examples": [
+        { "lb": "Wat heescht dat?", "fr": "Qu'est-ce que ça veut dire ?", "cardId": "joker-006" },
+        { "lb": "Kënnt Dir dat widderhuelen?", "fr": "Vous pouvez répéter ?", "cardId": "joker-004" },
+        { "lb": "Wou schaffs du?", "fr": "Où est-ce que tu travailles ?", "cardId": "intro-012" },
+        { "lb": "Wéi vill kascht dat?", "fr": "Combien ça coûte ?", "cardId": "cafeteria-005" }
+      ],
+      "pitfall": "« Wéi » veut dire « comment », mais « Wéi vill » veut dire « combien ».",
+      "quiz": [
+        {
+          "question": "Vous parlez français ?",
+          "choices": ["Dir schwätzt Franséisch?", "Schwätzt Dir Franséisch?"],
+          "answer": 1,
+          "explanation": "Pour une question oui / non, le verbe passe en premier."
+        },
+        {
+          "question": "« Où » se dit :",
+          "choices": ["wou", "wéi", "wat"],
+          "answer": 0,
+          "explanation": "« wou » = où, « wéi » = comment, « wat » = quoi."
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "negation",
+      "icon": "🚫",
+      "title": "La négation : net et keen",
+      "afterStage": "joker-2",
+      "intro": "Le « ne… pas » français se dit en un seul mot. Et il y en a deux selon les cas.",
+      "points": [
+        "**net** = ne… pas. Il se place **après le verbe** : « Ech verstinn net ».",
+        "**keen / keng** = pas de, aucun, devant un nom : « Ech hu keen Honger » (je n'ai pas faim).",
+        "**keen** devant un nom masculin ou neutre, **keng** devant un nom féminin ou pluriel.",
+        "La règle du n s'applique : « Kee Problem »."
+      ],
+      "examples": [
+        { "lb": "Ech verstinn net.", "fr": "Je ne comprends pas.", "cardId": "joker-003" },
+        { "lb": "Ech weess net.", "fr": "Je ne sais pas.", "cardId": "joker-010" },
+        { "lb": "Ech hu keen Honger.", "fr": "Je n'ai pas faim.", "cardId": "cafeteria-016" },
+        { "lb": "Kee Problem.", "fr": "Pas de problème.", "cardId": "office-013" }
+      ],
+      "pitfall": "On ne dit pas « Ech hunn net Honger » : devant un nom, on utilise « keen ».",
+      "quiz": [
+        {
+          "question": "Je ne sais pas :",
+          "choices": ["Ech net weess.", "Ech weess net."],
+          "answer": 1,
+          "explanation": "« net » vient après le verbe : « Ech weess net »."
+        },
+        {
+          "question": "Je n'ai pas soif :",
+          "choices": ["Ech hunn net Duuscht.", "Ech hu keen Duuscht."],
+          "answer": 1,
+          "explanation": "Devant un nom, on utilise « keen » : « Ech hu keen Duuscht »."
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "possessifs",
+      "icon": "🎁",
+      "title": "Mon, ton : mäin et däin",
+      "afterStage": "office-2",
+      "intro": "Comme en français, le possessif change selon le nom qui suit. Mais ici, c'est le genre luxembourgeois qui compte.",
+      "points": [
+        "**mäin** (mon) et **däin** (ton) devant un nom masculin ou neutre.",
+        "**meng** (ma, mes) et **deng** (ta, tes) devant un nom féminin ou pluriel.",
+        "La règle du n s'applique : « däi Gebuertsdag », « mäi Kaffi ».",
+        "Pour le vouvoiement : **Ären / Är** (votre)."
+      ],
+      "examples": [
+        { "lb": "Merci fir deng Hëllef.", "fr": "Merci pour ton aide. (Hëllef est féminin)", "cardId": "office-012" },
+        { "lb": "Alles Guddes fir däi Gebuertsdag!", "fr": "Joyeux anniversaire ! (Gebuertsdag est masculin)", "cardId": "office-009" },
+        { "lb": "Dat ass mäi Kaffi.", "fr": "C'est mon café." }
+      ],
+      "pitfall": "Le genre n'est pas toujours celui du français : « d'Hëllef » (l'aide) est féminin, mais « de Kaffi » est masculin comme en français.",
+      "quiz": [
+        {
+          "question": "Merci pour ton aide :",
+          "choices": ["Merci fir däin Hëllef.", "Merci fir deng Hëllef."],
+          "answer": 1,
+          "explanation": "« Hëllef » est féminin, donc « deng »."
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "modaux",
+      "icon": "💪",
+      "title": "Pouvoir, devoir, vouloir",
+      "afterStage": "office-3",
+      "intro": "Avec « kënnen » (pouvoir), « mussen » (devoir) et « wëllen » (vouloir), le deuxième verbe part tout à la fin de la phrase.",
+      "points": [
+        "Le verbe modal est conjugué, **l'autre verbe reste à l'infinitif, en fin de phrase** : « Ech muss goen ».",
+        "**kënnen** : ech kann, du kanns, Dir kënnt.",
+        "**mussen** : ech muss, du muss, Dir musst.",
+        "**wëllen** : ech wëll, du wëlls, Dir wëllt."
+      ],
+      "examples": [
+        { "lb": "Ech muss goen.", "fr": "Je dois y aller.", "cardId": "office-015" },
+        { "lb": "Kanns du mir hëllefen?", "fr": "Tu peux m'aider ?", "cardId": "joker-013" },
+        { "lb": "Kënnt Dir w.e.g. méi lues schwätzen?", "fr": "Pouvez-vous parler plus lentement, s'il vous plaît ?", "cardId": "joker-002" },
+        { "lb": "Kann ech mat der Kaart bezuelen?", "fr": "Je peux payer par carte ?", "cardId": "cafeteria-006" }
+      ],
+      "pitfall": "Pour commander, « Ech wëll » (je veux) fait un peu brusque. Dis plutôt « Ech hätt gär… » (je voudrais).",
+      "quiz": [
+        {
+          "question": "Je dois travailler :",
+          "choices": ["Ech muss schaffen.", "Ech schaffen muss."],
+          "answer": 0,
+          "explanation": "Le modal « muss » est conjugué, « schaffen » part à la fin."
+        },
+        {
+          "question": "Tu peux : « du … »",
+          "choices": ["du kënnt", "du kanns", "du kann"],
+          "answer": 1,
+          "explanation": "« kënnen » est irrégulier : « du kanns »."
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "articles",
+      "icon": "📦",
+      "title": "Les articles : de, d', en, eng",
+      "afterStage": "cafeteria-2",
+      "intro": "Le luxembourgeois a trois genres : masculin, féminin et neutre. L'article t'indique lequel.",
+      "points": [
+        "Article défini (le, la, les) : **den** (masculin), **d'** (féminin, neutre et pluriel), collé au nom : « d'Rechnung ».",
+        "Article indéfini (un, une) : **en** (masculin et neutre), **eng** (féminin).",
+        "La règle du n s'applique : « de Weekend », « e Kaffi », mais « en Apel » (une pomme).",
+        "Le genre ne suit pas toujours le français : apprends chaque nom avec son article."
+      ],
+      "examples": [
+        { "lb": "Ech hätt gär e Kaffi.", "fr": "Je voudrais un café. (masculin)", "cardId": "cafeteria-001" },
+        { "lb": "E Glas Waasser", "fr": "Un verre d'eau (neutre)", "cardId": "cafeteria-003" },
+        { "lb": "Eng Tut, wann ech gelift.", "fr": "Un sachet, s'il vous plaît. (féminin)", "cardId": "cafeteria-011" },
+        { "lb": "D'Rechnung, wann ech gelift.", "fr": "L'addition, s'il vous plaît. (féminin)", "cardId": "cafeteria-007" }
+      ],
+      "pitfall": "Après certains petits mots comme « mat » (avec) ou « aus » (de), l'article change : « mat der Kaart », « aus der Belsch ». Retiens-les comme des expressions toutes faites pour l'instant.",
+      "quiz": [
+        {
+          "question": "Un sachet (« Tut » est féminin) :",
+          "choices": ["e Tut", "eng Tut"],
+          "answer": 1,
+          "explanation": "Devant un nom féminin : « eng »."
+        },
+        {
+          "question": "Le week-end :",
+          "choices": ["de Weekend", "d'Weekend"],
+          "answer": 0,
+          "explanation": "« Weekend » est masculin : « den », qui devient « de » devant le W (règle du n)."
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "verbe-2",
+      "icon": "🔀",
+      "title": "Le verbe en deuxième position",
+      "afterStage": "numbers-days-2",
+      "intro": "Dans une phrase affirmative, le verbe conjugué est toujours en deuxième position. Si tu commences par autre chose que le sujet, le sujet passe après le verbe.",
+      "points": [
+        "Ordre habituel : « **Ech** schaffen haut » (je travaille aujourd'hui).",
+        "Si la phrase commence par « haut », le verbe reste 2ᵉ et le sujet passe après : « **Haut** schaffen ech ».",
+        "Même chose avec « muer », « gëschter », un jour de la semaine…",
+        "C'est la même règle qu'en allemand ou en néerlandais."
+      ],
+      "examples": [
+        { "lb": "Haut ass schéint Wieder.", "fr": "Il fait beau aujourd'hui.", "cardId": "office-016" },
+        { "lb": "Muer schaffen ech net.", "fr": "Demain, je ne travaille pas." },
+        { "lb": "Haut léieren ech Lëtzebuergesch.", "fr": "Aujourd'hui, j'apprends le luxembourgeois." }
+      ],
+      "pitfall": "On ne dit pas « Haut ech schaffen » comme en français : après « haut », le verbe vient tout de suite.",
+      "quiz": [
+        {
+          "question": "Demain, je travaille :",
+          "choices": ["Muer ech schaffen.", "Muer schaffen ech."],
+          "answer": 1,
+          "explanation": "Le verbe reste en 2ᵉ position, le sujet passe après : « Muer schaffen ech »."
+        }
+      ],
+      "verified": false
+    }
+  ]
+}

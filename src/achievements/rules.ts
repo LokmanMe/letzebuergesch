@@ -1,3 +1,4 @@
+import { LESSONS } from "../content";
 import { solidCards, streak, SOLID_BOXES } from "../domain/stats";
 import type { AppState, Card, LocalDate } from "../domain/types";
 
@@ -60,6 +61,15 @@ export const ACHIEVEMENTS: Achievement[] = [
     title: "Niveau A1",
     description: "Toutes les phrases solides",
     unlocked: ({ state, cards }) => cards.length > 0 && solidCards(cards, state).length === cards.length,
+  },
+  // Grammaire
+  { id: "lesson-1", icon: "📘", title: "Premier cours", description: "Lire une leçon de grammaire", unlocked: ({ state }) => Object.keys(state.lessonsRead).length >= 1 },
+  {
+    id: "lesson-all",
+    icon: "🧠",
+    title: "Grammairien",
+    description: "Lire toutes les leçons de grammaire",
+    unlocked: ({ state }) => LESSONS.every((l) => l.id in state.lessonsRead),
   },
   // Sur le terrain
   { id: "phrase-1", icon: "💬", title: "Sur le terrain", description: "Placer une phrase du jour", unlocked: ({ state }) => phrasesDone(state) >= 1 },

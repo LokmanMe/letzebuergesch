@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { LESSONS } from "../../content";
 import { lodSearchUrl } from "../../domain/content";
 import { cardsToCsv } from "../../domain/csv";
 import { Button, Panel, UnverifiedBadge } from "../components/ui";
@@ -22,7 +23,7 @@ export function Relecture() {
           {unverified > 1 ? "s" : ""} à vérifier). Exporte le tableau pour le faire relire par un collègue luxembourgophone, ou compare
           chaque phrase avec lod.lu.
         </p>
-        <Button variant="primary" block onClick={() => downloadFile(`letzebuergesch-relecture-${today}.csv`, cardsToCsv(cards, modules), "text/csv;charset=utf-8")}>
+        <Button variant="primary" block onClick={() => downloadFile(`letzebuergesch-relecture-${today}.csv`, cardsToCsv(cards, modules, LESSONS),"text/csv;charset=utf-8")}>
           Exporter en CSV (Excel)
         </Button>
         <p className={styles.hint}>
@@ -54,6 +55,25 @@ export function Relecture() {
           </ul>
         </Panel>
       ))}
+
+      <Panel aria-labelledby="mod-grammaire">
+        <h2 id="mod-grammaire" className={styles.h2}>
+          Leçons de grammaire
+        </h2>
+        <p className={styles.hint}>Les tableaux et exemples sont inclus dans l'export CSV. Les fiches sont dans src/content/grammar.json.</p>
+        <ul className={styles.list}>
+          {LESSONS.map((l) => (
+            <li key={l.id}>
+              <div className={styles.row}>
+                <Link to={`/grammaire/${l.id}`} className={styles.lb}>
+                  {l.icon} {l.title}
+                </Link>
+                {!l.verified && <UnverifiedBadge />}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </Panel>
     </main>
   );
 }

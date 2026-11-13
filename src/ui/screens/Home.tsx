@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ACHIEVEMENTS } from "../../achievements/rules";
-import { LOD_AUDIO } from "../../content";
+import { LESSONS, LOD_AUDIO } from "../../content";
+import { lessonStatuses } from "../../domain/grammar";
 import { pickPhraseOfDay, setPhraseOfDayDone } from "../../domain/phraseOfDay";
 import { LodAudio } from "../audio/LodAudio";
 import { availableNewCards, buildDailyQueue, dueCards, unseenCards } from "../../domain/queue";
@@ -75,6 +76,8 @@ export function Home() {
   const workedToday = reviewedToday + (state.log[today]?.newIntroduced ?? 0) > 0;
   const nextBatch = Math.min(state.settings.newPerDay, unseenCards(cards, state).length);
   const hasSeen = Object.keys(state.progress).length > 0;
+  const lessonStatus = lessonStatuses(LESSONS, stages, state);
+  const newLesson = LESSONS.find((l) => lessonStatus.get(l.id) === "new");
 
   return (
     <main className={styles.page}>
@@ -186,6 +189,19 @@ export function Home() {
         </span>
         <span aria-hidden="true">›</span>
       </Link>
+
+      {newLesson && (
+        <Link to={`/grammaire/${newLesson.id}`} className={styles.pathTeaser}>
+          <span className={styles.pathEmoji} aria-hidden="true">
+            {newLesson.icon}
+          </span>
+          <span>
+            <strong>Nouvelle leçon de grammaire</strong>
+            <span className={styles.small}>{newLesson.title} · 2 min</span>
+          </span>
+          <span aria-hidden="true">›</span>
+        </Link>
+      )}
 
       <p className={styles.footer}>
         <Link to="/progression#phrases">Historique des phrases du jour</Link>

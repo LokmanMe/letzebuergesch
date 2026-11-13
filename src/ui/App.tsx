@@ -2,6 +2,7 @@ import { HashRouter, NavLink, Navigate, Outlet, Route, Routes, useLocation } fro
 import { AchievementWatcher } from "./components/AchievementWatcher";
 import { AppStateProvider } from "./state/AppStateContext";
 import { Home } from "./screens/Home";
+import { Grammar, Lesson } from "./screens/Lesson";
 import { Path } from "./screens/Path";
 import { Progress } from "./screens/Progress";
 import { Relecture } from "./screens/Relecture";
@@ -53,6 +54,8 @@ export function AppRoutes() {
         <Route path="/progression" element={<Progress />} />
         <Route path="/reglages" element={<Settings />} />
         <Route path="/relecture" element={<Relecture />} />
+        <Route path="/grammaire" element={<Grammar />} />
+        <Route path="/grammaire/:id" element={<Lesson />} />
       </Route>
       <Route element={<Layout withNav={false} />}>
         <Route path="/revision" element={<ReviewRoute />} />

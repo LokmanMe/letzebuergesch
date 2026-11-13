@@ -112,13 +112,20 @@ Les 97 phrases sont rangées en **14 étapes** sur un chemin, dans l'ordre où t
 
 Quand une session débloque une nouvelle étape, l'écran de fin te le signale.
 
+### 📘 Leçons de grammaire
+**10 fiches courtes** (1 à 2 minutes) expliquent les phrases que tu apprends : la règle du « n », le présent, du ou Dir, être et avoir, les questions, la négation, les possessifs, pouvoir / devoir / vouloir, les articles et la place du verbe.
+
+- Chaque fiche apparaît sur le chemin du Parcours, juste après l'étape qui la prépare. Elle est marquée **Nouvelle** quand tu as découvert toutes les phrases de cette étape, et l'Accueil te la propose.
+- Une fiche contient l'essentiel à retenir, parfois un tableau de conjugaison, des exemples tirés de tes phrases (avec l'audio lod.lu), un piège à éviter et 1 ou 2 questions pour vérifier que c'est compris.
+- Touche **« J'ai compris ✓ »** pour la marquer comme lue. Tu peux lire toutes les fiches à tout moment depuis Parcours → Leçons de grammaire.
+
 ### 💬 Phrase du jour
 Chaque jour, une phrase à **placer pour de vrai** : avec un collègue, à la boulangerie, au voisin… Coche **« Fait »** quand c'est fait. L'historique de tes phrases placées est conservé.
 
 ### 📈 Progression
 - La courbe de ton activité sur les 30 derniers jours (touche ou survole un point pour le détail).
 - La liste de tes phrases **solides** et de tes phrases **fragiles** (celles qui reviennent souvent).
-- Tes **🏅 badges** : 16 à débloquer, par exemple découvrir 25 phrases, tenir une série de 7 jours, atteindre l'objectif du jour, 50 cartes en une journée, maîtriser un thème entier ou placer 5 phrases du jour. Une notification « Badge débloqué ! » s'affiche au moment où tu en gagnes un, et un badge obtenu reste acquis.
+- Tes **🏅 badges** : 18 à débloquer, par exemple découvrir 25 phrases, tenir une série de 7 jours, atteindre l'objectif du jour, 50 cartes en une journée, maîtriser un thème entier, lire toutes les leçons de grammaire ou placer 5 phrases du jour. Une notification « Badge débloqué ! » s'affiche au moment où tu en gagnes un, et un badge obtenu reste acquis.
 - L'historique de tes phrases du jour.
 
 ### ⚙️ Réglages
@@ -126,7 +133,7 @@ Chaque jour, une phrase à **placer pour de vrai** : avec un collègue, à la bo
 - **Objectif du jour** : de 5 à 100 cartes travaillées (15 par défaut).
 - **Sens des cartes** : mixé (par défaut : surtout français → luxembourgeois, une fois sur 4 à l'envers), toujours français → luxembourgeois, ou toujours luxembourgeois → français.
 - **Exporter / Importer** : sauvegarde ta progression dans un fichier, ou récupère-la sur un autre appareil.
-- **Relecture** : la liste complète des phrases, avec un export pour Excel.
+- **Relecture** : la liste complète des phrases et des leçons de grammaire, avec un export pour Excel.
 - **Réinitialiser** : repartir de zéro.
 
 ### ⌨️ Raccourcis clavier (sur ordinateur)
@@ -149,7 +156,7 @@ Les nouvelles cartes arrivent dans cet ordre :
 
 Avec 8 nouvelles cartes par jour, tu auras vu toutes les phrases en **un peu moins de 2 semaines**. Il faut ensuite quelques semaines de révisions pour qu'elles deviennent solides.
 
-> ⚠️ **Phrases à vérifier.** Les phrases et leur prononciation ont été rédigées avec l'aide d'une IA et n'ont pas encore été relues par un locuteur natif : elles portent la mention **« à vérifier »**. En cas de doute, fie-toi au dictionnaire [lod.lu](https://lod.lu) ou à tes collègues luxembourgeois. Réglages → Relecture permet d'exporter toutes les phrases pour les faire relire.
+> ⚠️ **Phrases à vérifier.** Les phrases, leur prononciation et les leçons de grammaire ont été rédigées avec l'aide d'une IA et n'ont pas encore été relues par un locuteur natif : elles portent la mention **« à vérifier »**. En cas de doute, fie-toi au dictionnaire [lod.lu](https://lod.lu) ou à tes collègues luxembourgeois. Réglages → Relecture permet d'exporter toutes les phrases pour les faire relire.
 
 ---
 

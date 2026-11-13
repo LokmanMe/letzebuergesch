@@ -1,0 +1,270 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.page h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon {
+  font-size: 2.4rem;
+}
+
+.kicker {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}
+
+.warn {
+  margin: -8px 0 0;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.intro {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.h2 {
+  font-size: 1.05rem;
+  margin: 0 0 8px;
+}
+
+.points {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  line-height: 1.45;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table td {
+  padding: 8px 4px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.table td:first-child {
+  font-weight: 700;
+}
+
+.table td:last-child {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.examples {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.examples li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.examples li:last-child {
+  border-bottom: none;
+}
+
+.lb {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.fr {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.pitfall {
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  background: var(--warn-bg);
+  color: var(--warn-text);
+  line-height: 1.45;
+}
+
+.question {
+  border: none;
+  margin: 0 0 14px;
+  padding: 0;
+}
+
+.question:last-child {
+  margin-bottom: 0;
+}
+
+.questionText {
+  font-weight: 600;
+  margin-bottom: 8px;
+  padding: 0;
+}
+
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.choice {
+  min-height: 44px;
+  padding: 8px 12px;
+  text-align: left;
+  font: inherit;
+  font-weight: 600;
+  color: var(--text);
+  background: var(--surface-2);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.choice:disabled {
+  cursor: default;
+}
+
+.right {
+  border-color: var(--easy);
+  background: color-mix(in srgb, var(--easy) 18%, var(--surface));
+}
+
+.wrong {
+  border-color: var(--again);
+  background: color-mix(in srgb, var(--again) 15%, var(--surface));
+}
+
+.dim {
+  opacity: 0.55;
+}
+
+.feedback {
+  margin: 8px 0 0;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.readOn {
+  margin: 0;
+  text-align: center;
+  font-weight: 700;
+  color: var(--easy);
+}
+
+.next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  min-height: 56px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.upcoming {
+  opacity: 0.7;
+}
+
+.itemIcon {
+  font-size: 1.6rem;
+}
+
+.itemTitle {
+  font-weight: 600;
+}
+
+.chip {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+  background: var(--surface-2);
+}
+
+.new {
+  background: var(--accent);
+  color: var(--accent-text);
+}
+
+.read {
+  background: var(--easy);
+  color: var(--surface);
+}
+
+.listen {
+  align-self: flex-start;
+  min-height: 44px;
+  padding: 4px 14px;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  cursor: pointer;
+}

@@ -39,6 +39,8 @@ const MIGRATIONS: Record<number, (s: Raw) => Raw> = {
     settings: { ...(isObject(s.settings) ? s.settings : {}), direction: "mixed" },
     achievements: {},
   }),
+  // Version 4 : leçons de grammaire lues.
+  3: (s) => ({ ...s, schemaVersion: 4, lessonsRead: {} }),
 };
 
 function sanitizeProgress(v: unknown): Record<string, CardProgress> {
@@ -149,5 +151,6 @@ export function migrate(raw: unknown): AppState {
     phraseOfDay: sanitizePhraseOfDay(s.phraseOfDay ?? {}),
     customCards: sanitizeCustomCards(s.customCards ?? []),
     achievements: sanitizeAchievements(s.achievements ?? {}),
+    lessonsRead: sanitizeAchievements(s.lessonsRead ?? {}),
   };
 }

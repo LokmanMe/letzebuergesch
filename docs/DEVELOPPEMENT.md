@@ -70,6 +70,10 @@ Dans le fichier JSON du module (`src/content/<module>.json`), ajoute un objet à
 1. Crée `src/content/mon-module.json` avec `id`, `title`, `description` et `cards`.
 2. Importe-le dans `src/content/index.ts` et ajoute-le à `RAW_MODULES` (l'ordre du tableau est l'ordre de présentation des nouvelles cartes).
 
+## Ajouter une leçon de grammaire
+
+Les fiches sont dans `src/content/grammar.json` (`lessons`), dans l'ordre du parcours. Champs : `id`, `icon`, `title`, `afterStage` (id d'étape, ex. `intro-1`), `intro`, `points` (le gras s'écrit `**…**`), `table` optionnel (`caption`, `rows` de paires luxembourgeois / français), `examples` (`lb`, `fr`, `cardId` optionnel pour réutiliser l'audio lod.lu d'une carte), `pitfall` optionnel, `quiz` (`question`, `choices`, `answer` = index de la bonne réponse, `explanation`) et `verified`. Les tests vérifient que l'étape existe, que l'ordre suit le parcours et qu'un exemple lié à une carte reprend exactement son texte. Les leçons lues sont dans `state.lessonsRead` (schéma v4).
+
 ## Données et sauvegarde
 
 La progression est stockée dans le `localStorage` du navigateur (clé `letzebuergesch:state`). Elle est propre à chaque appareil et navigateur : **exporte-la régulièrement** (Réglages → Exporter) et importe le fichier sur un autre appareil pour la transférer.
